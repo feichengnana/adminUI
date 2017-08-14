@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+	<head>
+		<meta charset="UTF-8">
+		<title> 山东联通宽带接入总承包项目工程管理系统</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        
+        <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="static/plugins/font-awesome/css/font-awesome.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="static/plugins/simple-line-icons/simple-line-icons.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="static/css/adminui.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="static/plugins/ace/css/ace.min.css"/>
+      	
+        <link href="static/img/favicon.png" rel="bookmark" type="image/x-icon" />
+        <link href="static/img/favicon.png" rel="icon" type="image/x-icon" />
+        <link href="static/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+      	
+	</head>
+	<body class="no-skin">
+		<div id="navbar" class="navbar navbar-default bg-main">
+            <div class="navbar-container ace-save-state" id="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="index.html" class="navbar-brand">
+                        <img class="logo" src="static/img/logo.png" /> 山东联通宽带接入总承包项目工程管理系统
+                    </a>
+                </div>
+                <div class="navbar-buttons navbar-header pull-right" role="navigation">
+                    <ul class="nav ace-nav">
+                        <li>
+                            <a class="dropdown-toggle" href="#">
+                                <i class="fa fa-envelope icon-animated-vertical"></i>
+                                <span class="badge badge-success">5</span>
+                            </a>
+                        </li>
+                        <li class="dropdown-modal">
+                            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                                <img class="nav-user-photo" src="static/img/avatar.png" alt="administrator">
+                                <span class="user-info">
+									<small>欢迎,</small>
+									侯玲
+								</span>
+                                <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                                <li>
+                                    <a href="profile.html">
+                                        <i class="ace-icon fa fa-key"></i> 更改密码
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ace-icon fa fa-power-off"></i> 退出
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a title="全屏" class="dropdown-toggle" href="#">
+                                <i class="fa fa-external-link"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-container">
+            <div id="sidebar" class="sidebar responsive ">
+            	<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+                    <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+                </div>
+                <ul class="nav nav-list" id="actionUl">
+                </ul>
+            </div>
+            <div class="main-content">
+                <div class="row content-tabs">
+                    <button class="roll-nav roll-left J_tabLeft"><i class="fa fa-backward"></i></button>
+                    <nav class="page-tabs J_menuTabs">
+                        <div class="page-tabs-content">
+                            <a href="javascript:;" class="active J_menuTab" data-id="index_v1.html">首页</a>
+                        </div>
+                    </nav>
+                    <button class="roll-nav roll-right J_tabRight"><i class="fa fa-forward"></i></button>
+                    <div class="btn-group roll-nav roll-right">
+	                    <button class="dropdown J_tabClose" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+	                    <ul role="menu" class="dropdown-menu dropdown-menu-right">
+	                        <li class="J_tabShowActive"><a>定位当前选项卡</a>
+	                        </li>
+	                        <li class="divider"></li>
+	                        <li class="J_tabCloseAll"><a>关闭全部选项卡</a>
+	                        </li>
+	                        <li class="J_tabCloseOther"><a>关闭其他选项卡</a>
+	                        </li>
+	                    </ul>
+	                </div>
+                    <a href="javascript:;" title="刷新当前页面" class="roll-nav roll-right J_tabRefresh"><i class="fa fa fa-refresh"></i></a>
+                </div>
+                <div class="row J_mainContent" id="content-main">
+                    <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="html/pages/main.html" frameborder="0" data-id="index_v1.html" seamless=""></iframe>
+                </div>
+            </div>
+        </div>
+		
+		
+      	<!--[if lt IE 9]>
+		  <script src="static/js/plugins/html5shiv.min.js"></script>
+		  <script src="static/js/plugins/respond.min.js"></script>
+		  <script src="static/js/plugins/html5shiv.min.js"></script>
+		  <script src="static/js/plugins/ie8.fix.min.js"></script>
+		<![endif]-->
+		<!--数据初始化-->
+        <script src="static/data/menu.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	var ace_menus = menus;
+        </script>
+        <!--插件引入-->
+        <script src="static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/plugins/ace/js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/plugins/ace/js/ace.sidebar.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
