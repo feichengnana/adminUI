@@ -1,0 +1,6 @@
+_variables.scss:
+	$grid-gutter-width:         30px !default;
+	-->
+	$grid-gutter-width:         20px !default;
+	
+	

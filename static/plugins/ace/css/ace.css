@@ -5,12 +5,37 @@ html {
 body {
   background-color: #f5f5f5;
   min-height: 100%;
-  padding-bottom: 0;
-  font-family: 'Open Sans';
+  padding-bottom: 0;s
   font-size: 13px;
   color: #393939;
   line-height: 1.5;
 }
+.navbar-setting{
+    width: 24px !important;
+    height: 24px !important;
+    line-height: 22px !important;
+    text-align: center !important;
+    border-radius: 2px !important;
+    border:2px solid rgba(255,255,255,.8);
+}
+#show-navbar{
+	  display: none;
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    background: rgba(209,23,24,.8);
+    width: 30px !important;
+    height:30px !important;
+    line-height: 28px !important;
+    text-align: center;
+    color:#FFF;
+    z-index: 99;
+    transition: all .5s;
+    border-radius: 2px !important;
+    font-size: 18px;
+}
+.hideNavbar #navbar{transition: all .5s;display: none}
+.hideNavbar .main-container{top: 0;}
 .main-container:before {
   display: block;
   content: "";

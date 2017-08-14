@@ -39,7 +39,7 @@ General reset
 /* Set default body */
 body {
   color: #333333;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0px !important;
   margin: 0px !important;
   direction: "ltr";
@@ -874,7 +874,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300; }
 
 h1 {
@@ -994,7 +994,7 @@ Utilities
   display: none !important; }
 
 .primary-font {
-  font-family: "Open Sans", sans-serif !important; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 .bold {
   font-weight: 700 !important; }
@@ -4753,7 +4753,7 @@ Charts and statistics
   overflow: hidden;
   height: 300px;
   width: 100%;
-  font-family: "Open Sans", sans-serif !important;
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 14px; }
 
 /***
@@ -6508,7 +6508,7 @@ Customized Bootstrap Labels
   font-weight: 300;
   padding: 3px 6px 3px 6px;
   color: #fff;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .label.label-sm {
     font-size: 13px;
     padding: 2px 5px 2px 5px; }
@@ -12499,7 +12499,7 @@ Light Table
     font-weight: 600;
     font-size: 13px;
     color: #93a2a9;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     border: 0;
     border-bottom: 1px solid #F2F5F8; }
   .table.table-light > tbody > tr:last-child > td {
@@ -22301,42 +22301,22 @@ Color library demo
     background: rgba(238, 238, 238, 0.9);
     color: #333; }
 
-.mt-content-row {
-  display: table;
-  height: 100%;
-  width: 100%; }
-  .mt-content-row .mt-content-col-fluid {
-    display: table-cell; }
-    .mt-content-row .mt-content-col-fluid .mt-content-body {
-      margin: 0;
-      height: 100%;
-      width: 100%;
-      display: table; }
-  .mt-content-row .mt-content-col-fixed {
-    display: table-cell; }
-    .mt-content-row .mt-content-col-fixed .mt-content-sidebar {
-      height: 100%;
-      width: 100%;
-      display: table;
-      margin-left: 20px;
-      border: 1px solid red; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
 
-@media (max-width: 767px) {
-  /* 767px */
-  .mt-content-row {
-    display: block;
-    width: 100%; }
-    .mt-content-row .mt-content-col-fluid {
-      display: block;
-      width: 100%;
-      margin-bottom: 20px; }
-      .mt-content-row .mt-content-col-fluid .mt-content-body {
-        margin: 0; }
-    .mt-content-row .mt-content-col-fixed {
-      display: block;
-      width: 100%; }
-      .mt-content-row .mt-content-col-fixed .mt-content-sidebar {
-        margin-left: 0; } }
+::-webkit-scrollbar-track {
+  border: 1px #f5f5f5 solid;
+  border-radius: 4px;
+  background: #f5f5f5; }
+
+::-webkit-scrollbar-thumb {
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  background: #d5d5d5; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb; }
 
 /* Cubic Bezier Transition */
 /***
@@ -24245,10 +24225,10 @@ iframe[src="about:blank"] {
   font-size: 12px;
   white-space: nowrap;
   font-weight: 600;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .select2-container--bootstrap .select2-selection {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .modal-open .select2-dropdown {
   z-index: 10060; }
@@ -24327,13 +24307,13 @@ Morris Charts
   font-weight: 400;
   font-size: 15px;
   color: #7D8C9D;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .morris-hover.morris-default-style .morris-hover-point {
   text-align: left;
   font-size: 14px;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Microsoft YaHei", "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /***
 iCheck

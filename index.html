@@ -14,8 +14,8 @@
         <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
       	<link rel="stylesheet" type="text/css" href="static/plugins/font-awesome/css/font-awesome.min.css"/>
       	<link rel="stylesheet" type="text/css" href="static/plugins/simple-line-icons/simple-line-icons.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="static/css/adminui.min.css"/>
       	<link rel="stylesheet" type="text/css" href="static/plugins/ace/css/ace.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="static/css/adminui.min.css"/>
       	
         <link href="static/img/favicon.png" rel="bookmark" type="image/x-icon" />
         <link href="static/img/favicon.png" rel="icon" type="image/x-icon" />
@@ -23,6 +23,7 @@
       	
 	</head>
 	<body class="no-skin">
+		<div id="show-navbar" title="点击显示菜单栏"><i class="fa fa-compress"></i></div>
 		<div id="navbar" class="navbar navbar-default bg-main">
             <div class="navbar-container ace-save-state" id="navbar-container">
                 <div class="navbar-header pull-left">
@@ -62,8 +63,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a title="全屏" class="dropdown-toggle" href="#">
-                                <i class="fa fa-external-link"></i>
+                            <a title="点击隐藏菜单栏" id="setScreenSize" class="dropdown-toggle" href="#">
+                                <i class="fa fa-expand navbar-setting"></i>
                             </a>
                         </li>
                     </ul>

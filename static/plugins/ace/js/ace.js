@@ -59,8 +59,21 @@ jQuery(function($) {
 	bsCollapseToggle();
 	smallDeviceDropdowns();
 	
+	setScreenSize();
 	////////////////////////////
-
+	
+	function setScreenSize(){
+		$('#setScreenSize').click(function(){
+			$('body').addClass('hideNavbar');
+			$('#sidebar').addClass('menu-min');
+			$('#show-navbar').show();
+		})
+		$('body').on('click','#show-navbar',function(){
+			$('body').removeClass('hideNavbar');
+			$('#sidebar').removeClass('menu-min');
+			$('#show-navbar').hide();
+		})
+	}
 	function basics() {
 		// for android and ios we don't use "top:auto" when breadcrumbs is fixed
 		if(ace.vars['non_auto_fixed']) {
