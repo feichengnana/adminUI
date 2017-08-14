@@ -25,6 +25,8 @@ System feeds
         &:last-child {
             margin-bottom: 0px;
         }
+        
+        > a { color: inherit; }
 
         .col1 {
             float:left;
@@ -58,10 +60,16 @@ System feeds
                     width:100%;
 
                     > .desc { 
-                        margin-left:35px;
+                        margin-left:10px;
                         padding-top: 4px;
                         padding-bottom: 5px;
                         overflow:hidden;
+                    }
+                }
+                
+                > .cont-col1 ~ .cont-col2 {
+                    > .desc { 
+                        margin-left:35px;
                     }
                 }
             }

@@ -12,7 +12,7 @@ Portlets
 
 .portlet  {
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     padding: 0px; 
     
     @include border-radius($general-border-radius);
@@ -500,7 +500,7 @@ Portlets
 
     &.bordered {
         border: 1px solid $general-panel-border-color !important;
-
+        border-top-width: 4px !important;
         > .portlet-title {
             border-bottom: 1px solid lighten($general-panel-border-color, 2%);
         }

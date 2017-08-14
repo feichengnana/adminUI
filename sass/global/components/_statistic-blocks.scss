@@ -154,8 +154,8 @@ Dashboard Stats 2
 .dashboard-stat2 {
     @include border-radius($general-border-radius);
     background: #fff;
-    padding: 15px 15px 30px 15px; 
-    margin-bottom: 20px;  
+    padding: 15px 15px 30px 15px !important; 
+    margin-bottom: 10px;  
 
     @if $theme-type == "material-design" {
         box-shadow: $general-shadow;
@@ -187,7 +187,6 @@ Dashboard Stats 2
             small {
                 font-size: 14px;
                 color: #AAB5BC;
-                font-weight: 600; 
                 text-transform: uppercase;
             }
 
@@ -219,7 +218,6 @@ Dashboard Stats 2
             margin-top: 5px;
             font-size: 11px;
             color: #AAB5BC;
-            font-weight: 600; 
             text-transform: uppercase;
 
             .status-title {

@@ -1,11 +1,402 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        
+        <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
 	</head>
 	<body>
-		
-		1111
+		<div class="page-content scroller">
+			<div class="row">
+				<div class="col-sm-3">
+					<div class="portlet light bordered dashboard-stat2">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-green-sharp">
+                                    <span data-counter="counterup" data-value="7800">0</span>
+                                    <small class="font-green-sharp">￥</small>
+                                </h3>
+                                <small>利润总额</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-pie-chart"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 76%;" class="progress-bar progress-bar-success green-sharp">
+                                    <span class="sr-only">新增比例 76%</span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> 新增比例 </div>
+                                <div class="status-number"> 76% </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="portlet light bordered dashboard-stat2">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-red-haze">
+                                    <span data-counter="counterup" data-value="1349">0</span>
+                                </h3>
+                                <small>新增反馈</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-thumbs-up"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 85%;" class="progress-bar progress-bar-success red-haze">
+                                    <span class="sr-only">已处理 85% </span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> 已处理 </div>
+                                <div class="status-number"> 85% </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="portlet light bordered dashboard-stat2 ">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-blue-sharp">
+                                    <span data-counter="counterup" data-value="567">0</span>
+                                </h3>
+                                <small>新增订单</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 45%;" class="progress-bar progress-bar-success blue-sharp">
+                                    <span class="sr-only">增长比例 45% </span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> 增长比例 </div>
+                                <div class="status-number"> 45% </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-sm-3">
+					<div class="portlet light bordered dashboard-stat2 ">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-purple-soft">
+                                    <span data-counter="counterup" data-value="276">0</span>
+                                </h3>
+                                <small>新增用户</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 57%;" class="progress-bar progress-bar-success purple-soft">
+                                    <span class="sr-only">新增比例 56%</span>
+                                </span>
+                            </div>
+                            <div class="status">
+                                <div class="status-title"> 新增比例 </div>
+                                <div class="status-number"> 57% </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 我的待办</span>
+                            </div>
+                            <div class="tools">
+                                <a href="" class="collapse"> </a>
+                                <a href="" class="reload"> </a>
+                                <a href="" class="remove"> </a>
+                                <a href="" class="fullscreen"></a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="scroller" style="height:200px" data-rail-visible="1" >
+                                <ul class="feeds">
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-success" title="设计确认">
+                                                            <i class="fa fa-pencil-square-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 需求名称--测试52 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-warning" title="验收确认">
+                                                            <i class="fa fa-calendar-check-o"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 2017年中国联通济南历下区山大路七中宿舍宽带接入新建工程sxf119test </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-primary" title="工程订单编制">
+                                                            <i class="fa fa-flag-checkered"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 测试附件阶段改造-20170523 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 3天前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col1">
+                                                        <div class="label label-sm label-info" title="其他">
+                                                            <i class="fa fa-anchor"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 采购测试111212 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 3天前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 我的待阅</span>
+                            </div>
+                            <div class="tools">
+                                <a href="" class="collapse"> </a>
+                                <a href="" class="reload"> </a>
+                                <a href="" class="remove"> </a>
+                                <a href="" class="fullscreen"></a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="scroller" style="height:200px" data-rail-visible="1" >
+                            	<ul class="feeds">
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                	<li>
+                                        <a href="javascript:;">
+                                            <div class="col1">
+                                                <div class="cont">
+                                                    <div class="cont-col2">
+                                                        <div class="desc"> 
+                                                        	<span class="text-info">#侯玲#</span> 修改了 <strong>测试新流程工单</strong> 的业务阶段为 <strong>设计审核</strong>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col2">
+                                                <div class="date"> 50分钟前 </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                        	</div>
+                    	</div>
+                	</div>
+				</div>
+			</div>
+		</div>
+		<!--[if lt IE 9]>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/respond.min.js"></script>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/ie8.fix.min.js"></script>
+		<![endif]-->
+		<!--插件引入-->
+		<script type="text/javascript">
+			//数据初始化
+		</script>
+		<!--基础依赖-->
+        <script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <!--业务依赖-->
+        <script src="../../static/plugins/counterup/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/counterup/jquery.counterup.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
+        <!--当前页面依赖-->
+        <script src="main.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

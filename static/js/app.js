@@ -368,27 +368,27 @@ var App = function() {
         $('.portlet > .portlet-title .fullscreen').tooltip({
             trigger: 'hover',
             container: 'body',
-            title: 'Fullscreen'
+            title: '全屏浏览'
         });
         $('.portlet > .portlet-title > .tools > .reload').tooltip({
             trigger: 'hover',
             container: 'body',
-            title: 'Reload'
+            title: '刷新'
         });
         $('.portlet > .portlet-title > .tools > .remove').tooltip({
             trigger: 'hover',
             container: 'body',
-            title: 'Remove'
+            title: '移除'
         });
         $('.portlet > .portlet-title > .tools > .config').tooltip({
             trigger: 'hover',
             container: 'body',
-            title: 'Settings'
+            title: '设置'
         });
         $('.portlet > .portlet-title > .tools > .collapse, .portlet > .portlet-title > .tools > .expand').tooltip({
             trigger: 'hover',
             container: 'body',
-            title: 'Collapse/Expand'
+            title: '折叠/展开'
         });
     };
 

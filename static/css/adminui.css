@@ -5271,6 +5271,8 @@ System feeds
       clear: both; }
     .feeds li:last-child {
       margin-bottom: 0px; }
+    .feeds li > a {
+      color: inherit; }
     .feeds li .col1 {
       float: left;
       width: 100%;
@@ -5294,10 +5296,12 @@ System feeds
           float: left;
           width: 100%; }
           .feeds li .col1 > .cont > .cont-col2 > .desc {
-            margin-left: 35px;
+            margin-left: 10px;
             padding-top: 4px;
             padding-bottom: 5px;
             overflow: hidden; }
+        .feeds li .col1 > .cont > .cont-col1 ~ .cont-col2 > .desc {
+          margin-left: 35px; }
     .feeds li .col2 {
       float: left;
       width: 75px;
@@ -7088,7 +7092,7 @@ Portlets
 /* Basic portlet */
 .portlet {
   margin-top: 0px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding: 0px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -7340,7 +7344,8 @@ Portlets
   padding: 12px 20px 15px 20px;
   background-color: #fff; }
   .portlet.light.bordered {
-    border: 1px solid #e7ecf1 !important; }
+    border: 1px solid #e7ecf1 !important;
+    border-top-width: 4px !important; }
     .portlet.light.bordered > .portlet-title {
       border-bottom: 1px solid #eef1f5; }
   .portlet.light.bg-inverse {
@@ -11936,8 +11941,8 @@ Dashboard Stats 2
   -o-border-radius: 4px;
   border-radius: 4px;
   background: #fff;
-  padding: 15px 15px 30px 15px;
-  margin-bottom: 20px; }
+  padding: 15px 15px 30px 15px !important;
+  margin-bottom: 10px; }
   .dashboard-stat2.bordered {
     border: 1px solid #e7ecf1; }
   .dashboard-stat2 .display {
@@ -11960,7 +11965,6 @@ Dashboard Stats 2
       .dashboard-stat2 .display .number small {
         font-size: 14px;
         color: #AAB5BC;
-        font-weight: 600;
         text-transform: uppercase; }
     .dashboard-stat2 .display .icon {
       display: inline-block;
@@ -11980,7 +11984,6 @@ Dashboard Stats 2
       margin-top: 5px;
       font-size: 11px;
       color: #AAB5BC;
-      font-weight: 600;
       text-transform: uppercase; }
       .dashboard-stat2 .progress-info .status .status-title {
         float: left;
@@ -22317,6 +22320,15 @@ Color library demo
 
 ::-webkit-scrollbar-thumb:hover {
   background: #bbb; }
+
+.page-content {
+  height: 100%;
+  padding: 10px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+.page-content.scroller {
+  padding: 10px 12px 10px 10px !important; }
 
 /* Cubic Bezier Transition */
 /***

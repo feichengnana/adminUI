@@ -8,8 +8,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title> 山东联通宽带接入总承包项目工程管理系统</title>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
         
         <link rel="stylesheet" type="text/css" href="static/plugins/bootstrap/css/bootstrap.min.css"/>
       	<link rel="stylesheet" type="text/css" href="static/plugins/font-awesome/css/font-awesome.min.css"/>
@@ -20,7 +21,12 @@
         <link href="static/img/favicon.png" rel="bookmark" type="image/x-icon" />
         <link href="static/img/favicon.png" rel="icon" type="image/x-icon" />
         <link href="static/img/favicon.png" rel="shortcut icon" type="image/x-icon" />
-      	
+        
+      	<!--数据初始化-->
+        <script src="static/data/menu.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        	var ace_menus = menus;
+        </script>
 	</head>
 	<body class="no-skin">
 		<div id="show-navbar" title="点击显示菜单栏"><i class="fa fa-compress"></i></div>
@@ -115,11 +121,6 @@
 		  <script src="static/js/plugins/html5shiv.min.js"></script>
 		  <script src="static/js/plugins/ie8.fix.min.js"></script>
 		<![endif]-->
-		<!--数据初始化-->
-        <script src="static/data/menu.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript">
-        	var ace_menus = menus;
-        </script>
         <!--插件引入-->
         <script src="static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
