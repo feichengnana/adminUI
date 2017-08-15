@@ -1,7 +1,17 @@
 /***
 Datatables general customization
 ***/
-
+.dataTables_wrapper .table tr td,.dataTables_wrapper .table tr th{white-space: nowrap;}
+.dataTables_wrapper .table>thead>tr{
+    color: #707070;
+    background: repeat-x #F2F2F2;
+    background-image: -webkit-linear-gradient(top,#F8F8F8 0,#ECECEC 100%);
+    background-image: -o-linear-gradient(top,#F8F8F8 0,#ECECEC 100%);
+    background-image: linear-gradient(to bottom,#F8F8F8 0,#ECECEC 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8', endColorstr='#ffececec', GradientType=0);
+}
+.dataTables_wrapper .table>thead>tr>th{font-weight: normal;}
+.dt-footer-wrapper{padding-top: 4px;}
 .table-checkable {
     tr > th:first-child,
     tr > td:first-child {
@@ -12,10 +22,10 @@ Datatables general customization
         padding-right: 0;   
     }
 }
-
+table.dataTable .btn-opt{padding:1px 2px;line-height: 14px !important;}
 table.dataTable thead th, 
 table.dataTable thead td {
-    border-bottom: 2px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
     outline: none !important;
 }
 
@@ -142,7 +152,7 @@ Scroller Extension
 }
 
 .dataTables_scrollHead {
-  border-bottom: 2px solid $table-border-color !important;
+  border-bottom: 1px solid $table-border-color !important;
 
   thead {   
     th {
@@ -229,142 +239,143 @@ a.dt-button {
         margin-right: 0;      
     }
 }
-
+div.dataTables_wrapper div.dataTables_filter input{height:34px;}
 .dataTables_wrapper .dt-buttons {    
     float: right;  
-
-    .portlet.light & {
-        margin-top: -64px;
-    }
-
-    .portlet.box & {
-        margin-top: -50px;
-    }
+    margin-left:10px;
+//
+//  .portlet.light & {
+//      margin-top: -64px;
+//  }
+//
+//  .portlet.box & {
+//      margin-top: -50px;
+//  }
 }
 
 /***
 Rot Details
 ***/
 
-.dataTable .row-details.row-details-close {
-  background: url("../img/datatable-row-openclose.png") no-repeat 0 0;
-}
-
-.dataTable .row-details.row-details-open {  
-  background: url("../img/datatable-row-openclose.png") no-repeat 0 -23px ;
-}
+//.dataTable .row-details.row-details-close {
+//background: url("../img/datatable-row-openclose.png") no-repeat 0 0;
+//}
+//
+//.dataTable .row-details.row-details-open {  
+//background: url("../img/datatable-row-openclose.png") no-repeat 0 -23px ;
+//}
 
 /***
 Sorting
 ***/
 
-table.dataTable thead .sorting,
-table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting_desc,
-table.dataTable thead .sorting_asc_disabled,
-table.dataTable thead .sorting_desc_disabled {
-  cursor: pointer;
-
-  &:after {
-    display: none;
-  }
-}
-
-table.dataTable thead .sorting { background: url('../plugins/datatables/images/sort_both.png') no-repeat center right; }
-table.dataTable thead .sorting_asc { background: url('../plugins/datatables/images/sort_asc.png') no-repeat center right; }
-table.dataTable thead .sorting_desc { background: url('../plugins/datatables/images/sort_desc.png') no-repeat center right; }
-
-table.dataTable thead .sorting_asc_disabled { background: url('../plugins/datatables/images/sort_asc_disabled.png') no-repeat center right; }
-table.dataTable thead .sorting_desc_disabled { background: url('../plugins/datatables/images/sort_desc_disabled.png') no-repeat center right; }
-
-table.dataTable th:active {
-  outline: none;
-}
+//table.dataTable thead .sorting,
+//table.dataTable thead .sorting_asc,
+//table.dataTable thead .sorting_desc,
+//table.dataTable thead .sorting_asc_disabled,
+//table.dataTable thead .sorting_desc_disabled {
+//cursor: pointer;
+//
+//&:after {
+//  display: none;
+//}
+//}
+//
+//table.dataTable thead .sorting { background: url('../plugins/datatables/images/sort_both.png') no-repeat center right; }
+//table.dataTable thead .sorting_asc { background: url('../plugins/datatables/images/sort_asc.png') no-repeat center right; }
+//table.dataTable thead .sorting_desc { background: url('../plugins/datatables/images/sort_desc.png') no-repeat center right; }
+//
+//table.dataTable thead .sorting_asc_disabled { background: url('../plugins/datatables/images/sort_asc_disabled.png') no-repeat center right; }
+//table.dataTable thead .sorting_desc_disabled { background: url('../plugins/datatables/images/sort_desc_disabled.png') no-repeat center right; }
+//
+//table.dataTable th:active {
+//outline: none;
+//}
 
 /***
 Fixed Header
 ***/
 
-table.dataTable.fixedHeader-floating {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  border: 1px solid darken($table-border-color, 3%);
-
-  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.table-header-fixed thead > tr > th {
-    border-top: 0;
-}
-
-.table>tfoot>tr>th, 
-.table>tfoot>tr>td {
-  border-bottom: 0;
-  padding: 10px 18px;
-  border-top: 1px solid $table-border-color;
-  font-weight: 600;
-}   
+//table.dataTable.fixedHeader-floating {
+//margin-top: 0 !important;
+//margin-bottom: 0 !important;
+//border: 1px solid darken($table-border-color, 3%);
+//
+//-webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+//-moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+//box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1); 
+//}
+//
+//.table-header-fixed thead > tr > th {
+//  border-top: 0;
+//}
+//
+//.table>tfoot>tr>th, 
+//.table>tfoot>tr>td {
+//border-bottom: 0;
+//padding: 10px 18px;
+//border-top: 1px solid $table-border-color;
+//font-weight: 600;
+//}   
 
 /***
 Responsive Datatables
 ***/
-.table.dataTable.dt-responsive
-.table.dataTable.responsive {
-  width: 100%;
-}
-
-table.dataTable.dtr-column > tbody > tr > td.control,
-table.dataTable.dtr-column > tbody > tr > th.control {
-  text-align: center;
-  width: 14px;
-}
-
-table.dataTable.dtr-column>tbody>tr>td.control:before, table.dataTable.dtr-column>tbody>tr>th.control:before {
-  margin-left: -8px;
-  text-align: center;
-  text-indent: 0;  
-  line-height: 0;
-}
-
-
-table.dataTable.dtr-column > tbody > tr > td.control:before, 
-table.dataTable.dtr-column > tbody > tr > th.control:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, 
-table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
-    box-shadow: none !important;
-    background-color: darken($general-panel-bg-color, 20%);      
-    font-weight: 300;
-    vertical-align: middle;
-    line-height: 16px;
-    border: 0;
-}
-
-table.dataTable.dtr-column > tbody > tr.parent td.control:before, 
-table.dataTable.dtr-column > tbody > tr.parent th.control:before,
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, 
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
-    background-color: $brand-success;
-    font-weight: 300;
-    vertical-align: middle;
-    border: 0;
-}
-
-table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, 
-table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
-  top: 10px;
-}
-
-table.dataTable.dtr-column > tbody > tr > td.control:before, 
-table.dataTable.dtr-column > tbody > tr > th.control:before {
-  text-align: center;
-  margin-top: -8px;  
-}
-
-table.dataTable > tbody > tr.child ul li {
-  border: 0;
-}
+//.table.dataTable.dt-responsive
+//.table.dataTable.responsive {
+//width: 100%;
+//}
+//
+//table.dataTable.dtr-column > tbody > tr > td.control,
+//table.dataTable.dtr-column > tbody > tr > th.control {
+//text-align: center;
+//width: 14px;
+//}
+//
+//table.dataTable.dtr-column>tbody>tr>td.control:before, table.dataTable.dtr-column>tbody>tr>th.control:before {
+//margin-left: -8px;
+//text-align: center;
+//text-indent: 0;  
+//line-height: 0;
+//}
+//
+//
+//table.dataTable.dtr-column > tbody > tr > td.control:before, 
+//table.dataTable.dtr-column > tbody > tr > th.control:before,
+//table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, 
+//table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+//  box-shadow: none !important;
+//  background-color: darken($general-panel-bg-color, 20%);      
+//  font-weight: 300;
+//  vertical-align: middle;
+//  line-height: 16px;
+//  border: 0;
+//}
+//
+//table.dataTable.dtr-column > tbody > tr.parent td.control:before, 
+//table.dataTable.dtr-column > tbody > tr.parent th.control:before,
+//table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, 
+//table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+//  background-color: $brand-success;
+//  font-weight: 300;
+//  vertical-align: middle;
+//  border: 0;
+//}
+//
+//table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, 
+//table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+//top: 10px;
+//}
+//
+//table.dataTable.dtr-column > tbody > tr > td.control:before, 
+//table.dataTable.dtr-column > tbody > tr > th.control:before {
+//text-align: center;
+//margin-top: -8px;  
+//}
+//
+//table.dataTable > tbody > tr.child ul li {
+//border: 0;
+//}
 
 // firefox fix for ajax datatables in portlet
 @-moz-document url-prefix() {
@@ -394,18 +405,18 @@ table.dataTable > tbody > tr.child ul li {
 
 // datatable dropdown menu fix
 
-.table-scrollable .dataTable th > .btn-group,
-.table-scrollable .dataTable td > .btn-group {
-    position: absolute;
-    margin-top: -2px;
-}
+//.table-scrollable .dataTable th > .btn-group,
+//.table-scrollable .dataTable td > .btn-group {
+//  position: absolute;
+//  margin-top: -2px;
+//}
 
 // popover plugin integration
 .dataTable td .popover-content .btn-group {
   position: static !important;
 }
 
-.table .btn-group .btn {
-  margin-left: 0;
-  margin-right: -1px;
-}
+//.table .btn-group .btn {
+//margin-left: 0;
+//margin-right: -1px;
+//}

@@ -514,12 +514,48 @@ var App = function() {
         if ($().select2) {
             $.fn.select2.defaults.set("theme", "bootstrap");
             $('.select2me').select2({
-                placeholder: "Select",
-                width: 'auto', 
+                placeholder: "请选择",
+               // width: 'auto', 
                 allowClear: true
             });
         }
     };
+    
+    // Handle datePicker
+    var handleDatePicker = function() {
+    	if($.fn.datepicker){
+			$.fn.datepicker.defaults.format = 'yyyy-mm-dd';
+			$.fn.datepicker.defaults.language = 'zh-CN';
+			$.fn.datepicker.defaults.autoclose = true;
+			$('.date-picker').datepicker({
+				format: "yyyy-mm-dd"
+			});
+		}
+    };
+    var panelAction = function(el,parentEl,bodyEl,icon1,icon2,times){
+		$(el).click(function(){
+			var me = $(this);
+			var pnode = me.closest(parentEl);
+			var pbody = pnode.nextAll(bodyEl).first();
+			var meicon = me.find('.fa');
+			if(times!=0){
+				times = times?times:200;
+			}
+			pbody.slideToggle(times);
+			meicon.toggleClass(icon1).toggleClass(icon2);
+			if(el == '.page-search-more a'){
+				var panelSearch = me.closest('.page-search');
+				var resetBtn = panelSearch.find('.page-search-action').find('button[type=reset]');
+				resetBtn.toggleClass('hidden');
+			}
+		})
+	}
+    
+    var handlePagesearch = function(){
+    	if($('.page-search-more').length){
+			panelAction('.page-search-more a','.page-search-more','.page-search-moreBody','fa-angle-double-right','fa-angle-double-up',0);
+		}
+    }
 
     // handle group element heights
    var handleHeight = function() {
@@ -578,6 +614,8 @@ var App = function() {
             handleScrollers(); // handles slim scrolling contents 
             handleFancybox(); // handle fancy box
             handleSelect2(); // handle custom Select2 dropdowns
+            handleDatePicker();
+            handlePagesearch();
             handlePortletTools(); // handles portlet action bar functionality(refresh, configure, toggle, remove)
             handleAlerts(); //handle closabled alerts
             handleDropdowns(); // handle dropdowns

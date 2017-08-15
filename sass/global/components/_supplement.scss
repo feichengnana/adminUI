@@ -18,6 +18,26 @@
 }
 
 // 布局相关
-.page-content{height:100%;padding:10px;overflow-y: auto;overflow-x: hidden;}
+html,body,.page-content{height:100%;}
+.page-content{padding:10px;overflow-y: auto;overflow-x: hidden;}
 .page-content.scroller{padding:10px 12px 10px 10px !important;}
+
+.page-search{position: relative;margin-bottom: 10px;min-height: 40px;margin-top: -5px;}
+.page-search .page-search-form{padding-right:110px;overflow: hidden;}
+.page-search .page-search-form .input-group{margin-bottom: 5px;margin-top: 5px;}
+.page-search .page-search-action{position: absolute;right:0;top:0;width:100px;padding:5px 10px;height: 100%;margin-bottom:10px;text-align: center;border-left: 1px solid #ddd;}
+.page-search .page-search-action:after{content:'';clear: both;}
+.page-search-more{text-align: right;}
+.page-search-more>a{color: $brand-danger !important;}
+.page-search-more>a:before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top:12px;
+    right:95px;
+    height:0;
+    border-bottom: 1px dashed rgba(0,0,0,.2);
+}
+.page-search-moreBody{display: none;}
+
 

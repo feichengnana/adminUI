@@ -327,7 +327,7 @@ $tabbable-line-font-color: #333 !default;
 
             &.active {
                 background: none;
-                border-bottom: 4px solid $brand-success;
+                border-bottom: 4px solid $brand-danger;
                 position: relative;
 
                 > a {
@@ -343,7 +343,7 @@ $tabbable-line-font-color: #333 !default;
             &.open,
             &:hover {
                 background: none;
-                border-bottom: 4px solid lighten($brand-success, 25%);
+                border-bottom: 4px solid lighten($brand-danger, 25%);
 
                 > a {
                     border: 0; 

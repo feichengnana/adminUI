@@ -9,49 +9,42 @@ var menus = [{
             "pid":"01",
             "icon":"",
             "name":"数据列表页",
-            "uri":"view/list.html",
+            "uri":"html/pages/list.html",
             "childrens":[]
-//      },{
-//          "id":"012",
-//          "pid":"01",
-//          "icon":"",
-//          "name":"数据列表页-固定高度",
-//          "uri":"view/list.html",
-//          "childrens":[]
         },{
             "id":"013",
             "pid":"01",
             "icon":"",
             "name":"表单分隔1",
-            "uri":"view/add1.html",
+            "uri":"html/pages/add1.html",
             "childrens":[]
         },{
             "id":"014",
             "pid":"01",
             "icon":"",
             "name":"表单分隔2",
-            "uri":"view/add3.html",
+            "uri":"html/pages/add3.html",
             "childrens":[]
         },{
             "id":"015",
             "pid":"01",
             "icon":"",
             "name":"表单分隔3",
-            "uri":"view/add2.html",
+            "uri":"html/pages/add2.html",
             "childrens":[]
         },{
             "id":"016",
             "pid":"01",
             "icon":"",
             "name":"弹出表单",
-            "uri":"view/addModal.html",
+            "uri":"html/pages/addModal.html",
             "childrens":[]
         },{
             "id":"017",
             "pid":"01",
             "icon":"",
             "name":"表单向导",
-            "uri":"view/formWizard.html",
+            "uri":"html/pages/formWizard.html",
             "childrens":[]
         }
 
@@ -68,21 +61,21 @@ var menus = [{
             "pid":"02",
             "icon":"",
             "name":"排版",
-            "uri":"view/layout.html",
+            "uri":"html/pages/layout.html",
             "childrens":[]        
         },{
             "id":"022",
             "pid":"02",
             "icon":"",
             "name":"按钮",
-            "uri":"view/buttons.html",
+            "uri":"html/pages/buttons.html",
             "childrens":[]        
         },{
             "id":"023",
             "pid":"02",
             "icon":"",
             "name":"工具类",
-            "uri":"view/funClass.html",
+            "uri":"html/pages/funClass.html",
             "childrens":[]        
         }
     ]
@@ -98,35 +91,35 @@ var menus = [{
             "pid":"03",
             "icon":"",
             "name":"表单校验",
-            "uri":"view/bootstrapValidate.html",
+            "uri":"html/pages/bootstrapValidate.html",
             "childrens":[]        
         },{
             "id":"032",
             "pid":"03",
             "icon":"",
             "name":"树形、筛选操作",
-            "uri":"view/treeSelect.html",
+            "uri":"html/pages/treeSelect.html",
             "childrens":[]    
         },{
             "id":"033",
             "pid":"03",
             "icon":"",
             "name":"文件上传",
-            "uri":"view/webUploader.html",
+            "uri":"html/pages/webUploader.html",
             "childrens":[]        
         },{
             "id":"034",
             "pid":"03",
             "icon":"",
             "name":"固定格式文本",
-            "uri":"view/inputMsk.html",
+            "uri":"html/pages/inputMsk.html",
             "childrens":[]        
         },{
             "id":"035",
             "pid":"03",
             "icon":"",
             "name":"提示框",
-            "uri":"view/sweetAlert.html",
+            "uri":"html/pages/sweetAlert.html",
             "childrens":[]        
         }
     ]

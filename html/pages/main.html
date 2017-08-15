@@ -373,6 +373,102 @@
                     	</div>
                 	</div>
 				</div>
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 项目数量</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div style="height:380px" id="echartCount"></div>
+                    	</div>
+               	    </div>
+				</div>
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 工单月变化统计</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div style="height:380px" id="echartMonth"></div>
+                    	</div>
+               	    </div>
+				</div>
+				<div class="col-sm-12">
+					<div class="portlet light bordered">
+                        <div class="portlet-title">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 区县统计</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div id="echartArea" style="height:420px"></div>
+                    	</div>
+               	    </div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> tab布局面板</span>
+                            </div>
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#portlet_tab1" data-toggle="tab"> Tab 1 </a>
+                                </li>
+                                <li>
+                                    <a href="#portlet_tab2" data-toggle="tab"> Tab 2 </a>
+                                </li>
+                                <li>
+                                    <a href="#portlet_tab3" data-toggle="tab"> Tab 3 </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="portlet_tab1">
+                                    <div class="scroller" style="height: 200px;">
+                                    	portlet_tab1portlet_tab1
+                                	</div>
+                            	</div>
+                                <div class="tab-pane" id="portlet_tab2">
+                                    <div class="scroller" style="height: 200px;">
+                                    	portlet_tab2portlet_tab2
+                                	</div>
+                            	</div>
+                                <div class="tab-pane" id="portlet_tab3">
+                                    <div class="scroller" style="height: 200px;">
+                                    	portlet_tab3portlet_tab3
+                                	</div>
+                            	</div>
+                        	</div>
+                    	</div>
+               	    </div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 带操作按钮的面板</span>
+                            </div>
+                            <div class="actions">
+                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-plus"></i> 添加</a>
+                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-pencil"></i> 编辑</a>
+                            	<a href="#" class="btn btn-default btn-circle btn-icon-only fullscreen"></a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="scroller" style="height: 200px;">
+                            	面板内容
+                        	</div>
+                    	</div>
+               	    </div>
+				</div>
 			</div>
 		</div>
 		<!--[if lt IE 9]>
@@ -395,6 +491,7 @@
         <!--业务依赖-->
         <script src="../../static/plugins/counterup/jquery.waypoints.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/plugins/counterup/jquery.counterup.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
         <script src="main.js" type="text/javascript" charset="utf-8"></script>
