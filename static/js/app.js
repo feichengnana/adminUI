@@ -532,6 +532,7 @@ var App = function() {
 			});
 		}
     };
+    
     var panelAction = function(el,parentEl,bodyEl,icon1,icon2,times){
 		$(el).click(function(){
 			var me = $(this);
@@ -555,6 +556,13 @@ var App = function() {
     	if($('.page-search-more').length){
 			panelAction('.page-search-more a','.page-search-more','.page-search-moreBody','fa-angle-double-right','fa-angle-double-up',0);
 		}
+    }
+    
+    // Handle formFieldset
+    var handleFormFieldset = function(){
+    	if($('.form-fieldset .form-collapse').length){
+    		panelAction('.form-fieldset .form-collapse','.form-fieldset-title','.form-fieldset-body','fa-angle-up','fa-angle-down');
+    	}
     }
 
     // handle group element heights
@@ -616,6 +624,7 @@ var App = function() {
             handleSelect2(); // handle custom Select2 dropdowns
             handleDatePicker();
             handlePagesearch();
+            handleFormFieldset();
             handlePortletTools(); // handles portlet action bar functionality(refresh, configure, toggle, remove)
             handleAlerts(); //handle closabled alerts
             handleDropdowns(); // handle dropdowns

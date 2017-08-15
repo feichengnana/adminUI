@@ -7134,7 +7134,7 @@ Portlets
       display: inline-block;
       font-size: 18px;
       line-height: 18px;
-      padding: 10px 0; }
+      padding: 10px 0 12px; }
       .portlet > .portlet-title > .caption.bold {
         font-weight: 400; }
       .portlet > .portlet-title > .caption > i {
@@ -22375,6 +22375,26 @@ html, body, .page-content {
 
 .page-search-moreBody {
   display: none; }
+
+.form-fieldset {
+  margin-bottom: 10px; }
+  .form-fieldset > .form-fieldset-title {
+    position: relative;
+    padding: 5px 0;
+    border-bottom: 2px solid #f2f2f2;
+    color: #337AB7;
+    font-weight: bold; }
+    .form-fieldset > .form-fieldset-title > .form-fieldset-tools {
+      position: absolute;
+      right: 10px;
+      top: 4px; }
+      .form-fieldset > .form-fieldset-title > .form-fieldset-tools > a {
+        display: inline-block;
+        padding: 4px 6px; }
+        .form-fieldset > .form-fieldset-title > .form-fieldset-tools > a > .fa {
+          font-size: 20px; }
+  .form-fieldset > .form-fieldset-body {
+    padding: 10px 10px 0; }
 
 /* Cubic Bezier Transition */
 /***

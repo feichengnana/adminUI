@@ -15,22 +15,8 @@ var menus = [{
             "id":"013",
             "pid":"01",
             "icon":"",
-            "name":"表单分隔1",
-            "uri":"html/pages/add1.html",
-            "childrens":[]
-        },{
-            "id":"014",
-            "pid":"01",
-            "icon":"",
-            "name":"表单分隔2",
-            "uri":"html/pages/add3.html",
-            "childrens":[]
-        },{
-            "id":"015",
-            "pid":"01",
-            "icon":"",
-            "name":"表单分隔3",
-            "uri":"html/pages/add2.html",
+            "name":"表单布局",
+            "uri":"html/pages/addForm.html",
             "childrens":[]
         },{
             "id":"016",
