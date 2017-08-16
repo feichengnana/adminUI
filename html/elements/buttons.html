@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        
+        <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
+	</head>
+	<body>
+		<div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 按钮使用说明</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <table class="table">
+                            	<tr>
+                            		<td>类型</td>
+                            		<td>类名</td>
+                            		<td>说明</td>
+                            	</tr>
+                            	<tr>
+                            		<td>基类</td>
+                            		<td>.btn</td>
+                            		<td>必有</td>
+                            	</tr>
+                            	<tr>
+                            		<td>颜色/主题</td>
+                            		<td>
+                            			.btn-default/.btn-primary/.btn-info/.btn-success/.btn-warning/.btn-danger/.btn-link<br />
+                            			.default/.blue/.green/.red/.yellow/.gray/.dark/.purple
+                            		</td>
+                            		<td>.btn-link为链接式按钮</td>
+                            	</tr>
+                            	<tr>
+                            		<td>大小</td>
+                            		<td>默认.btn-xs/.btn-sm/.btn-lg</td>
+                            		<td>默认实色</td>
+                            	</tr>
+                            	<tr>
+                            		<td>边框</td>
+                            		<td>.btn-outline</td>
+                            		<td>默认实色</td>
+                            	</tr>
+                            	<tr>
+                            		<td>圆角</td>
+                            		<td>.btn-circle</td>
+                            		<td></td>
+                            	</tr>
+                            	<tr>
+                            		<td>块状按钮</td>
+                            		<td>.btn-block</td>
+                            		<td></td>
+                            	</tr>
+                            	
+                            </table>
+                    	</div>
+               	    </div>
+				</div>
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 单个按钮</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<h4>主题按钮 <small class="font-red">在.btn 上追加.btn-*,*为选用的主题</small></h4>
+                        	<p>
+                        		<button class="btn">默认</button>
+                        		<button class="btn btn-default">default</button>
+                        		<button class="btn btn-primary">primary</button>
+                        		<button class="btn btn-info">info</button>
+                        		<button class="btn btn-success">success</button>
+                        		<button class="btn btn-warning">warning</button>
+                        		<button class="btn btn-danger">danger</button>
+                        		<button class="btn btn-link">link</button>
+                        	</p>
+                        	
+                        	<h4>自定义颜色 <small class="font-red">在.btn类上追加.*,*为颜色类型</small></h4>
+                        	<p>
+                        		<button class="btn default">default</button>
+                        		<button class="btn blue">blue</button>
+                        		<button class="btn green">green</button>
+                        		<button class="btn red">red</button>
+                        		<button class="btn yellow">yellow</button>
+                        		<button class="btn purple">purple</button>
+                        		<button class="btn gray">gray</button>
+                        		<button class="btn dark">dark</button>
+                        	</p>
+                        	<h4>边框按钮<small class="font-red">追加.btn-outline类</small></h4>
+                        	<p>
+                        		<button class="btn btn-primary btn-outline">primary</button>
+                        		<button class="btn btn-info btn-outline">info</button>
+                        		<button class="btn btn-success btn-outline">success</button>
+                        		<button class="btn btn-warning btn-outline">warning</button>
+                        		<button class="btn btn-danger btn-outline">danger</button>
+                    		</p>
+                    		<p>
+                        		<button class="btn default btn-outline">default</button>
+                        		<button class="btn blue  btn-outline">blue</button>
+                        		<button class="btn green btn-outline">green</button>
+                        		<button class="btn red btn-outline">red</button>
+                        		<button class="btn yellow btn-outline">yellow</button>
+                        		<button class="btn purple btn-outline">purple</button>
+                        		<button class="btn gray btn-outline">gray</button>
+                        		<button class="btn dark btn-outline">dark</button>
+                        	</p>
+                        	<h4>禁用状态<small class="font-red">a标签追加.disabled类，button标签添加disabled属性</small></h4>
+                        	<p>
+                        		<a href="#"  class="btn btn-primary disabled">primary</a>
+                        		<a href="#"  class="btn btn-info disabled">info</a>
+                        		<a href="#"  class="btn btn-success disabled">success</a>
+                        		<a href="#"  class="btn btn-warning disabled">warning</a>
+                        		<a href="#"  class="btn btn-danger disabled">danger</a>
+                    		</p>
+                    		<p>
+                        		<a href="#"  class="btn default disabled">default</a>
+                        		<a href="#"  class="btn blue  disabled">blue</a>
+                        		<a href="#"  class="btn green disabled">green</a>
+                        		<a href="#"  class="btn red disabled">red</a>
+                        		<a href="#"  class="btn yellow disabled">yellow</a>
+                        		<a href="#"  class="btn purple disabled">purple</a>
+                        		<a href="#"  class="btn dark disabled">dark</a>
+                        	</p>
+                        	<h4>圆角按钮<small class="font-red">追加.btn-circle</small></h4>
+                        	<p>
+                        		<a href="#"  class="btn btn-primary btn-circle">primary</a>
+                        		<a href="#"  class="btn btn-info btn-circle">info</a>
+                        		<a href="#"  class="btn btn-success btn-circle">success</a>
+                        		<a href="#"  class="btn btn-warning btn-circle">warning</a>
+                        		<a href="#"  class="btn btn-danger btn-circle">danger</a>
+                    		</p>
+                    		<p>
+                        		<a href="#"  class="btn default btn-circle">default</a>
+                        		<a href="#"  class="btn blue  btn-circle">blue</a>
+                        		<a href="#"  class="btn green btn-circle">green</a>
+                        		<a href="#"  class="btn red btn-circle">red</a>
+                        		<a href="#"  class="btn yellow btn-circle">yellow</a>
+                        		<a href="#"  class="btn purple btn-circle">purple</a>
+                        		<a href="#"  class="btn dark btn-circle">dark</a>
+                        	</p>
+                        	<h4>按钮大小<small>追加.btn-*,*为尺寸标识</small></h4>
+                        	<p>
+                        		<button class="btn btn-primary btn-lg">btn-lg 大按钮</button>
+                        		<button class="btn btn-primary">常规按钮</button>
+                        		<button class="btn btn-primary btn-sm">btn-sm小按钮</button>
+                        		<button class="btn btn-primary btn-xs">btn-xs较小按钮</button>
+                        	</p>
+                        	<h4>块状按钮<small>追加.btn-block</small></h4>
+                        	<p>
+                        		<a href="#"  class="btn btn-primary btn-block">primary</a>
+                        		<a href="#"  class="btn btn-info btn-block">info</a>
+                        		<a href="#"  class="btn btn-success btn-block">success</a>
+                        		<a href="#"  class="btn btn-warning btn-block">warning</a>
+                        		<a href="#"  class="btn btn-danger btn-block">danger</a>
+                    		</p>
+                    		<p>
+                        		<a href="#"  class="btn default btn-block">default</a>
+                        		<a href="#"  class="btn blue  btn-block">blue</a>
+                        		<a href="#"  class="btn green btn-block">green</a>
+                        		<a href="#"  class="btn red btn-block">red</a>
+                        		<a href="#"  class="btn yellow btn-block">yellow</a>
+                        		<a href="#"  class="btn purple btn-block">purple</a>
+                        		<a href="#"  class="btn gray btn-block">gray</a>
+                        		<a href="#"  class="btn dark btn-block">dark</a>
+                        	</p>
+                    	</div>
+               	    </div>
+				</div>
+				<div class="col-sm-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 按钮组</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<h4>按钮组基础应用</h4>
+                        	<p>
+                        		<div class="btn-group">
+                        			<button class="btn btn-default">left</button>
+                        			<button class="btn btn-default">middle</button>
+                        			<button class="btn btn-default">right</button>
+                        		</div>
+                        		<div class="btn-group">
+                        			<button class="btn btn-danger">left</button>
+                        			<button class="btn btn-info">middle</button>
+                        			<button class="btn btn-success">right</button>
+                        		</div>
+                        		<div class="btn-group">
+                        			<button class="btn red">left</button>
+                        			<button class="btn blue">middle</button>
+                        			<button class="btn green">right</button>
+                        		</div>
+                        	</p>
+                        		<pre>
+&lt;div class="btn-group"&gt;
+	&lt;button class="btn btn-default"&gt;left&lt;/button&gt;
+	&lt;button class="btn btn-default"&gt;middle&lt;/button&gt;
+	&lt;button class="btn btn-default"&gt;right&lt;/button&gt;
+&lt;/div&gt;</pre>
+							<h4>按钮组尺寸</h4>
+							<p>
+								<div class="btn-group btn-group-lg">
+                        			<button class="btn btn-default">left</button>
+                        			<button class="btn btn-default">middle</button>
+                        			<button class="btn btn-default">right</button>
+                        		</div>
+                    	    </p>
+                	        <p>
+                        		<div class="btn-group">
+                        			<button class="btn btn-default">left</button>
+                        			<button class="btn btn-default">middle</button>
+                        			<button class="btn btn-default">right</button>
+                        		</div>
+                    	    </p>
+                	        <p>
+                        		<div class="btn-group btn-group-sm">
+                        			<button class="btn btn-default">left</button>
+                        			<button class="btn btn-default">middle</button>
+                        			<button class="btn btn-default">right</button>
+                        		</div>
+                    	    </p>
+                	        <p>
+                        		<div class="btn-group btn-group-xs">
+                        			<button class="btn btn-default">left</button>
+                        			<button class="btn btn-default">middle</button>
+                        			<button class="btn btn-default">right</button>
+                        		</div>
+							</p>
+							<h4>自适应宽度按钮</h4>
+							<p>
+                        		<div class="btn-group btn-group-justified">
+                        			<a href="#" class="btn btn-default">left</a>
+                        			<a href="#" class="btn btn-default">middle</a>
+                        			<a href="#" class="btn btn-default">right</a>
+                        		</div>
+							</p>
+							<p>
+                        		<div class="btn-group btn-group-justified">
+                        			<a href="#" class="btn red">left</a>
+                        			<a href="#" class="btn blue">middle</a>
+                        			<a href="#" class="btn green">right</a>
+                        		</div>
+							</p>
+                    	</div>
+               	    </div>
+				</div>
+			</div>
+		</div>
+		<!--[if lt IE 9]>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/respond.min.js"></script>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/ie8.fix.min.js"></script>
+		<![endif]-->
+		<!--插件引入-->
+		<script type="text/javascript">
+			//数据初始化
+		</script>
+		<!--基础依赖-->
+        <script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <!--业务依赖-->
+        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
+        <!--当前页面依赖-->
+        <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
+	</body>
+</html>

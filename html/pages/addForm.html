@@ -15,159 +15,167 @@
         <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
       	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
       	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
 	</head>
 	<body>
 		<div class="page-content">
 			<div class="portlet light bordered">
                 <div class="portlet-title tabbable-line">
                     <div class="caption font-dark">
-                        <span class="caption-subject bold uppercase"> 工单编制</span>
+                        <span class="caption-subject bold uppercase"> 新增工单编制</span>
+                    </div>
+                    <div class="actions">
+                    	<a href="list.html" class="btn blue btn-circle"><i class="fa fa-list"> 返回列表</i></a>
                     </div>
                 </div>
-                <div class="portlet-body">
+                <div class="portlet-body form">
                    <form action="" method="post">
-                   		<div class="form-fieldset">
-                   			<div class="form-fieldset-title">
-                   				<span><i class="fa fa-list-ol"></i> 工单编制-基本信息</span>
-                   				<div class="form-fieldset-tools pull-right">
-                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
-                   				</div>
-                   			</div>
-                   			<div class="form-fieldset-body">
-                   				<div class="row">
-                   					<div class="col-sm-12">
-                   						<div class="form-group">
-											<label for="proName">工单名称  <i class="needIcon"></i></label>
-											<div class="input-group">
-												<input type="text" class="form-control" id="proName" placeholder="工程订单名称.">
-												<span class="input-group-btn">
-													<button type="button" class="btn btn-primary">勾选需求</button>
-												</span>
+                   		<div class="form-body">
+                   			<div class="form-fieldset">
+	                   			<div class="form-fieldset-title">
+	                   				<span><i class="icon-layers"></i> 工单编制-基本信息</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+	                   			</div>
+	                   			<div class="form-fieldset-body">
+	                   				<div class="row">
+	                   					<div class="col-sm-12">
+	                   						<div class="form-group">
+												<label for="proName">工单名称  <i class="needIcon"></i></label>
+												<div class="input-group">
+													<input type="text" class="form-control" id="proName" placeholder="工程订单名称.">
+													<span class="input-group-btn">
+														<button type="button" class="btn green">勾选需求</button>
+													</span>
+												</div>
+											</div>
+	                   					</div>
+	                   					<div class="col-sm-3">
+	                   						<div class="form-group">
+												<label for="proCode">项目编码</label>
+												<input type="text" class="form-control" id="proCode" placeholder="编码格式：xxx-xx">
+											</div>
+	                   					</div>
+	                   					<div class="col-sm-3">
+	                   						<div class="form-group">
+												<label for="buildScene">建设性质  <i class="needIcon"></i></label>
+												<select name="buildScene" class="form-control select2me" id="buildScene">
+													<option value="0">新建</option>
+													<option value="1">改造</option>
+													<option value="2">扩容</option>
+												</select>
+											</div>
+	                   					</div>
+	                   					<div class="col-sm-3">
+	                   						<div class="form-group">
+												<label for="cityName">地市</label>
+												<input type="text" class="form-control" id="cityName" placeholder="">
+											</div>
+	                   					</div>
+	                   					<div class="col-sm-3">
+	                   						<div class="form-group">
+												<label for="disName">区县</label>
+												<input type="text" class="form-control" id="disName" placeholder="">
+											</div>
+	                   					</div>
+	                   				</div>
+	                   			</div>
+	                   		</div>
+	                   		<div class="form-fieldset">
+	                   			<div class="form-fieldset-title">
+	                   				<span><i class="icon-layers"></i> 工单编制-承接相关</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+	                   			</div>
+	                   			<div class="form-fieldset-body">
+	                   				<div class="row">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="providerUserName">工单接收人  <i class="needIcon"></i></label>
+												<input type="text" class="form-control" id="providerUserName" placeholder="工单接收人">
 											</div>
 										</div>
-                   					</div>
-                   					<div class="col-sm-3">
-                   						<div class="form-group">
-											<label for="proCode">项目编码</label>
-											<input type="text" class="form-control" id="proCode" placeholder="编码格式：xxx-xx">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="providerName">工程服务商</label>
+												<input type="text" class="form-control" id="providerName" placeholder="工程服务商">
+											</div>
 										</div>
-                   					</div>
-                   					<div class="col-sm-3">
-                   						<div class="form-group">
-											<label for="buildScene">建设性质  <i class="needIcon"></i></label>
-											<select name="buildScene" class="form-control select2me" id="buildScene">
-												<option selected="" value="">请选择</option>
-												<option value="">新建</option>
-												<option value="">改造</option>
-												<option value="">扩容</option>
-											</select>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="buildType">建设时限  <i class="needIcon"></i></label>
+												<select name="" class="form-control select2me" id="buildType" name="buildType">
+													<option value="0">7天</option>
+													<option value="1">55天</option>
+													<option value="2">其他</option>
+												</select>
+											</div>
 										</div>
-                   					</div>
-                   					<div class="col-sm-3">
-                   						<div class="form-group">
-											<label for="cityName">地市</label>
-											<input type="text" class="form-control" id="cityName" placeholder="">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="proDate">归属工期  <i class="needIcon"></i></label>
+												<input type="text" class="form-control" id="proDate" placeholder="请先选择建设时限">
+											</div>
 										</div>
-                   					</div>
-                   					<div class="col-sm-3">
-                   						<div class="form-group">
-											<label for="disName">区县</label>
-											<input type="text" class="form-control" id="disName" placeholder="">
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="proManagerName">项目经理</label>
+												<input type="text" class="form-control" id="proManagerName" placeholder="项目经理">
+											</div>
 										</div>
-                   					</div>
-                   				</div>
-                   			</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="proManagerTel">项目经理联系方式  <i class="needIcon"></i></label>
+												<div class="input-group">
+													<input type="text" class="form-control" id="proManagerTel" placeholder="项目经理联系方式">
+													<a href="#" class="input-group-addon">
+														<i class="fa fa-refresh"></i>
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="pdmTime">设计完成时限  <i class="needIcon"></i></label>
+												<input type="text" class="form-control" id="pdmTime" placeholder="设计完成时限">
+											</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label for="xqTouzi">前评估投资(元)  <i class="needIcon"></i></label>
+												<input type="text" class="form-control" id="xqTouzi" placeholder="前评估投资">
+											</div>
+										</div>
+									</div>
+	               				</div>
+	           				</div>
+	                   		<div class="form-fieldset">
+	                   			<div class="form-fieldset-title">
+	                   				<span><i class="icon-layers"></i> 工单编制-工单描述</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+	                   			</div>
+	                   			<div class="form-fieldset-body">
+	                   				<div class="row">
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label for="proDesc">工单描述  <i class="needIcon"></i> <small class="text-red">（注意：工单描述要包含以下内容：建设地点及当前现状、建设性质、接入方式、主要建设内容及规模、建设时限要求。）</small></label>
+												<textarea id="proDesc" class="form-control" name="proDesc" rows="3" cols="" placeholder="工单描述要包含以下内容：建设地点及当前现状、建设性质、接入方式、主要建设内容及规模、建设时限要求。"></textarea>
+											</div>
+	
+										</div>
+									</div>
+	               				</div>
+	           				</div>
                    		</div>
-                   		<div class="form-fieldset">
-                   			<div class="form-fieldset-title">
-                   				<span><i class="fa fa-list-ol"></i> 工单编制-承接相关</span>
-                   				<div class="form-fieldset-tools pull-right">
-                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
-                   				</div>
-                   			</div>
-                   			<div class="form-fieldset-body">
-                   				<div class="row">
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="providerUserName">工单接收人  <i class="needIcon"></i></label>
-											<input type="text" class="form-control" id="providerUserName" placeholder="工单接收人">
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="providerName">工程服务商</label>
-											<input type="text" class="form-control" id="providerName" placeholder="工程服务商">
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="buildType">建设时限  <i class="needIcon"></i></label>
-											<select name="" class="form-control" id="buildType" name="buildType">
-												<option selected="" value="">请选择</option>
-												<option value="">7天</option>
-												<option value="">55天</option>
-												<option value="">其他</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="proDate">归属工期  <i class="needIcon"></i></label>
-											<input type="text" class="form-control" id="proDate" placeholder="请先选择建设时限">
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="proManagerName">项目经理</label>
-											<input type="text" class="form-control" id="proManagerName" placeholder="项目经理">
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="proManagerTel">项目经理联系方式  <i class="needIcon"></i></label>
-											<div class="input-group">
-												<input type="text" class="form-control" id="proManagerTel" placeholder="项目经理联系方式">
-												<a href="#" class="input-group-addon">
-													<i class="fa fa-refresh"></i>
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="pdmTime">设计完成时限  <i class="needIcon"></i></label>
-											<input type="text" class="form-control" id="pdmTime" placeholder="设计完成时限">
-										</div>
-									</div>
-									<div class="col-sm-3">
-										<div class="form-group">
-											<label for="xqTouzi">前评估投资(元)  <i class="needIcon"></i></label>
-											<input type="text" class="form-control" id="xqTouzi" placeholder="前评估投资">
-										</div>
-									</div>
-								</div>
-               				</div>
-           				</div>
-                   		<div class="form-fieldset">
-                   			<div class="form-fieldset-title">
-                   				<span><i class="fa fa-list-ol"></i> 工单编制-工单描述</span>
-                   				<div class="form-fieldset-tools pull-right">
-                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
-                   				</div>
-                   			</div>
-                   			<div class="form-fieldset-body">
-               				</div>
-           				</div>
-                   		<div class="form-fieldset">
-                   			<div class="form-fieldset-title">
-                   				<span><i class="fa fa-list-ol"></i> 工单编制-附件</span>
-                   				<div class="form-fieldset-tools pull-right">
-                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
-                   				</div>
-                   			</div>
-                   			<div class="form-fieldset-body">
-               				</div>
+           				<div class="form-actions">
+           					<button class="btn red btn-circle"><i class="fa fa-check"></i> 提交</button>
+           					<button class="btn default btn-circle"><i class="fa fa-refresh"></i> 重置</button>
            				</div>
                    </form>
             	</div>
@@ -190,8 +198,12 @@
         <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
         <!--业务依赖-->
-        <script src="../../static/js/app.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
         <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
 	</body>

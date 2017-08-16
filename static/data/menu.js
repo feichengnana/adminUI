@@ -19,13 +19,6 @@ var menus = [{
             "uri":"html/pages/addForm.html",
             "childrens":[]
         },{
-            "id":"016",
-            "pid":"01",
-            "icon":"",
-            "name":"弹出表单",
-            "uri":"html/pages/addModal.html",
-            "childrens":[]
-        },{
             "id":"017",
             "pid":"01",
             "icon":"",
@@ -47,21 +40,21 @@ var menus = [{
             "pid":"02",
             "icon":"",
             "name":"排版",
-            "uri":"html/pages/layout.html",
+            "uri":"html/elements/layout.html",
             "childrens":[]        
         },{
             "id":"022",
             "pid":"02",
             "icon":"",
             "name":"按钮",
-            "uri":"html/pages/buttons.html",
+            "uri":"html/elements/buttons.html",
             "childrens":[]        
         },{
             "id":"023",
             "pid":"02",
             "icon":"",
             "name":"工具类",
-            "uri":"html/pages/funClass.html",
+            "uri":"html/elements/funClass.html",
             "childrens":[]        
         }
     ]

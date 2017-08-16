@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        
+        <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
+	</head>
+	<body>
+		<div class="page-content scroller">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 表单向导 </span>
+                            </div>
+                        </div>
+                        <div class="portlet-body" id="form_wizard_1">
+                        	<form class="form-horizontal" action="#" id="submit_form" method="POST">
+								<div class="form-wizard form-wizard-line">
+									<div class="form-body">
+										<ul class="nav nav-pills nav-justified steps">
+                                            <li>
+                                                <a href="#tab1" data-toggle="tab" class="step">
+                                                    <span class="number"> 1 </span>
+                                                    <span class="desc"><i class="fa fa-check"></i> 账号设置 </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#tab2" data-toggle="tab" class="step">
+                                                    <span class="number"> 2 </span>
+                                                    <span class="desc"><i class="fa fa-check"></i> 个人信息 </span>
+                                                </a>
+                                            </li>
+											<li>
+												<a href="#tab3" data-toggle="tab" class="step">
+													<span class="number"> 3 </span>
+													<span class="desc">
+		                                            <i class="fa fa-check"></i> 支付设置 </span>
+												</a>
+											</li>
+											<li>
+												<a href="#tab4" data-toggle="tab" class="step">
+													<span class="number"> 4 </span>
+													<span class="desc">
+		                                            <i class="fa fa-check"></i> 确认 </span>
+												</a>
+											</li>
+										</ul>
+										<div id="bar" class="progress progress-striped" role="progressbar">
+											<div class="progress-bar progress-bar-success"> </div>
+										</div>
+										<div class="tab-content padding-16">
+											<div class="tab-pane active" id="tab1">
+												<div class="form-group">
+													<label class="control-label col-sm-3">用户名
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="username" />
+														<span class="help-block"> 请填写您的用户名 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">密码
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="password" class="form-control" name="password" id="submit_form_password" />
+														<span class="help-block"> 请填写六位以上的密码 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">确认密码
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="password" class="form-control" name="rpassword" />
+														<span class="help-block"> 请确认您的密码 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">邮箱
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="email" />
+														<span class="help-block"> 请填写您的邮箱地址 </span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="tab2">
+												<div class="form-group">
+													<label class="control-label col-sm-3">姓名
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="fullname" />
+														<span class="help-block"> 请填写您的真实姓名 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">手机号码
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="phone" />
+														<span class="help-block"> 请填写您的手机号码 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">性别
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<div class="radio-list">
+															<label><input type="radio" name="gender" value="M" data-title="Male" /> 男 </label>
+															<label><input type="radio" name="gender" value="F" data-title="Female" /> 女 </label>
+														</div>
+														<div id="form_gender_error"> </div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">住址
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="address" />
+														<span class="help-block"> 请填写您的住址 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">所在城市
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="city" />
+														<span class="help-block"> 请填写您所在城市 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">备注</label>
+													<div class="col-sm-4">
+														<textarea class="form-control" rows="3" name="remarks"></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="tab3">
+												<div class="form-group">
+													<label class="control-label col-sm-3">银行卡所有者
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="card_name" />
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">银行卡卡号
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" class="form-control" name="card_number" />
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">CVC码
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" placeholder="" class="form-control" name="card_cvc" />
+														<span class="help-block">请输入银行卡背面后三位数字 </span>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="control-label col-sm-3">到期时间(MM/YYYY)
+		                                                <span class="required"> * </span>
+		                                            </label>
+													<div class="col-sm-4">
+														<input type="text" placeholder="MM/YYYY" maxlength="7" class="form-control" name="card_expiry_date" />
+														<span class="help-block"> e.g 11/2020 </span>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="tab4">
+												<div class="dividerBox dividerBox-spinner dividerBox-blue">
+													<div class="dividerBox-title"><span>账号信息</span></div>
+													<div class="dividerBox-body">
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">用户名:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="username"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">邮箱:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="email"> </p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dividerBox dividerBox-spinner dividerBox-blue">
+													<div class="dividerBox-title"><span>个人信息</span></div>
+													<div class="dividerBox-body">
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">姓名:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="fullname"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">性别:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="gender"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">电话:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="phone"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">住址:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="address"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">所在城市:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="city"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">备注:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="remarks"> </p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dividerBox dividerBox-spinner dividerBox-blue">
+													<div class="dividerBox-title"><span>支付信息</span></div>
+													<div class="dividerBox-body">
+														<div class="row">
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">所有者:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="card_name"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">卡号:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="card_number"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">CVC码:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="card_cvc"> </p>
+																	</div>
+																</div>
+															</div>
+															<div class="col-sm-6">
+																<div class="form-group">
+																	<label class="control-label col-sm-3">到期日期:</label>
+																	<div class="col-sm-4">
+																		<p class="form-control-static" data-display="card_expiry_date"> </p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-actions">
+										<div class="row">
+											<div class="col-sm-offset-3 col-sm-9">
+												<a href="javascript:;" class="btn blue btn-circle button-previous">
+													<i class="fa fa-angle-left"></i> 上一步 </a>
+												<a href="javascript:;" class="btn green btn-circle button-next"> 下一步
+													<i class="fa fa-angle-right"></i>
+												</a>
+												<a href="javascript:;" class="btn red btn-circle button-submit"> 确认提交
+													<i class="fa fa-check"></i>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+                    	</div>
+               	    </div>
+				</div>
+			</div>
+		</div>
+		<!--[if lt IE 9]>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/respond.min.js"></script>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/ie8.fix.min.js"></script>
+		<![endif]-->
+		<!--插件引入-->
+		<script type="text/javascript">
+			//数据初始化
+		</script>
+		<!--基础依赖-->
+        <script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <!--业务依赖-->
+        <script src="../../static/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
+        <!--当前页面依赖-->
+        <script src="formWizard.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

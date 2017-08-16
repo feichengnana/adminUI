@@ -24,11 +24,11 @@ var table = table.dataTable({
 			"render": function(a, b, c, d) {
 				var html = '';
 				if(a < 6){
-					html += '<button class="btn btn-info btn-link btn-opt"><i class="fa fa-search-plus"></i></button>';
-					html += '<button class="btn btn-success btn-link btn-opt" disabled="disabled"><i class="fa fa-edit"></i></button>';
+					html += '<button onclick="findDetail('+c.proId+')" class="btn btn-info btn-link btn-xs"><i class="fa fa-search-plus"></i></button>';
+					html += '<button onclick="editDetail('+c.proId+')" class="btn btn-success btn-link btn-xs" '+(a>3?'disabled="disabled"':'')+'><i class="fa fa-edit"></i></button>';
 				}else{
-					html += '<button class="btn btn-info btn-xs"><i class="fa fa-search-plus"></i></button>';
-					html += '<button class="btn btn-success btn-xs" disabled="disabled"><i class="fa fa-edit"></i></button>';
+					html += '<button onclick="findDetail('+c.proId+')" class="btn btn-info btn-xs"><i class="fa fa-search-plus"></i></button>';
+					html += '<button onclick="editDetail('+c.proId+')" class="btn btn-success btn-xs" '+(a>9?'disabled="disabled"':'')+'><i class="fa fa-edit"></i></button>';
 				}
 				return html;
 			}
@@ -103,14 +103,14 @@ var table = table.dataTable({
 	"data": dataTableData,
 	"oLanguage": {
 			"sProcessing": "处理中...",
-			"sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;显示 _MENU_ 项结果",
+			"sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
 			"sZeroRecords": "没有匹配结果",
-			"sInfo": "显示第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
-			"sInfoEmpty": "显示第 0 至 0 条记录，共 0 项",
+			"sInfo": "当前为第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
+			"sInfoEmpty": "当前为第 0 至 0 条记录，共 0 项",
 			"sInfoFiltered": "(由 _MAX_ 条记录结果过滤)",
 			"sInfoPostFix": "",
 			"sSearch": "",
-			"sSearchPlaceholder": "快速搜索",
+			"sSearchPlaceholder": "输入关键字筛选表格",
 			"sUrl": "",
 			"sDecimal": "",
 			"sThousands": ",",
@@ -152,7 +152,7 @@ var table = table.dataTable({
 			"targets": "_all",
 			"defaultContent": ''
 	}],
-	"buttons":  [ 'copy', 'excel', 'pdf', 'colvis' ],
+	"buttons":  [ 'copy', 'excel', 'colvis' ],//'pdf',
 	"initComplete": function(settings, json) {
 	    var html = $('#toolbars').html();
 	    $('#table-btns').append(html);
@@ -162,3 +162,34 @@ var table = table.dataTable({
         $(":checkbox[name='td-checkbox']").prop('checked', false);  
     }
 });
+
+function findDetail(itemId){
+	$('#findDetailModal').modal('show')
+}
+
+function editDetail(itemId){
+	$('#editDetailModal').modal('show')
+}
+
+function addItem(){
+	
+}
+
+function delItem(){
+	var checkedItem = $('#dataTable_wrapper').find('input[type=checkbox][name=td-checkbox]:checked');
+	if(checkedItem.length == 0){
+		layer.alert('请先在表格中勾选您要删除的项目', {
+		  icon: 0,
+		  skin: 'layer-ext-moon'
+		})
+		return false;
+	}else{
+		layer.confirm('您选择了'+checkedItem.length+'条记录，确定要将其删除吗',{
+		  btn: ['删除','取消'],
+		  icon: 0,
+		  skin: 'layer-ext-moon'
+		}, function(){
+			layer.msg('已为您删除所选记录！');
+		})
+	}
+}

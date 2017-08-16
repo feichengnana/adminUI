@@ -1,21 +1,21 @@
 /***
 Custom buttons based on bootstrap SASS
 ***/
-
-.btn {
-	outline: none !important;
-    @if $theme-type == "default" { 
-	   box-shadow: none !important;   
-    }
-
-    &:hover {
-        transition: all 0.3s;
-    }
-}
-
-.btn:not(.btn-sm):not(.btn-lg) {
-    line-height: 1.44;
-}
+//
+//.btn {
+//	outline: none !important;
+//  @if $theme-type == "default" { 
+//	   box-shadow: none !important;   
+//  }
+//
+//  &:hover {
+//      transition: all 0.3s;
+//  }
+//}
+//
+//.btn:not(.btn-sm):not(.btn-lg) {
+//  line-height: 1.44;
+//}
 
 /***
 Custom color buttons 

@@ -77,6 +77,7 @@ Form Layouts
         padding: 20px 20px; 
         margin: 0;
         background-color: #f5f5f5;
+        text-align: center;
 
         @if $theme-type == "default" {
             border-top: 1px solid $general-panel-border-color;
@@ -234,12 +235,12 @@ Form Layouts
     .form-group {
         margin: 0; 
         border-bottom: 1px solid #efefef;
-        padding: 15px 0;
+        padding: 5px 0;
 
         &.last {
             border-bottom: 0;
             margin-bottom: 0;
-            padding-bottom: 13px;
+            padding-bottom: 3px;
         }
 
         .help-block {

@@ -3,36 +3,38 @@
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="en">
-    <!--<![endif]-->
-    <!-- BEGIN HEAD -->
+	<!--<![endif]-->
+	<!-- BEGIN HEAD -->
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="renderer" content="webkit">
-        
-        <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="renderer" content="webkit">
+
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/css/dataTables.bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/FixedColumns/fixedColumns.bootstrap.min.css"/>
-		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/Buttons/buttons.dataTables.css"/>
-		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/Buttons/buttons.bootstrap.css"/>
-      	<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/FixedColumns/fixedColumns.bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/Buttons/buttons.dataTables.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/plugins/datatables/extensions/Buttons/buttons.bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css" />
 	</head>
+
 	<body>
 		<div class="page-content scroller" data-height="100%">
 			<div class="portlet light bordered">
-                <div class="portlet-title tabbable-line">
-                    <div class="caption font-dark">
-                        <span class="caption-subject bold uppercase"> 工程订单管理-datatables.js</span>
-                    </div>
-                </div>
-                <div class="portlet-body">
-                	<div class="page-search">
+				<div class="portlet-title tabbable-line">
+					<div class="caption font-dark">
+						<span class="caption-subject bold uppercase"> 工程订单管理-datatables.js</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="page-search">
 						<form class="form-horizontal" action="">
 							<div class="row page-search-form">
 								<div class="col-sm-4">
@@ -54,13 +56,13 @@
 								<div class="col-sm-4">
 									<div class="input-group date date-picker">
 										<span class="input-group-addon">时间选择</span>
-                                        <input type="text" class="form-control" readonly>
-                                        <span class="input-group-btn">
+										<input type="text" class="form-control" readonly>
+										<span class="input-group-btn">
                                             <button class="btn default" type="button">
                                                 <i class="fa fa-calendar"></i>
                                             </button>
                                         </span>
-                                    </div>
+									</div>
 								</div>
 								<div class="col-sm-12 page-search-more">
 									<a href="javascript:;">更多搜索 <i class="fa fa-angle-double-right"></i></a>
@@ -69,9 +71,9 @@
 									<div class="col-sm-4">
 										<div class="input-group date-picker input-daterange">
 											<span class="input-group-addon">时间段</span>
-                                            <input type="text" class="form-control" name="from">
-                                            <span class="input-group-addon"> - </span>
-                                            <input type="text" class="form-control" name="to"> 
+											<input type="text" class="form-control" name="from">
+											<span class="input-group-addon"> - </span>
+											<input type="text" class="form-control" name="to">
 										</div>
 									</div>
 									<div class="col-sm-4">
@@ -101,24 +103,176 @@
 								</div>
 							</div>
 							<div class="page-search-action">
-								<button type="button" class="btn btn-block btn-danger"><i class="ace-icon fa fa-search"></i> 查询</button>
-								<button type="reset" class="btn btn-block btn-warning hidden"><i class="ace-icon fa fa-repeat"></i> 重置</button>
+								<button type="button" class="btn btn-block btn-circle red"><i class="ace-icon fa fa-search"></i> 查询</button>
+								<button type="reset" class="btn btn-block btn-circle yellow hidden"><i class="ace-icon fa fa-repeat"></i> 重置</button>
 							</div>
 						</form>
 					</div>
 					<div id="toolbars" class="hidden">
-						<div class="btn-group">
-							<button type="button" onclick="addItem()" class="btn btn-danger"><i class="fa fa-plus-circle"></i> 新增</button>
-							<button type="button" class="btn btn-warning"><i class="fa fa-times"></i> 删除</button>
+						<div class="btn-group btn-group-circle">
+							<a href="addForm.html" class="btn red"><i class="fa fa-plus-circle"></i> 新增</a>
+							<button onclick="delItem()" type="button" class="btn yellow"><i class="fa fa-times"></i> 删除</button>
 						</div>
-						<div class="btn-group">
-							<button type="button" class="btn btn-default"><i class="fa fa-gear"></i> 其他操作</button>
-							<button type="button" class="btn btn-default"><i class="fa fa-gear"></i> 其他操作</button>
+						<div class="btn-group btn-group-circle">
+							<button type="button" class="btn blue"><i class="fa fa-gear"></i> 导入</button>
+							<button type="button" class="btn blue"><i class="fa fa-gear"></i> 导出</button>
+						</div>
+						<div class="btn-group btn-group-circle">
+							<button type="button" class="btn default"><i class="fa fa-gear"></i> 其他操作</button>
+							<button type="button" class="btn default"><i class="fa fa-gear"></i> 其他操作</button>
 						</div>
 					</div>
-                	<table id="dataTable" class="table table-striped table-bordered table-hover table-header-fixed"></table>
-            	</div>
-       	    </div>
+					<table id="dataTable" class="table table-striped table-bordered table-hover table-header-fixed"></table>
+				</div>
+			</div>
+		</div>
+		<!--弹出添加-->
+		<div class="modal fade" id="findDetailModal" tabindex="-1" data-backdrop="static" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">查看内容</h4>
+					</div>
+					<div class="modal-body form">
+						<div class="form-body form-horizontal form-row-seperated">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+                                        <label class="control-label col-sm-2">工单名称:</label>
+                                        <div class="col-sm-10">
+                                            <p class="form-control-static"> 集客需求名称--测试29-JK </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">项目编码:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 20170809150702 </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">建设性质:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 新建 </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">地市:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 德州 </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">区县:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 齐河县 </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">工单接收人:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 崔国动（菏泽） </p>
+                                        </div>
+                                    </div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+                                        <label class="control-label col-sm-4">工程服务商:</label>
+                                        <div class="col-sm-8">
+                                            <p class="form-control-static"> 山东省邮电工程有限公司 </p>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn-circle" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹出编辑-->
+		<div class="modal fade" id="editDetailModal" data-backdrop="static" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">编辑内容</h4>
+					</div>
+					<div class="modal-body form">
+						<div class="form-body">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-group">
+										<label for="proName">工单名称  <i class="needIcon"></i></label>
+										<div class="input-group">
+											<input type="text" class="form-control" id="proName" placeholder="工程订单名称.">
+											<span class="input-group-btn">
+												<button type="button" class="btn btn-success">勾选需求</button>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="proCode">项目编码</label>
+										<input type="text" class="form-control" id="proCode" placeholder="编码格式：xxx-xx">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="buildScene">建设性质  <i class="needIcon"></i></label>
+										<select name="buildScene" class="form-control select2me" style="width:100%" id="buildScene">
+											<option value="0">新建</option>
+											<option value="1">改造</option>
+											<option value="2">扩容</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="cityName">地市</label>
+										<input type="text" class="form-control" id="cityName" placeholder="">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="form-group">
+										<label for="disName">区县</label>
+										<input type="text" class="form-control" id="disName" placeholder="">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="providerUserName">工单接收人  <i class="needIcon"></i></label>
+										<input type="text" class="form-control" id="providerUserName" placeholder="工单接收人">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label for="providerName">工程服务商</label>
+										<input type="text" class="form-control" id="providerName" placeholder="工程服务商">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger btn-circle"><i class="fa fa-check"></i> 提交</button>
+						<button type="button" class="btn btn-default btn-circle" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--[if lt IE 9]>
 		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
@@ -131,18 +285,19 @@
 			//数据初始化
 		</script>
 		<!--基础依赖-->
-        <script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
-        <!--业务依赖-->
-        <script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
-        <!--<script src="../../static/js/datatable.js" type="text/javascript" charset="utf-8"></script>-->
-        <script src="../../static/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<!--业务依赖-->
+		<!--<script src="../../static/js/datatable.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../../static/plugins/datatables/js/jquery.dataTables.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/plugins/datatables/js/dataTables.bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--表格-固定列-->
 		<script src="../../static/plugins/datatables/extensions/FixedColumns/dataTables.fixedColumns.min.js" type="text/javascript" charset="utf-8"></script>
@@ -157,9 +312,10 @@
 		<script src="../../static/plugins/datatables/extensions/Buttons/buttons.print.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/plugins/datatables/extensions/Buttons/buttons.colVis.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--表格-结束-->
-        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
-        <!--当前页面依赖-->
-        <script src="../../static/data/datatable.js" type="text/javascript" charset="utf-8"></script>
-        <script src="list.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<!--当前页面依赖-->
+		<script src="../../static/data/datatable.js" type="text/javascript" charset="utf-8"></script>
+		<script src="list.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+
 </html>

@@ -6,11 +6,12 @@ Bootstrap Wizard
 	
 	.progress {
   		margin-bottom: 30px;
+  		height: 10px;
 	}
 
 	.steps {
 		padding: 10px 0;
-	  	margin-bottom: 15px;
+	  	margin-bottom: 0;
 	  	background-color: #fff ;
 	 	background-image: none ;
 	  	filter:none ;
@@ -89,6 +90,119 @@ Bootstrap Wizard
 				}
 			}
 		}
+	}
+	&.form-wizard-line{
+	    .steps{
+	        > li {
+                > a.step {
+                    position: relative;
+                    > .number{
+                        position: relative;
+                        color: #333;
+                        border:3px solid #e5e5e5;
+                        background-color: #FFF;
+                        margin:auto auto 5px;
+                        font-size: 18px;
+                        line-height: 18px;
+                        z-index: 5 !important;
+                    }
+                    > .desc {
+                        display: block;
+                        color: #95A5A6!important;
+                        
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 32px;
+                            width: 50%;
+                            height: 3px;
+                            margin-top: -1px;
+                            background-color: #e5e5e5;
+                            z-index: 4 !important;;
+                        }
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            top: 32px;
+                            width: 50%;
+                            height: 3px;
+                            margin-top: -1px;
+                            background-color: #e5e5e5;
+                            z-index: 4 !important;;
+                        }
+                    }
+                }
+                
+                &.done{
+                    > a.step {
+                        
+                        > .number{
+                            border-color: #26C281!important;
+                            color: #26C281!important;
+                            
+                        }
+                        
+                        > .desc {
+                            color: #26C281!important;
+                            > .fa{color: #26C281!important;}
+                            
+                            &:before{
+                                background-color: #26C281!important;
+                            }
+                            &:after{
+                                background-color: #26C281!important;
+                            }
+                        }
+                    }
+                }
+                
+                
+                &.active{
+                    > a.step {
+                        > .number{
+                            border-color: #E7505A!important;
+                            color: #E7505A!important;
+                        }
+                        
+                        > .desc {
+                            color: #E7505A!important;
+                            > .fa{color: #E7505A!important;}
+                            
+                            &:before{
+                                background-color: #E7505A!important;
+                            }
+                            &:after{
+                                background-color: #E7505A!important;
+                            }
+                        }
+                    }
+                }
+                
+                &:first-child {
+                    > a.step {
+                        > .desc{
+                            &:before{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+                &:last-child {
+                    > a.step {
+                        > .desc{
+                            &:after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                
+            }
+	    }
+	    .desc{display: block;}
 	}
 }
 
