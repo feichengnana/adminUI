@@ -20,8 +20,189 @@
 		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
 	</head>
 	<body>
-		<div class="page-content scroller">
-			
+		<div class="page-content">
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> alert 警示框</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<table class="table">
+                        		<tr>
+                        			<td>基类</td>
+                        			<td>
+                        				.alert
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>主题色</td>
+                        			<td>
+                        				.alert-success/.alert-info/.alert-warning/.alert-danger
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>辅助类</td>
+                        			<td>
+                        				.alert-title 标题
+                        			</td>
+                        		</tr>
+                        	</table>
+                        	<div class="alert alert-success">
+                        		<strong>操作成功！</strong> 您已成功添加一条数据；
+                         	</div>
+                        	<div class="alert alert-info">
+                        		<strong>通知！</strong> 您已成功添加一条数据；
+                         	</div>
+                        	<div class="alert alert-warning">
+                        		<strong>注意啦！</strong> 您还没有选中你要操作的对象；
+                         	</div>
+                        	<div class="alert alert-danger">
+                        		<strong>警告！</strong> 您尚未注册此应用，请先进行注册操作；
+                         	</div>
+                         	<div class="alert alert-success">
+                         		<button type="button" class="close" data-dismiss="alert"></button>
+                         		<h4 class="alert-heading">操作成功！</h4>
+                         		<p>您已成功注册xx系统或添加某条数据，可以在左侧菜单中点击相应栏目进行查看！</p>
+                         		<p>
+                         			<button type="button" class="btn green"> 操作按钮 </button>
+                         			<button type="button" class="btn btn-link"> 取消 </button>
+                         		</p>
+                         	</div>
+                        	<pre>
+&lt;div class="alert alert-success"&gt;
+	&lt;strong&gt;操作成功！&lt;/strong&gt; 您已成功添加一条数据；
+&lt;/div&gt;</pre>
+                        	<pre>
+&lt;div class="alert alert-success"&gt;
+	&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;/button&gt;
+	&lt;h4 class="alert-heading"&gt;操作成功！&lt;/h4&gt;
+	&lt;p&gt;您已成功注册xx系统或添加某条数据，可以在左侧菜单中点击相应栏目进行查看！&lt;/p&gt;
+&lt;/div&gt;</pre>
+                    	</div>
+                	</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> note 信息框</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<table class="table">
+                        		<tr>
+                        			<td>基类</td>
+                        			<td>
+                        				.note
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>主题色</td>
+                        			<td>
+                        				.note-success/.note-info/.note-warning/.note-danger
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>辅助类</td>
+                        			<td>
+                        				无
+                        			</td>
+                        		</tr>
+                        	</table>
+                        	<div class="note note-success">
+                        		您已成功添加一条数据；
+                         	</div>
+                        	<div class="note note-info">
+                        		您已成功添加一条数据；
+                         	</div>
+                        	<div class="note note-warning">
+                        		您还没有选中你要操作的对象；
+                         	</div>
+                        	<div class="note note-danger">
+                        		您尚未注册此应用，请先进行注册操作；
+                         	</div>
+                         	<div class="note note-success">
+                         		<h4 class="block">操作成功！</h4>
+                         		<p>您已成功注册xx系统或添加某条数据，可以在左侧菜单中点击相应栏目进行查看！</p>
+                         	</div>
+                        	<pre>
+&lt;div class="note note-success"&gt;
+	您已成功添加一条数据；
+&lt;/div&gt;</pre>
+                        	<pre>
+&lt;div class="note note-success"&gt;
+	&lt;h4 class="block"&gt;操作成功！&lt;/h4&gt;
+	&lt;p&gt;您已成功注册xx系统或添加某条数据，可以在左侧菜单中点击相应栏目进行查看！&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+                    	</div>
+                	</div>
+				</div>
+				
+				<div class="col-xs-6">
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 小角标</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<table class="table">
+                        		<thead>
+                        			<tr>
+                        				<th>Class</th>
+                        				<th>Labels</th>
+                        				<th>Badges</th>
+                        				<th>Roundless Badges</th>
+                        			</tr>
+                        		</thead>
+                        		<tbody>
+                        			<tr>
+                        				<td>Default</td>
+                        				<td><span class="label label-default"> default </span></td>
+                        				<td><span class="badge badge-default"> 5 </span></td>
+                        				<td><span class="badge badge-default badge-roundless"> 3 </span></td>
+                        			</tr>
+                        			<tr>
+                        				<td>Primary</td>
+                        				<td><span class="label label-primary"> primary </span></td>
+                        				<td><span class="badge badge-primary"> 5 </span></td>
+                        				<td><span class="badge badge-primary badge-roundless"> 3 </span></td>
+                        			</tr>
+                        			<tr>
+                        				<td>info</td>
+                        				<td><span class="label label-info"> info </span></td>
+                        				<td><span class="badge badge-info"> 5 </span></td>
+                        				<td><span class="badge badge-info badge-roundless"> hot </span></td>
+                        			</tr>
+                        			<tr>
+                        				<td>success</td>
+                        				<td><span class="label label-success"> success </span></td>
+                        				<td><span class="badge badge-success"> 5 </span></td>
+                        				<td><span class="badge badge-success badge-roundless"> new </span></td>
+                        			</tr>
+                        			<tr>
+                        				<td>danger</td>
+                        				<td><span class="label label-danger"> danger </span></td>
+                        				<td><span class="badge badge-danger"> 5 </span></td>
+                        				<td><span class="badge badge-danger badge-roundless"> 3 </span></td>
+                        			</tr>
+                        			<tr>
+                        				<td>warning</td>
+                        				<td><span class="label label-warning"> warning </span></td>
+                        				<td><span class="badge badge-warning"> 5 </span></td>
+                        				<td><span class="badge badge-warning badge-roundless"> 3 </span></td>
+                        			</tr>
+                        		</tbody>
+                        	</table>
+                    	</div>
+                	</div>
+            	</div
+				<div class="col-xs-6"></div>
+			</div>
 		</div>
 		<!--[if lt IE 9]>
 		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
