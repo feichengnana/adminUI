@@ -68,3 +68,6 @@ html,body,.page-content{height:100%;}
 }
 
 
+//selectL2R
+.selectL2R .panel-body{overflow: auto;}
+.selectL2R .selectR tr,.selectL2L tr,.selectL2R .selectR li,.selectL2L li{cursor: pointer;}

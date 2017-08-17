@@ -70,35 +70,35 @@ var menus = [{
             "pid":"03",
             "icon":"",
             "name":"表单校验",
-            "uri":"html/pages/bootstrapValidate.html",
+            "uri":"html/components/bootstrapValidate.html",
             "childrens":[]        
         },{
             "id":"032",
             "pid":"03",
             "icon":"",
             "name":"树形、筛选操作",
-            "uri":"html/pages/treeSelect.html",
+            "uri":"html/components/treeSelect.html",
             "childrens":[]    
         },{
             "id":"033",
             "pid":"03",
             "icon":"",
             "name":"文件上传",
-            "uri":"html/pages/webUploader.html",
+            "uri":"html/components/webUploader.html",
             "childrens":[]        
         },{
             "id":"034",
             "pid":"03",
             "icon":"",
             "name":"固定格式文本",
-            "uri":"html/pages/inputMsk.html",
+            "uri":"html/components/inputMsk.html",
             "childrens":[]        
         },{
             "id":"035",
             "pid":"03",
             "icon":"",
-            "name":"提示框",
-            "uri":"html/pages/sweetAlert.html",
+            "name":"提示弹窗",
+            "uri":"html/components/layer.html",
             "childrens":[]        
         }
     ]

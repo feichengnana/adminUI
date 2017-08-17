@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+    <!--<![endif]-->
+    <!-- BEGIN HEAD -->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        
+        <link rel="stylesheet" type="text/css" href="../../static/plugins/bootstrap/css/bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/font-awesome/css/font-awesome.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/zTree/css/zTreeStyle.css"/>
+      	
+		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
+	</head>
+	<body>
+		<div class="page-content">
+			<div class="row">
+				<div class="col-sm-12">
+					<!--<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 树形选择</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body form">
+                            <form action="" method="post">
+                            	<div class="row">
+                            		<div class="col-sm-4">
+                            			<div class="form-group">
+			                                <label for="selectTree" class="control-label">下拉树选（zTree）</label>
+			                                <div class="input-group">
+			                                	<input id="selectTree" onclick="showTree()" readonly name="selectTree" type="text" class="form-control"/>
+			                                	<span class="input-group-addon"><i class="fa fa-th-list"></i></span>
+			                                </div>
+			                            </div>
+                            		</div>
+                            		<div class="col-sm-4">
+                            			<div class="form-group">
+			                                <label for="modalTtee" class="control-label">弹出树选（zTree）</label>
+			                                <div class="input-group">
+			                                	<input id="modalTtee" name="modalTtee" data-toggle="modal" data-target="#modalTree" type="text" readonly class="form-control"/>
+			                                	<span class="input-group-addon"><i class="fa fa-th-list"></i></span>
+			                                </div>
+			                            </div>
+                            		</div>
+                            		<div class="col-sm-4">
+                            			<div class="form-group">
+			                                <label for="tableTree" class="control-label">弹出树选表格（bootstrapTable）</label>
+			                                <div class="input-group">
+			                                	<input id="tableTree" name="tableTree" data-toggle="modal" data-target="#modalTableTree" type="text" readonly class="form-control"/>
+			                                	<span class="input-group-addon"><i class="fa fa-th-list"></i></span>
+			                                </div>
+			                            </div>
+                            		</div>
+                            	</div>
+                            </form>
+                    	</div>
+               	    </div>-->
+					<div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 左右选择-table</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="alert alert-info">
+				                左右选择，依赖selectL2R.min.js，内容可以是table也可以是ul。<br />
+				                可以通过selectL2R.init('.selectL2R',initData)来初始化插件，initData为id的数字，可以为空。<br />
+				                可以通过selectL2R.getResult('.selectL2R')来获取选择的结果,获取的结果为选择内容id的数组。
+				            </div>
+				            <div id="selectL2R" class="row selectL2R">
+		                        <div class="col-sm-4 col-sm-offset-1">
+		                            <div class="panel panel-info">
+		                                <div class="panel-heading">选择列表</div>
+		                                <div class="panel-body selectL" style="height: 200px;overflow: auto;">
+		                                    <table class="table table-bordered table-condensed">
+		                                        <thead>
+		                                            <tr data-id="01">
+		                                                <th width="30"></th>
+		                                                <th>组织机构</th>
+		                                                <th>接口人</th>
+		                                            </tr>
+		                                        </thead>
+		                                        <tbody>
+		                                            <tr data-id="01">
+		                                                <td>1</td>
+		                                                <td>中国联通总部-财务部</td>
+		                                                <td>李媛媛</td>
+		                                            </tr>
+		                                            <tr data-id="02">
+		                                                <td>2</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="03">
+		                                                <td>3</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="04">
+		                                                <td>4</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="05">
+		                                                <td>5</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="06">
+		                                                <td>6</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="07">
+		                                                <td>7</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="08">
+		                                                <td>8</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="09">
+		                                                <td>9</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                            <tr data-id="10">
+		                                                <td>10</td>
+		                                                <td>中国联通总部-</td>
+		                                                <td></td>
+		                                            </tr>
+		                                        </tbody>
+		                                    </table>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-1 text-center selectL2R-actions">
+		                            <button title="选择" class="selectL2R-select btn btn-danger btn-outline btn-block"><i class="fa fa-angle-right"></i></button>
+		                            <button title="选择全部" class="selectL2R-selectAll btn btn-danger btn-outline btn-block"><i class="fa fa-angle-double-right"></i></button>
+		                            <button title="取消" class="selectL2R-delete btn btn-warning btn-outline btn-block"><i class="fa fa-angle-left"></i></button>
+		                            <button title="取消全部" class="selectL2R-deleteAll btn btn-warning btn-outline btn-block"><i class="fa fa-angle-double-left"></i></button>
+		                        </div>
+		                        <div class="col-sm-4">
+		                            <div class="panel panel-success">
+		                                <div class="panel-heading">已选列表</div>
+		                                <div class="panel-body selectR" style="height: 200px;overflow: auto;">
+		                                    <table class="table table-bordered table-condensed">
+		                                        <thead>
+		                                            <tr>
+		                                                <th width="30"></th>
+		                                                <th>组织机构</th>
+		                                                <th>接口人</th>
+		                                            </tr>
+		                                        </thead>
+		                                        <tbody>
+		                                        </tbody>
+		                                    </table>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-2">
+		                            <button class="btn btn-danger" type="button" id="getSelectL2R">获取结果</button>
+		                            <div id="selectL2RResult"></div>
+		                        </div>
+		                    </div>
+                    	</div>
+               	    </div>
+               	    <div class="portlet light bordered">
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> 左右选择-ul</span>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                        	<div id="selectL2R-ul" class="row selectL2R">
+		                        <div class="col-sm-4 col-sm-offset-1">
+		                            <div class="panel panel-info">
+		                                <div class="panel-heading">请选择爱吃的水果</div>
+		                                <div class="panel-body selectL" style="height: 200px;overflow: auto;">
+		                                    <ul class="list-group">
+		                                    	<li data-id="a1" class="list-group-item">苹果</li>
+		                                        <li data-id="a2" class="list-group-item">火龙果</li>
+		                                        <li data-id="a3" class="list-group-item">榴莲</li>
+		                                        <li data-id="a4" class="list-group-item">香蕉</li>
+		                                        <li data-id="a5" class="list-group-item">芒果</li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-1 text-center selectL2R-actions">
+		                            <button title="选择" class="selectL2R-select btn btn-danger btn-outline btn-block"><i class="fa fa-angle-right"></i></button>
+		                            <button title="选择全部" class="selectL2R-selectAll btn btn-danger btn-outline btn-block"><i class="fa fa-angle-double-right"></i></button>
+		                            <button title="取消" class="selectL2R-delete btn btn-warning btn-outline btn-block"><i class="fa fa-angle-left"></i></button>
+		                            <button title="取消全部" class="selectL2R-deleteAll btn btn-warning btn-outline btn-block"><i class="fa fa-angle-double-left"></i></button>
+		                        </div>
+		                        <div class="col-sm-4">
+		                            <div class="panel panel-success">
+		                                <div class="panel-heading">已选列表</div>
+		                                <div class="panel-body selectR" style="height: 200px;overflow: auto;">
+		                                    <ul class="list-unstyled">
+		                                    </ul>
+		                                </div>
+		                            </div>
+		                        </div>
+		                        <div class="col-sm-2">
+		                            <button class="btn btn-danger" type="button" id="getSelectL2R-ul">获取结果</button>
+		                            <div id="selectL2RResult-ul"></div>
+		                        </div>
+		                    </div>
+                    	</div>
+               	    </div>
+				</div>
+			</div>
+		</div>
+		<div id="treeContent" class="zTreeContent selectZTreeCount hidden" style="height:400px;">
+            <ul id="treeDemo" class="ztree"></ul>
+        </div>
+        <div id="modalTree" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">请选择</div>
+                    <div class="modal-body" style="height:300px;overflow: auto;">
+                        <ul id="modalTreeDemo" class="ztree"></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" onclick="saveModalTree()">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modalTableTree" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">请选择</div>
+                    <div class="modal-body" style="height:400px;overflow: auto">
+                        <table id="treeTable" class="table table-hover">
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" onclick="saveModalTableTree()">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!--[if lt IE 9]>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/respond.min.js"></script>
+		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
+		  <script src="../../static/js/plugins/ie8.fix.min.js"></script>
+		<![endif]-->
+		<!--插件引入-->
+		<script type="text/javascript">
+			//数据初始化
+		</script>
+		<!--基础依赖-->
+        <script src="../../static/plugins/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/js.cookie.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery.blockui.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/contabs.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/select2/js/select2.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+        <!--业务依赖-->
+        <script src="../../static/plugins/zTree/js/jquery.ztree.all.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/selectL2R.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
+        <!--当前页面依赖-->
+        <script src="../../static/data/treeData.js" type="text/javascript" charset="utf-8"></script>
+        <script src="treeSelect.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

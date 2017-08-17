@@ -7723,6 +7723,12 @@ html, body, .page-content {
   .form-fieldset > .form-fieldset-body {
     padding: 10px 10px 0; }
 
+.selectL2R .panel-body {
+  overflow: auto; }
+
+.selectL2R .selectR tr, .selectL2L tr, .selectL2R .selectR li, .selectL2L li {
+  cursor: pointer; }
+
 /* Cubic Bezier Transition */
 /***
 Bootstrap Datepicker
