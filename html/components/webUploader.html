@@ -17,6 +17,7 @@
       	<link rel="stylesheet" type="text/css" href="../../static/plugins/simple-line-icons/simple-line-icons.min.css"/>
       	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2.min.css"/>
       	<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css"/>
+      	<link rel="stylesheet" type="text/css" href="../../static/plugins/webuploader/css/webuploader.css"/>
 		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css"/>
 	</head>
 	<body>
@@ -26,18 +27,65 @@
 					<div class="portlet light bordered">
                         <div class="portlet-title tabbable-line">
                             <div class="caption font-dark">
-                                <span class="caption-subject bold uppercase"> 带操作按钮的面板</span>
-                            </div>
-                            <div class="actions">
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-plus"></i> 添加</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-pencil"></i> 编辑</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-icon-only fullscreen"></a>
+                                <span class="caption-subject bold uppercase"> 文件上传-webUploader</span>
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <div class="scroller" style="height: 200px;">
-                            	面板内容
-                        	</div>
+                            <div class="alert alert-info">
+                            	<p>WebUploader是由Baidu WebFE(FEX)团队开发的一个简单的以HTML5为主，FLASH为辅的现代文件上传组件。在现代的浏览器里面能充分发挥HTML5的优势，同时又不摒弃主流IE浏览器，沿用原来的FLASH运行时，兼容IE6+，iOS 6+, android 4+。两套运行时，同样的调用方式，可供用户任意选用。</p>
+								<p>采用大文件分片并发上传，极大的提高了文件上传效率。</p>
+                            </div>
+                    	</div>
+                        <div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> webUploader-基础版</span>
+                            </div>
+                        </div>
+                    	<div class="portlet-body">
+                            <div class="wu-example">
+							    <!--用来存放文件信息-->
+							    <div id="thelist" class="uploader-list"></div>
+							    <div class="btns">
+							        <div id="picker1" class="webuploader-container">选择文件</div>
+							        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+							    </div>
+							</div>
+                    	</div>
+                    	<div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase"> webUploader-图片上传 <small>此demo演示了：文件过滤，图片预览，图片压缩上传等功能。</small></span>
+                            </div>
+                        </div>
+                    	<div class="portlet-body">
+                            <div id="uploader-demo" class="webuploader-container-img">
+							    <!--用来存放item-->
+							    <div id="fileList" class="uploader-list"></div>
+							    <div id="filePicker-img">选择图片</div>
+							</div>
+                    	</div>
+                    	<div class="portlet-title tabbable-line">
+                            <div class="caption font-dark">
+                                <span class="caption-subject bold uppercase">webUploader-多文件支持拖拽 </span>
+                            </div>
+                        </div>
+                    	<div class="portlet-body">
+                            <div id="uploader" class="webuploader-container-drag">
+							    <div class="queueList">
+							        <div id="dndArea" class="placeholder">
+							            <div id="filePicker" class="webuploader-container"><div class="webuploader-pick">点击选择图片</div><div id="rt_rt_1bkligd84uviba9voe630126p1" style="position: absolute; top: 0px; left: 448px; width: 168px; height: 44px; overflow: hidden; bottom: auto; right: auto;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></div>
+							            <p>或将照片拖到这里，单次最多可选300张</p>
+							        </div>
+							    <ul class="filelist"></ul></div>
+							    <div class="statusBar" style="display:none;">
+							        <div class="progress" style="display: none;">
+							            <span class="text">0%</span>
+							            <span class="percentage" style="width: 0%;"></span>
+							        </div><div class="info">共0张（0B），已上传0张</div>
+							        <div class="btns">
+							            <div id="filePicker2" class="webuploader-container"><div class="webuploader-pick">继续添加</div><div id="rt_rt_1bkligd8d1clb1efck411nv91d4u6" style="position: absolute; top: 0px; left: 0px; width: 1px; height: 1px; overflow: hidden;"><input type="file" name="file" class="webuploader-element-invisible" multiple="multiple" accept="image/*"><label style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label></div></div><div class="uploadBtn state-pedding">开始上传</div>
+							        </div>
+							    </div>
+							</div>
                     	</div>
                	    </div>
 				</div>
@@ -65,8 +113,9 @@
         <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
         <!--业务依赖-->
+        <script src="../../static/plugins/webuploader/js/webuploader.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
-        <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="webUploader.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

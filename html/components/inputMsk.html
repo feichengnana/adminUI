@@ -26,18 +26,150 @@
 					<div class="portlet light bordered">
                         <div class="portlet-title tabbable-line">
                             <div class="caption font-dark">
-                                <span class="caption-subject bold uppercase"> 带操作按钮的面板</span>
-                            </div>
-                            <div class="actions">
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-plus"></i> 添加</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-pencil"></i> 编辑</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-icon-only fullscreen"></a>
+                                <span class="caption-subject bold uppercase"> 固定格式文本</span>
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <div class="scroller" style="height: 200px;">
-                            	面板内容
-                        	</div>
+                            <h3>基于inputmask.js</h3>
+		                	<div class="row">
+		                		<div class="col-xs-6">
+		                			<h5>Options:</h5>
+			                		<table class="table table-bordered">
+			                			<tr>
+			                				<td>name</td>
+			                				<td>type</td>
+			                				<td>default</td>
+			                				<td>描述</td>
+			                			</tr>
+			                			<tr>
+			                				<td>mask</td>
+			                				<td>string</td>
+			                				<td>''</td>
+			                				<td>格式化字符串，可比对的字符见Format表</td>
+			                			</tr>
+			                			<tr>
+			                				<td>placeholder</td>
+			                				<td>string</td>
+			                				<td>'_'</td>
+			                				<td>输入框中显示的字符</td>
+			                			</tr>
+			                		</table>
+			                		<pre>
+$('.inputmask').inputmask({
+  mask: '999-99-999-9999-9'
+})</pre>
+		                		</div>
+			                	<div class="col-xs-6">
+			                		<h5>Format:匹对类型</h5>
+			                		<table class="table table-bordered">
+			                			<tr>
+			                				<td>Character</td>
+			                				<td>Description</td>
+			                			</tr>
+			                			<tr>
+			                				<td>9</td>
+			                				<td>Number</td>
+			                			</tr>
+			                			<tr>
+			                				<td>a</td>
+			                				<td>Letter</td>
+			                			</tr>
+			                			<tr>
+			                				<td>w</td>
+			                				<td>Alphanumeric</td>
+			                			</tr>
+			                			<tr>
+			                				<td>*</td>
+			                				<td>任何字符</td>
+			                			</tr>
+			                			<tr>
+			                				<td>?</td>
+			                				<td>0~1个可选字符</td>
+			                			</tr>
+			                		</table>
+			                	</div>
+		                	</div>
+		                	<div class="form-fieldset">
+	                   			<div class="form-fieldset-title">
+	                   				<span><i class="icon-layers"></i> 数字格式</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+	                   			</div>
+	                   			<div class="form-fieldset-body">
+	                   				<div class="row">
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">日期-y/m/d</label>
+												<input type="text" id="mask_date" class="form-control" placeholder="y/m/d">
+												<span class="help-block"></span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">日期-逐字变更</label>
+												<input type="text" id="mask_date1" class="form-control" placeholder="yyyy/mm/dd">
+												<span class="help-block"></span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">手机</label>
+												<input type="text" id="mask_mobile" class="form-control" placeholder="(0) 999-9999-9999">
+												<span class="help-block"></span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">电话</label>
+												<input type="text" id="mask_phone" class="form-control" placeholder="(999) 999-99999">
+												<span class="help-block"></span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">数字</label>
+												<input type="text" id="mask_number" class="form-control">
+												<span class="help-block">mask "9" or mask "99" or ... mask "9999999999"</span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">货币金额</label>
+												<input type="text" id="mask_currency" class="form-control">
+												<span class="help-block">123456 => ￥ ___.__1.234,56</span>
+											</div>
+				                        </div>
+				                    </div>
+                   				</div>
+               				</div>
+               				<div class="form-fieldset">
+	                   			<div class="form-fieldset-title">
+	                   				<span><i class="icon-layers"></i> IP地址</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+	                   			</div>
+	                   			<div class="form-fieldset-body">
+	                   				<div class="row">
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">IPV4</label>
+												<input type="text" id="input_ipv4" class="form-control" placeholder="y/m/d">
+												<span class="help-block">192.168.120.150</span>
+											</div>
+				                        </div>
+				                        <div class="col-sm-6">
+				                            <div class="form-group">
+												<label for="proCode">IPV6</label>
+												<input type="text" id="input_ipv6" class="form-control" placeholder="yyyy/mm/dd">
+												<span class="help-block">3ffe:1900:4545:3:200:f8ff:fe21:67cf</span>
+											</div>
+				                        </div>
+				                        
+				                    </div>
+                   				</div>
+                   			</div>
                     	</div>
                	    </div>
 				</div>
@@ -65,8 +197,10 @@
         <script src="../../static/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
         <!--业务依赖-->
+        <script src="../../static/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../static/plugins/jquery.input-ip-address-control-1.0.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
-        <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="inputMsk.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

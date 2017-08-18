@@ -26,23 +26,70 @@
 					<div class="portlet light bordered">
                         <div class="portlet-title tabbable-line">
                             <div class="caption font-dark">
-                                <span class="caption-subject bold uppercase"> 带操作按钮的面板</span>
-                            </div>
-                            <div class="actions">
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-plus"></i> 添加</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-sm"><i class="fa fa-pencil"></i> 编辑</a>
-                            	<a href="#" class="btn btn-default btn-circle btn-icon-only fullscreen"></a>
+                                <span class="caption-subject bold uppercase"> web弹层组件-layer</span>
                             </div>
                         </div>
                         <div class="portlet-body">
-                            <div class="scroller" style="height: 200px;">
-                            	面板内容
-                        	</div>
+                        	<div class="form-fieldset">
+                            	<div class="form-fieldset-title">
+                            		<span><i class="icon-layers"></i> alert 提示框</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+                            	</div>
+                            	<div class="form-fieldset-body">
+                            		<p>
+                            			<button class="btn btn-default" type="button" id="layerAlert">提示</button>
+                            		</p>
+                            	</div>
+                            </div>
+                            <div class="form-fieldset">
+                            	<div class="form-fieldset-title">
+                            		<span><i class="icon-layers"></i> 信息提示</span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+                            	</div>
+                            	<div class="form-fieldset-body">
+                            		<p>
+                            			<button class="btn btn-default" type="button" id="layer0">警告信息</button>
+                            			<button class="btn btn-default" type="button" id="layer1">正确提示</button>
+                            			<button class="btn btn-default" type="button" id="layer2">错误提示</button>
+                            			<button class="btn btn-default" type="button" id="layer3">确认提示</button>
+                            		</p>
+                            	</div>
+                            </div>
+                            
+                        	<div class="form-fieldset">
+                            	<div class="form-fieldset-title">
+                            		<span><i class="icon-layers"></i> 捕获页 </span>
+	                   				<div class="form-fieldset-tools pull-right">
+	                   					<a href="#" class="form-collapse"><i class="fa fa-angle-up"></i></a>
+	                   				</div>
+                            	</div>
+                            	<div class="form-fieldset-body">
+                            		<div class="bg-info well">
+                            			捕获就是从页面已经存在的元素上，包裹layer的结构<br />
+                            			捕获的元素最好存放在body最外层，否则可能被其它的相对元素所影响
+                            		</div>
+                            		<p>
+                            			<button class="btn btn-default" type="button" id="layerBu">提示</button>
+                            		</p>
+                            	</div>
+                            </div>
                     	</div>
                	    </div>
 				</div>
 			</div>
 		</div>
+		<div id="layerCnt" class="well no-margin-bottom" style="display: none;width: 260px;">
+			<ul class="list-unstyled">
+				<li><input type="checkbox" /> 列表01</li>
+				<li><input type="checkbox" /> 列表02</li>
+				<li><input type="checkbox" /> 列表03</li>
+				<li><input type="checkbox" /> 列表04</li>
+			</ul>	
+		</div>	
 		<!--[if lt IE 9]>
 		  <script src="../../static/js/plugins/html5shiv.min.js"></script>
 		  <script src="../../static/js/plugins/respond.min.js"></script>
@@ -67,6 +114,7 @@
         <!--业务依赖-->
         <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
-        <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
+        <script src="layerShow.js" type="text/javascript" charset="utf-8"></script>
 	</body>
+	
 </html>
