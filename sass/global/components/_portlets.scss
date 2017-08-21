@@ -296,11 +296,7 @@ Portlets
 
 /* Side bordered portlet */
 
-.portlet.bordered {
-
-    @if $theme-type == "default" {
-        border-left: 2px solid #e6e9ec !important;   
-    }
+.portlet {
 
     > .portlet-title {
         border-bottom: 0;
@@ -309,202 +305,197 @@ Portlets
 
 /* Solid colored portlet */
 
-.portlet.solid {
-    padding: 0 10px 10px 10px;
-    border: 0px;
+//.portlet.solid {
+//  padding: 0 10px 10px 10px;
+//  border: 0px;
+//
+//  > .portlet-title {
+//      border-bottom: 0;
+//      margin-bottom: 10px; 
+//
+//      > .caption {
+//          padding: 16px 0 2px 0;
+//      }
+//
+//      > .actions {
+//          padding: 12px 0 6px 0;  
+//      }
+//
+//      > .tools {
+//          padding: 14px 0 6px 0;     
+//      }
+//  }
+//}
 
-    > .portlet-title {
-        border-bottom: 0;
-        margin-bottom: 10px; 
-
-        > .caption {
-            padding: 16px 0 2px 0;
-        }
-
-        > .actions {
-            padding: 12px 0 6px 0;  
-        }
-
-        > .tools {
-            padding: 14px 0 6px 0;     
-        }
-    }
-}
-
-@mixin porlet-solid($name, $color) {
-
-    .portlet.solid.#{$name} {
-
-        > .portlet-title,
-        > .portlet-body {
-            border: 0;
-            color: $color;
-        }
-
-        > .portlet-title {
-            > .caption {
-                font-weight: 400; 
-                > i {
-                    color: $color; 
-                }
-            }
-
-            > .tools {
-                > a.remove {
-                    background-image:url(#{$global-img-path}portlet-remove-icon-white.png);
-                }
-
-                > a.config {
-                    background-image:url(#{$global-img-path}portlet-config-icon-white.png);
-                }
-
-                > a.reload {
-                    background-image:url(#{$global-img-path}portlet-reload-icon-white.png);
-                }
-
-                > a.expand {
-                    background-image:url(#{$global-img-path}portlet-expand-icon-white.png);
-                }
-
-                > a.collapse {
-                    background-image:url(#{$global-img-path}portlet-collapse-icon-white.png);
-                }
-
-                > a.fullscreen {
-                    color: #fdfdfd;
-                }
-            }
-        }
-    }
-}
+//@mixin porlet-solid($name, $color) {
+//
+//  .portlet.solid.#{$name} {
+//
+//      > .portlet-title,
+//      > .portlet-body {
+//          border: 0;
+//          color: $color;
+//      }
+//
+//      > .portlet-title {
+//          > .caption {
+//              font-weight: 400; 
+//              > i {
+//                  color: $color; 
+//              }
+//          }
+//
+//          > .tools {
+//              > a.remove {
+//                  background-image:url(#{$global-img-path}portlet-remove-icon-white.png);
+//              }
+//
+//              > a.config {
+//                  background-image:url(#{$global-img-path}portlet-config-icon-white.png);
+//              }
+//
+//              > a.reload {
+//                  background-image:url(#{$global-img-path}portlet-reload-icon-white.png);
+//              }
+//
+//              > a.expand {
+//                  background-image:url(#{$global-img-path}portlet-expand-icon-white.png);
+//              }
+//
+//              > a.collapse {
+//                  background-image:url(#{$global-img-path}portlet-collapse-icon-white.png);
+//              }
+//
+//              > a.fullscreen {
+//                  color: #fdfdfd;
+//              }
+//          }
+//      }
+//  }
+//}
 
 //@include porlet-solid("red", $metronic-blue-text);
 
 /* Solid bordered portlet */
 
-.portlet.solid.bordered > .portlet-title {
-  margin-bottom: 10px;
-}
+//.portlet.solid.bordered > .portlet-title {
+//margin-bottom: 10px;
+//}
 
 /* Box portlet */
 
-.portlet.box {
-    padding:0px !important;
+//.portlet.box {
+//  padding:0px !important;
+//
+//  > .portlet-title {  
+//      border-bottom: 0;  
+//      padding: 0 10px;
+//      margin-bottom: 0;
+//      color: #fff;    
+//
+//      > .caption {
+//          padding: 11px 0 9px 0;
+//      }
+//
+//      > .tools {
+//          > a.remove {
+//              background-image:url(#{$global-img-path}portlet-remove-icon-white.png);
+//          }
+//
+//          > a.config {
+//              background-image:url(#{$global-img-path}portlet-config-icon-white.png);
+//          }
+//
+//          > a.reload {
+//              background-image:url(#{$global-img-path}portlet-reload-icon-white.png);
+//          }
+//
+//          > a.expand {
+//              background-image:url(#{$global-img-path}portlet-expand-icon-white.png);
+//          }
+//
+//          > a.collapse {
+//              background-image:url(#{$global-img-path}portlet-collapse-icon-white.png);
+//          }
+//
+//          > a.fullscreen {
+//              color: #fdfdfd;
+//          }
+//      }
+//
+//      > .actions {
+//          padding: 7px 0 5px 0;   
+//      }
+//  }
+//
+//  > .portlet-body {
+//      background-color: #fff;
+//      padding: 15px;
+//  }
+//}
 
-    > .portlet-title {  
-        border-bottom: 0;  
-        padding: 0 10px;
-        margin-bottom: 0;
-        color: #fff;    
-
-        > .caption {
-            padding: 11px 0 9px 0;
-        }
-
-        > .tools {
-            > a.remove {
-                background-image:url(#{$global-img-path}portlet-remove-icon-white.png);
-            }
-
-            > a.config {
-                background-image:url(#{$global-img-path}portlet-config-icon-white.png);
-            }
-
-            > a.reload {
-                background-image:url(#{$global-img-path}portlet-reload-icon-white.png);
-            }
-
-            > a.expand {
-                background-image:url(#{$global-img-path}portlet-expand-icon-white.png);
-            }
-
-            > a.collapse {
-                background-image:url(#{$global-img-path}portlet-collapse-icon-white.png);
-            }
-
-            > a.fullscreen {
-                color: #fdfdfd;
-            }
-        }
-
-        > .actions {
-            padding: 7px 0 5px 0;   
-        }
-    }
-
-    > .portlet-body {
-        background-color: #fff;
-        padding: 15px;
-    }
-}
-
-@mixin porlet-box($name, $color, $text-color) {
-
-    .portlet.box.#{$name} {  
-        border: 1px solid lighten($color, 10%); 
-        border-top: 0;
-
-        > .portlet-title {
-            background-color: $color;
-
-            > .caption {
-                color: $text-color;
-                > i {
-                    color: $text-color;
-                }
-            }
-
-            > .actions {
-                .btn-default {
-                    background: transparent !important; 
-                    background-color: transparent !important;
-                    border: 1px solid lighten($color, 22%);        
-                    color: lighten($color, 27%);  
-
-                    > i {
-                        color: lighten($color, 30%);       
-                    }
-
-                    &:hover,
-                    &:focus,
-                    &:active,
-                    &.active {
-                        border: 1px solid lighten($color, 32%);
-                        color: lighten($color,37%);      
-                    }
-
-                    @if $theme-type == "material-design" {
-                        box-shadow: none;
-
-                        &:hover {
-                            @extend .md-shadow-z-2-hover;            
-                        }
-
-                        &:active {
-                            @extend .md-shadow-z-3-hover;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//@mixin porlet-box($name, $color, $text-color) {
+//
+//  .portlet.box.#{$name} {  
+//      border: 1px solid lighten($color, 10%); 
+//      border-top: 0;
+//
+//      > .portlet-title {
+//          background-color: $color;
+//
+//          > .caption {
+//              color: $text-color;
+//              > i {
+//                  color: $text-color;
+//              }
+//          }
+//
+//          > .actions {
+//              .btn-default {
+//                  background: transparent !important; 
+//                  background-color: transparent !important;
+//                  border: 1px solid lighten($color, 22%);        
+//                  color: lighten($color, 27%);  
+//
+//                  > i {
+//                      color: lighten($color, 30%);       
+//                  }
+//
+//                  &:hover,
+//                  &:focus,
+//                  &:active,
+//                  &.active {
+//                      border: 1px solid lighten($color, 32%);
+//                      color: lighten($color,37%);      
+//                  }
+//
+//                  @if $theme-type == "material-design" {
+//                      box-shadow: none;
+//
+//                      &:hover {
+//                          @extend .md-shadow-z-2-hover;            
+//                      }
+//
+//                      &:active {
+//                          @extend .md-shadow-z-3-hover;
+//                      }
+//                  }
+//              }
+//          }
+//      }
+//  }
+//}
 
 //@include porlet-box("red", $metronic-red, $metronic-red-text);
 
 /* Light Portlet */
 
-.portlet.light {
+.portlet {
     padding: 2px 10px 10px;
     background-color: #fff;
 
-    &.bordered {
-        border: 1px solid $general-panel-border-color !important;
-        border-top-width: 4px !important;
-        > .portlet-title {
-            border-bottom: 1px solid lighten($general-panel-border-color, 2%);
-        }
-    }
+    border: 1px solid $general-panel-border-color !important;
+    border-top-width: 4px !important;
 
     &.bg-inverse {
         background: $general-panel-bg-color;
@@ -512,7 +503,8 @@ Portlets
 
     > .portlet-title {  
         padding: 0;
-        //min-height: 48px;  
+        //min-height: 48px; 
+        border-bottom: 1px solid lighten($general-panel-border-color, 2%); 
 
         > .caption {
             color: #666;
@@ -729,6 +721,6 @@ Custom colored portlets
 
 @each $name, $colors in $component-colors {
     @include porlet-background($name, map-get($colors, base));
-    @include porlet-solid($name, map-get($colors, font));
-    @include porlet-box($name, map-get($colors, base), map-get($colors, font));
+//  @include porlet-solid($name, map-get($colors, font));
+//  @include porlet-box($name, map-get($colors, base), map-get($colors, font));
 }

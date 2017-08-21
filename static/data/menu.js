@@ -26,7 +26,6 @@ var menus = [{
             "uri":"html/pages/formWizard.html",
             "childrens":[]
         }
-
     ]
 },{
     "id":"02",
