@@ -83,50 +83,54 @@
 													</div>
 												</div>
 												<div class="col-sm-4">
-													<div class="form-group">
+													<div class="form-group form-ui-radios">
 														<label for="gender">性别：（单选必填）</label>
 														<div>
-															<div class="radio-inline">
-																<label>
-			                                                    <input type="radio" name="gender" value="male">男
-			                                                  </label>
-															</div>
-															<div class="radio-inline">
-																<label>
-			                                                    <input type="radio" name="gender" value="female">女
-			                                                  </label>
+															<div class="ui-radio-list ui-radio-inline">
+																<label class="ui-radio">
+																	男
+																	<input type="radio" class="gender" value="male" name="gender">
+																	<span></span>
+																</label>
+																<label class="ui-radio">
+																	女
+																	<input type="radio" class="gender" value="female" name="gender">
+																	<span></span>
+																</label>
 															</div>
 														</div>
 													</div>
 												</div>
 												<div class="col-sm-8">
-													<div class="form-group">
+													<div class="form-group form-ui-checkboxes">
 														<label for="likes">兴趣（限定2~4个）</label>
 														<div>
-															<div class="checkbox-inline">
-																<label>
-			                                                    <input type="checkbox" name="likes" value="0">打球
-			                                                  </label>
-															</div>
-															<div class="checkbox-inline">
-																<label>
-			                                                    <input type="checkbox" name="likes" value="1">唱歌
-			                                                  </label>
-															</div>
-															<div class="checkbox-inline">
-																<label>
-			                                                    <input type="checkbox" name="likes" value="2">跳舞
-			                                                  </label>
-															</div>
-															<div class="checkbox-inline">
-																<label>
-			                                                    <input type="checkbox" name="likes" value="3">读书
-			                                                  </label>
-															</div>
-															<div class="checkbox-inline">
-																<label>
-			                                                    <input type="checkbox" name="likes" value="4">刷朋友圈
-			                                                  </label>
+															<div class="ui-checkbox-list ui-checkbox-inline">
+																<label class="ui-checkbox">
+																	打球
+																	<input type="checkbox" value="0" name="likes">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	唱歌
+																	<input type="checkbox" value="1" name="likes">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	跳舞
+																	<input type="checkbox" value="2" name="likes">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	读书
+																	<input type="checkbox" value="3" name="likes">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	刷朋友圈
+																	<input type="checkbox" value="4" name="likes">
+																	<span></span>
+																</label>
 															</div>
 														</div>
 													</div>
@@ -160,10 +164,17 @@
 														</div>-->
 													</div>
 												</div>
+												
 												<div class="col-sm-4">
-													<div class="form-group">
-														<label for="fourthFile">file</label>
-														<input class="form-control" name="fourthFile" id="fourthFile" type="file" value="">
+													<div class="form-group form-group-file">
+														<label for="file1">file文件上传</label>
+														<div class="input-group">
+															<input type="file" name="fourthFile" id="fourthFile" value="" class="hidden" />
+															<input type="text" readonly="readonly" class="form-control" placeholder="请选择">
+															<span class="input-group-btn">
+																<button type="button" class="btn green">选择文件</button>
+															</span>
+														</div>
 													</div>
 												</div>
 												<div class="col-sm-4">

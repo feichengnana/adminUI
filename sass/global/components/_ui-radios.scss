@@ -19,7 +19,7 @@
 }
 
 
-.md-radio {
+.ui-radio {
     position:relative;
 
     input[type=radio]   { 
@@ -121,28 +121,28 @@
 // Error states
 //radio-variant($box, $check, $label)
 
-.has-error .md-radio,
-.has-error.md-radio {
+.has-error .ui-radio,
+.has-error.ui-radio {
     @include radio-variant($state-danger-text, $state-danger-text, $state-danger-text);
 }
 
-.has-success .md-radio,
-.has-success.md-radio {
+.has-success .ui-radio,
+.has-success.ui-radio {
     @include radio-variant($state-success-text, $state-success-text, $state-success-text);
 }
 
-.has-warning .md-radio,
-.has-warning.md-radio {
+.has-warning .ui-radio,
+.has-warning.ui-radio {
     @include radio-variant($state-warning-text, $state-warning-text, $state-warning-text);
 }
 
-.has-info .md-radio,
-.has-info.md-radio {
+.has-info .ui-radio,
+.has-info.ui-radio {
     @include radio-variant($state-info-text, $state-info-text, $state-info-text);
 }
 
 
-.form-md-radios {
+.form-ui-radios {
   padding-top: 5px;
 
     > label {
@@ -150,7 +150,8 @@
         color: $input-md-label-color;     
         @include opacity($input-md-label-opacity);
     }  
-
+    .ui-radio-list{display: inline-block;}
+    
     &.has-error {
         @if $theme-type == "material-design" {
             @include radio-label-variant($state-danger-bg);
@@ -184,27 +185,28 @@
     }
 }
 
-.md-radio-list {
-  margin: 5px 0 5px 0;
+.ui-radio-list {
+  margin: 0;
 
   .form-horizontal & {
-    margin-top: 5px;    
+    margin-top: 1px;    
   }
 
-  .md-radio {
+  .ui-radio {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
   }
 }  
 
-.md-radio-inline {
-  margin: 5px 0 5px 0;
+.ui-radio-inline {
+  margin: 0;
 
   .form-horizontal & {
-    margin-top: 7px;    
+    margin-top: 1px;    
+    padding:5px 0 1px; 
   }
 
-  .md-radio {
+  .ui-radio {
     display: inline-block;
     margin-right: 20px;
 

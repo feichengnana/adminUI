@@ -172,9 +172,10 @@ $color-checked: $color-hover;
     display: inline-block;
     position: relative;
     padding-left: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
     cursor: pointer;
     font-size: 14px;
+    height:20px;
     @include transition('all 0.3s');
 
     &.ui-radio-disabled,
@@ -320,7 +321,7 @@ $color-checked: $color-hover;
 
 .ui-checkbox-list,
 .ui-radio-list {
-    padding: 10px 0;
+    padding: 5px 0;
 
     .form-horizontal .form-group & {
         padding-top: 0;
@@ -334,7 +335,7 @@ $color-checked: $color-hover;
 
 .ui-checkbox-inline,
 .ui-radio-inline {
-    padding: 10px 0;
+    padding: 5px 0;
 
     .form-horizontal .form-group & {
         padding-top: 8px;

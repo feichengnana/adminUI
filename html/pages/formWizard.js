@@ -25,9 +25,7 @@ $(function() {
 	var handleTitle = function(tab, navigation, index) {
 		var total = navigation.find('li').length;
 		var current = index + 1;
-		// set wizard title
 		$('.step-title', $('#form_wizard_1')).text('Step ' + (index + 1) + ' of ' + total);
-		// set done steps
 		jQuery('li', $('#form_wizard_1')).removeClass("done");
 		var li_list = navigation.find('li');
 		for(var i = 0; i < index; i++) {
@@ -51,35 +49,18 @@ $(function() {
 		App.scrollTo($('.page-title'));
 	}
 
-	// default form wizard
 	$('#form_wizard_1').bootstrapWizard({
 		'nextSelector': '.button-next',
 		'previousSelector': '.button-previous',
 		onTabClick: function(tab, navigation, index, clickedIndex) {
-//			return false;
-//
-//			success.hide();
-//			error.hide();
-//			if(form.valid() == false) {
-//				return false;
-//			}
-
+			//业务处理
 			handleTitle(tab, navigation, clickedIndex);
 		},
 		onNext: function(tab, navigation, index) {
-//			success.hide();
-//			error.hide();
-//
-//			if(form.valid() == false) {
-//				return false;
-//			}
-
+ 			//业务处理
 			handleTitle(tab, navigation, index);
 		},
 		onPrevious: function(tab, navigation, index) {
-//			success.hide();
-//			error.hide();
-
 			handleTitle(tab, navigation, index);
 		},
 		onTabShow: function(tab, navigation, index) {

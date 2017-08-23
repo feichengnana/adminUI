@@ -158,12 +158,14 @@
 
 .form-ui-checkboxes {
     padding-top: 5px;
-
+    
     > label {
         font-size: $input-md-label-font-size;
         color: $input-md-label-color;     
         @include opacity($input-md-label-opacity);
     }  
+    
+    .ui-checkbox-list{display: inline-block;}
 
     &.has-error {
         @if $theme-type == "material-design" {
@@ -199,15 +201,16 @@
 }
 
 .ui-checkbox-list {
-  margin: 5px 0 5px 0;
+  margin: 0;
 
   .form-horizontal & {
-    margin-top: 5px;    
+    margin-top: 1px;    
+    padding:5px 0 1px;
   }   
 
   .ui-checkbox {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 
     &:last-child {
       margin-bottom: 0;
@@ -216,10 +219,10 @@
 }  
 
 .ui-checkbox-inline {
-  margin: 5px 0 5px 0;
+  margin: 0;
 
   .form-horizontal & {
-    margin-top: 7px;    
+    margin-top: 1px;    
   }
 
   .ui-checkbox {

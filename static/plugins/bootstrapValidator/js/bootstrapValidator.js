@@ -1124,6 +1124,7 @@ if (typeof jQuery === 'undefined') {
                 switch (true) {
                     // Only show the first error message if it is placed inside a tooltip ...
                     case ('tooltip' === container):
+                    	console.log($field);
                         (isValidField === false)
                                 ? $field.css('cursor', 'pointer').tooltip('destroy').tooltip({
                                     container: false,

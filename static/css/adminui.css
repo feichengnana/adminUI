@@ -611,6 +611,8 @@ body {
     color: #888888;
     opacity: 1 ;
     filter: alpha(opacity=100) ; }
+  .form-ui-checkboxes .ui-checkbox-list {
+    display: inline-block; }
   .form-ui-checkboxes.has-error label {
     color: #ed6b75; }
   .form-ui-checkboxes.has-info label {
@@ -621,19 +623,20 @@ body {
     color: #F1C40F; }
 
 .ui-checkbox-list {
-  margin: 5px 0 5px 0; }
+  margin: 0; }
   .form-horizontal .ui-checkbox-list {
-    margin-top: 5px; }
+    margin-top: 1px;
+    padding: 5px 0 1px; }
   .ui-checkbox-list .ui-checkbox {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 4px; }
     .ui-checkbox-list .ui-checkbox:last-child {
       margin-bottom: 0; }
 
 .ui-checkbox-inline {
-  margin: 5px 0 5px 0; }
+  margin: 0; }
   .form-horizontal .ui-checkbox-inline {
-    margin-top: 7px; }
+    margin-top: 1px; }
   .ui-checkbox-inline .ui-checkbox {
     display: inline-block;
     margin-right: 20px; }
@@ -665,24 +668,24 @@ body {
     background: #eee;
     transform: scale(1.25); } }
 
-.md-radio {
+.ui-radio {
   position: relative;
   /* handling click events */
   /* when radio is checked */ }
-  .md-radio input[type=radio] {
+  .ui-radio input[type=radio] {
     visibility: hidden;
     position: absolute; }
-  .md-radio label {
+  .ui-radio label {
     cursor: pointer;
     padding-left: 30px; }
-  .md-radio label > span {
+  .ui-radio label > span {
     display: block;
     position: absolute;
     left: 0;
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s; }
-  .md-radio label > span.inc {
+  .ui-radio label > span.inc {
     background: #fff;
     left: -20px;
     top: -20px;
@@ -692,7 +695,7 @@ body {
     border-radius: 50% !important;
     -moz-border-radius: 50% !important;
     -webkit-border-radius: 50% !important; }
-  .md-radio label > .box {
+  .ui-radio label > .box {
     top: 0px;
     border: 2px solid #666;
     height: 20px;
@@ -701,7 +704,7 @@ body {
     -moz-border-radius: 50% !important;
     -webkit-border-radius: 50% !important;
     z-index: 5; }
-  .md-radio label > .check {
+  .ui-radio label > .check {
     top: 5px;
     left: 5px;
     width: 10px;
@@ -715,111 +718,114 @@ body {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     transform: scale(0); }
-  .md-radio label > span.inc {
+  .ui-radio label > span.inc {
     -webkit-animation: growCircleRadio 0.3s ease;
     -moz-animation: growCircleRadio 0.3s ease;
     animation: growCircleRadio 0.3s ease; }
-  .md-radio input[type=radio]:checked ~ label > .check {
+  .ui-radio input[type=radio]:checked ~ label > .check {
     opacity: 1;
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     transform: scale(1); }
-  .md-radio input[type=radio]:disabled ~ label,
-  .md-radio input[type=radio][disabled] ~ label {
+  .ui-radio input[type=radio]:disabled ~ label,
+  .ui-radio input[type=radio][disabled] ~ label {
     cursor: not-allowed;
     opacity: 0.7 ;
     filter: alpha(opacity=70) ; }
-  .md-radio input[type=radio]:disabled ~ label > .box,
-  .md-radio input[type=radio][disabled] ~ label > .box {
+  .ui-radio input[type=radio]:disabled ~ label > .box,
+  .ui-radio input[type=radio][disabled] ~ label > .box {
     cursor: not-allowed;
     opacity: 0.7 ;
     filter: alpha(opacity=70) ; }
-  .md-radio input[type=radio]:disabled:checked ~ label > .check,
-  .md-radio input[type=radio][disabled]:checked ~ label > .check {
+  .ui-radio input[type=radio]:disabled:checked ~ label > .check,
+  .ui-radio input[type=radio][disabled]:checked ~ label > .check {
     cursor: not-allowed;
     opacity: 0.7 ;
     filter: alpha(opacity=70) ; }
 
-.has-error .md-radio label,
-.has-error.md-radio label {
+.has-error .ui-radio label,
+.has-error.ui-radio label {
   color: #e73d4a; }
 
-.has-error .md-radio label > .box,
-.has-error.md-radio label > .box {
+.has-error .ui-radio label > .box,
+.has-error.ui-radio label > .box {
   border-color: #e73d4a; }
 
-.has-error .md-radio label > .check,
-.has-error.md-radio label > .check {
+.has-error .ui-radio label > .check,
+.has-error.ui-radio label > .check {
   background: #e73d4a; }
 
-.has-success .md-radio label,
-.has-success.md-radio label {
+.has-success .ui-radio label,
+.has-success.ui-radio label {
   color: #27a4b0; }
 
-.has-success .md-radio label > .box,
-.has-success.md-radio label > .box {
+.has-success .ui-radio label > .box,
+.has-success.ui-radio label > .box {
   border-color: #27a4b0; }
 
-.has-success .md-radio label > .check,
-.has-success.md-radio label > .check {
+.has-success .ui-radio label > .check,
+.has-success.ui-radio label > .check {
   background: #27a4b0; }
 
-.has-warning .md-radio label,
-.has-warning.md-radio label {
+.has-warning .ui-radio label,
+.has-warning.ui-radio label {
   color: #c29d0b; }
 
-.has-warning .md-radio label > .box,
-.has-warning.md-radio label > .box {
+.has-warning .ui-radio label > .box,
+.has-warning.ui-radio label > .box {
   border-color: #c29d0b; }
 
-.has-warning .md-radio label > .check,
-.has-warning.md-radio label > .check {
+.has-warning .ui-radio label > .check,
+.has-warning.ui-radio label > .check {
   background: #c29d0b; }
 
-.has-info .md-radio label,
-.has-info.md-radio label {
+.has-info .ui-radio label,
+.has-info.ui-radio label {
   color: #327ad5; }
 
-.has-info .md-radio label > .box,
-.has-info.md-radio label > .box {
+.has-info .ui-radio label > .box,
+.has-info.ui-radio label > .box {
   border-color: #327ad5; }
 
-.has-info .md-radio label > .check,
-.has-info.md-radio label > .check {
+.has-info .ui-radio label > .check,
+.has-info.ui-radio label > .check {
   background: #327ad5; }
 
-.form-md-radios {
+.form-ui-radios {
   padding-top: 5px; }
-  .form-md-radios > label {
+  .form-ui-radios > label {
     font-size: 14px;
     color: #888888;
     opacity: 1 ;
     filter: alpha(opacity=100) ; }
-  .form-md-radios.has-error label {
+  .form-ui-radios .ui-radio-list {
+    display: inline-block; }
+  .form-ui-radios.has-error label {
     color: #ed6b75; }
-  .form-md-radios.has-info label {
+  .form-ui-radios.has-info label {
     color: #659be0; }
-  .form-md-radios.has-success label {
+  .form-ui-radios.has-success label {
     color: #36c6d3; }
-  .form-md-radios.has-warning label {
+  .form-ui-radios.has-warning label {
     color: #F1C40F; }
 
-.md-radio-list {
-  margin: 5px 0 5px 0; }
-  .form-horizontal .md-radio-list {
-    margin-top: 5px; }
-  .md-radio-list .md-radio {
+.ui-radio-list {
+  margin: 0; }
+  .form-horizontal .ui-radio-list {
+    margin-top: 1px; }
+  .ui-radio-list .ui-radio {
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 4px; }
 
-.md-radio-inline {
-  margin: 5px 0 5px 0; }
-  .form-horizontal .md-radio-inline {
-    margin-top: 7px; }
-  .md-radio-inline .md-radio {
+.ui-radio-inline {
+  margin: 0; }
+  .form-horizontal .ui-radio-inline {
+    margin-top: 1px;
+    padding: 5px 0 1px; }
+  .ui-radio-inline .ui-radio {
     display: inline-block;
     margin-right: 20px; }
-    .md-radio-inline .md-radio:last-child {
+    .ui-radio-inline .ui-radio:last-child {
       margin-right: 0; }
 
 /* bubble animation */
@@ -3017,9 +3023,10 @@ Custom color buttons
   display: inline-block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 4px;
   cursor: pointer;
   font-size: 14px;
+  height: 20px;
   webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -3150,7 +3157,7 @@ td > .ui-checkbox.ui-checkbox-single {
 
 .ui-checkbox-list,
 .ui-radio-list {
-  padding: 10px 0; }
+  padding: 5px 0; }
   .form-horizontal .form-group .ui-checkbox-list, .form-horizontal .form-group
   .ui-radio-list {
     padding-top: 0; }
@@ -3162,7 +3169,7 @@ td > .ui-checkbox.ui-checkbox-single {
 
 .ui-checkbox-inline,
 .ui-radio-inline {
-  padding: 10px 0; }
+  padding: 5px 0; }
   .form-horizontal .form-group .ui-checkbox-inline, .form-horizontal .form-group
   .ui-radio-inline {
     padding-top: 8px; }
@@ -7702,7 +7709,9 @@ a.travis {
 .td-checkbox .ui-checkbox {
   margin-left: 0 !important;
   margin-right: 0 !important;
-  padding-left: 20px; }
+  margin-bottom: 0 !important;
+  padding-left: 20px;
+  line-height: 20px !important; }
 
 /* Cubic Bezier Transition */
 /***
