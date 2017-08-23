@@ -568,3 +568,15 @@ a.travis {
 /*layer 默认样式修改 */
 .layui-layer-btn{text-align: center !important;}
 /*layer 默认样式修改-end */
+
+.form-group .needIcon{
+    font-family: FontAwesome;
+    font-size: 10px;
+    color: #E43A45;
+    font-style: normal;
+}
+.td-checkbox .ui-checkbox{
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left: 20px;
+}

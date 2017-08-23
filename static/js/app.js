@@ -192,7 +192,7 @@ var App = function() {
     var handleMaterialDesign = function() {
 
         // Material design ckeckbox and radio effects
-        $('body').on('click', '.md-checkbox > label, .md-radio > label', function() {
+        $('body').on('click', '.ui-checkbox > label, .md-radio > label', function() {
             var the = $(this);
             // find the first span which is our circle/bubble
             var el = $(this).children('span:first-child');
@@ -558,6 +558,18 @@ var App = function() {
 		}
     }
     
+    var handleFileInput = function(){
+    	$('.form-group-file .input-group').click(function(){
+			var pnode = $(this).closest('.form-group-file');
+			var fileNode = pnode.find('input[type=file]');
+			fileNode.click();
+		});
+		$('.form-group-file input[type=file]').change(function(){
+			var pnode = $(this).parent('.form-group-file');
+			var fileNode = pnode.find('.input-group input[type=text]');
+			fileNode.val($(this).val());
+		})
+    }
     // Handle formFieldset
     var handleFormFieldset = function(){
     	if($('.form-fieldset .form-collapse').length){
@@ -624,6 +636,7 @@ var App = function() {
             handleSelect2(); // handle custom Select2 dropdowns
             handleDatePicker();
             handlePagesearch();
+            handleFileInput();
             handleFormFieldset();
             handlePortletTools(); // handles portlet action bar functionality(refresh, configure, toggle, remove)
             handleAlerts(); //handle closabled alerts

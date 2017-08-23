@@ -19,16 +19,16 @@
 }
 
 
-.md-checkbox {
+.ui-checkbox {
     position:relative;
 
     // Inline checkbox
 
-    &.md-checkbox-inline {
+    &.ui-checkbox-inline {
       display: inline-block;    
     }
 
-    .form-inline &.md-checkbox-inline {
+    .form-inline &.ui-checkbox-inline {
       margin-right: 20px;
       top: 3px;
     }
@@ -66,7 +66,7 @@
 
     label > .box {
       top:0px;
-      border:2px solid $input-md-checkbox-box-color;
+      border:2px solid $input-ui-checkbox-box-color;
       height:20px;   
       width:20px;
       z-index:5;
@@ -117,46 +117,46 @@
     input[type=checkbox]:disabled ~ label,
     input[type=checkbox][disabled] ~ label {
         cursor: not-allowed;   
-        @include opacity($input-md-checkbox-disabled-opacity); 
+        @include opacity($input-ui-checkbox-disabled-opacity); 
     }
    
     input[type=checkbox]:disabled ~ label > .box,
     input[type=checkbox][disabled] ~ label > .box { 
         cursor: not-allowed;
-        @include opacity($input-md-checkbox-disabled-opacity);
+        @include opacity($input-ui-checkbox-disabled-opacity);
     }
 
     input[type=checkbox]:disabled:checked ~ label > .check, 
     input[type=checkbox][disabled]:checked ~ label > .check {           
         cursor: not-allowed;
-        @include opacity($input-md-checkbox-disabled-opacity);
+        @include opacity($input-ui-checkbox-disabled-opacity);
     } 
 }
 
 // Error states
 //checkbox-variant($box, $check, $label)
 
-.has-error .md-checkbox,
-.has-error.md-checkbox {
+.has-error .ui-checkbox,
+.has-error.ui-checkbox {
     @include checkbox-variant($state-danger-text, $state-danger-text, $state-danger-text);
 }
 
-.has-success .md-checkbox,
-.has-success.md-checkbox {
+.has-success .ui-checkbox,
+.has-success.ui-checkbox {
     @include checkbox-variant($state-success-text, $state-success-text, $state-success-text);
 }
 
-.has-warning .md-checkbox,
-.has-warning.md-checkbox {
+.has-warning .ui-checkbox,
+.has-warning.ui-checkbox {
     @include checkbox-variant($state-warning-text, $state-warning-text, $state-warning-text);
 }
 
-.has-info .md-checkbox,
-.has-info.md-checkbox {
+.has-info .ui-checkbox,
+.has-info.ui-checkbox {
     @include checkbox-variant($state-info-text, $state-info-text, $state-info-text);
 }
 
-.form-md-checkboxes {
+.form-ui-checkboxes {
     padding-top: 5px;
 
     > label {
@@ -198,14 +198,14 @@
     }
 }
 
-.md-checkbox-list {
+.ui-checkbox-list {
   margin: 5px 0 5px 0;
 
   .form-horizontal & {
     margin-top: 5px;    
   }   
 
-  .md-checkbox {
+  .ui-checkbox {
     display: block;
     margin-bottom: 10px;
 
@@ -215,14 +215,14 @@
   }
 }  
 
-.md-checkbox-inline {
+.ui-checkbox-inline {
   margin: 5px 0 5px 0;
 
   .form-horizontal & {
     margin-top: 7px;    
   }
 
-  .md-checkbox {
+  .ui-checkbox {
     display: inline-block;
     margin-right: 20px;
 

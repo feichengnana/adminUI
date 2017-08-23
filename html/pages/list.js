@@ -8,9 +8,9 @@ var table = table.dataTable({
 			"data": "proId",
 			"align": 'center',
 			"render": function(data, type, row, meta) {
-				var content = '<label class="checkbox">';
-				content += '    <input type="checkbox" name="td-checkbox" value="' + data + '" />';
-				content += '</label>';
+				var content = '<label class="ui-checkbox">';
+					content += '<input type="checkbox"  value="' + data + '" name="td-checkbox">';
+					content += '<span></span></label>';
 				return content;
 			}
 		}, {
@@ -187,6 +187,7 @@ function delItem() {
 			icon: 0,
 			skin: 'layer-ext-moon'
 		}, function() {
+			//table.ajax.reload();
 			layer.msg('已为您删除所选记录！');
 		})
 	}

@@ -167,8 +167,8 @@ $color-hover: darken($color-default, 5%);
 $color-checked: $color-hover;  
 
 // Basic control styles
-.mt-radio,
-.mt-checkbox {
+.ui-radio,
+.ui-checkbox {
     display: inline-block;
     position: relative;
     padding-left: 30px;
@@ -177,8 +177,8 @@ $color-checked: $color-hover;
     font-size: 14px;
     @include transition('all 0.3s');
 
-    &.mt-radio-disabled,
-    &.mt-checkbox-disabled {
+    &.ui-radio-disabled,
+    &.ui-checkbox-disabled {
         @include opacity(0.6);
     }
   
@@ -231,8 +231,8 @@ $color-checked: $color-hover;
         pointer-events: none;
     }
 
-    &.mt-radio-outline,
-    &.mt-checkbox-outline {
+   
+    & {
         > span {
             border: 1px solid darken($color-default, 5%); 
             background: none;
@@ -257,7 +257,7 @@ $color-checked: $color-hover;
     }
 }
 
-.mt-radio {
+.ui-radio {
     > span {
         @include border-radius(50%, '!important'); // Makes radio buttons circlular
 
@@ -277,7 +277,7 @@ $color-checked: $color-hover;
         }
     }
 
-    &.mt-radio-single {
+    &.ui-radio-single {
         th > &, 
         td > & {
             right: -5px;
@@ -285,7 +285,7 @@ $color-checked: $color-hover;
     }
 }
 
-.mt-checkbox {
+.ui-checkbox {
     > span {
         &:after {
             left: 6px;
@@ -309,7 +309,7 @@ $color-checked: $color-hover;
         margin-right: 15px;
     }
 
-    &.mt-checkbox-single {
+    &.ui-checkbox-single {
 
         th > &, 
         td > & {
@@ -318,30 +318,30 @@ $color-checked: $color-hover;
     }
 }
 
-.mt-checkbox-list,
-.mt-radio-list {
+.ui-checkbox-list,
+.ui-radio-list {
     padding: 10px 0;
 
     .form-horizontal .form-group & {
         padding-top: 0;
     }
 
-    .mt-checkbox,
-    .mt-radio {
+    .ui-checkbox,
+    .ui-radio {
         display: block;  
     }   
 }
 
-.mt-checkbox-inline,
-.mt-radio-inline {
+.ui-checkbox-inline,
+.ui-radio-inline {
     padding: 10px 0;
 
     .form-horizontal .form-group & {
         padding-top: 8px;
     }
 
-    .mt-checkbox,
-    .mt-radio {
+    .ui-checkbox,
+    .ui-radio {
         display: inline-block;
         margin-right: 15px;
 

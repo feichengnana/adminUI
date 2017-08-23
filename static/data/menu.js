@@ -52,6 +52,13 @@ var menus = [{
             "id":"023",
             "pid":"02",
             "icon":"",
+            "name":"表单项",
+            "uri":"html/elements/formItem.html",
+            "childrens":[]         
+        },{
+            "id":"024",
+            "pid":"02",
+            "icon":"",
             "name":"工具类",
             "uri":"html/elements/funClass.html",
             "childrens":[]        
