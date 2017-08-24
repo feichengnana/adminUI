@@ -105,14 +105,6 @@ $(function(){
 	                }
 	            }
 	        },
-	        gender:{
-	        	//selector:'.ui-radio-list',
-	            validators:{
-	                notEmpty:{
-	                    message:'请选择性别'
-	                }
-	            }
-	        },
 	        age:{
 	            validators:{
 	                notEmpty:{
@@ -128,9 +120,15 @@ $(function(){
 	                }
 	            }
 	        },
+	        gender:{
+	        	validators:{
+	                notEmpty:{
+	                    message:'请选择性别'
+	                }
+	            }
+	        },
 	        likes:{
-	        	selector:'.ui-checkbox-list',
-	            validators:{
+	        	validators:{
 	                notEmpty:{
 	                    message:'请选择兴趣'
 	                },
@@ -164,17 +162,16 @@ $(function(){
 	            }
 	        },
 	        fourthFile:{
-	        	selector:'#fourthFile',
 	            validators:{
 	                notEmpty:{
 	                    message:'请选择附件'
 	                },
 	                file:{
 	                    extension: 'pdf',
-	                    type: 'application/pdf/jpg/png',
-	                    minSize: 1024*1024,
+	                    type: 'application/pdf',
+	                    //minSize: 1024,
 	                    maxSize: 10*1024*1024,
-	                    message:'只能上传1M~10M之间的pdf文件'
+	                    message:'请选择一个低于10M的pdf文件'
 	                }
 	            }
 	        },
@@ -189,13 +186,9 @@ $(function(){
 	    }
 	})
 	$('#validForm2').bootstrapValidator({
+		excluded: [':disabled', ':not(:visible)'],
 	    message:'校验未通过',
 	    container: 'tooltip',
-	    feedbackIcons: {
-	        valid: 'glyphicon',
-	        invalid: 'glyphicon',
-	        validating: 'glyphicon'
-	    },
 	    fields:{
 	        onlyChinese:{
 	            validators:{
@@ -221,13 +214,57 @@ $(function(){
 	            validators:{
 	                ip:{}
 	            }
+	        },
+	        gender1:{
+	        	selector:'.ui-radio-list',
+	        	validators:{
+	                ui_choice_noEmpty:{}
+	            }
+	        },
+	        likes1:{
+	        	selector:'.ui-checkbox-list',
+	        	validators:{
+	                ui_choice_noEmpty:{
+	                    message:'请选择兴趣'
+	                },
+	                ui_choice:{
+	                    min: 2,
+	                    max: 4,
+	                    message:'请选择2~4个'
+	                }
+	            }
+	        },
+	        fourthFile1:{
+	        	selector:'#fourthFile1Trigger',
+	        	validators:{
+	                ui_file_notEmpty:{
+	                    message:'请选择附件'
+	                },
+	                ui_file:{
+	                    extension: 'pdf',
+	                    type: 'application/pdf',
+	                    //minSize: 1024,
+	                    maxSize: 10*1024*1024,
+	                    message:'请选择一个低于10M的pdf文件'
+	                }
+	            }
 	        }
 	    }
 	})
 	
-	//$('.form_datetime').on('changeDate', function(e) {
-	//  $('#validForm').data('bootstrapValidator').revalidateField('dateTimePicker');
-	//});
+	$('.ui-checkbox-list input[type=checkbox]').on('change',function(e){
+		$('#validForm2').data('bootstrapValidator').revalidateField('likes1');
+	})
+	$('.ui-radio-list input[type=radio]').on('change',function(e){
+		$('#validForm2').data('bootstrapValidator').revalidateField('gender1');
+	})
+	$('.date-picker').on('changeDate', function(e) {
+	  $('#validForm').data('bootstrapValidator').revalidateField('dateTime');
+	});
+	$('#fourthFile1').on('change', function(e) {
+	  $('#validForm2').data('bootstrapValidator').revalidateField('fourthFile1');
+	});
+	
 
 })
 

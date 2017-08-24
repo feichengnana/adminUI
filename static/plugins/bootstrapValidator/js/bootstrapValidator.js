@@ -867,7 +867,6 @@ if (typeof jQuery === 'undefined') {
          * @returns {BootstrapValidator}
          */
         validateField: function(field) {
-        	console.log(11);
             var fields = $([]);
             switch (typeof field) {
                 case 'object':
@@ -963,7 +962,6 @@ if (typeof jQuery === 'undefined') {
                     }
                 }
             }
-			console.log(this);
             return this;
         },
 
@@ -1124,7 +1122,6 @@ if (typeof jQuery === 'undefined') {
                 switch (true) {
                     // Only show the first error message if it is placed inside a tooltip ...
                     case ('tooltip' === container):
-                    	console.log($field);
                         (isValidField === false)
                                 ? $field.css('cursor', 'pointer').tooltip('destroy').tooltip({
                                     container: false,

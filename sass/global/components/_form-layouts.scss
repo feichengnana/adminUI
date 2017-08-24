@@ -167,63 +167,63 @@ Form Layouts
     }
 }
 
-/* Checkboxes */
-
-.checkbox,
-.form-horizontal .checkbox {
-    padding: 0;   
-
-    > label {
-        padding-left: 0;
-    }
-}
-
-.checkbox-list > label {
-    display: block;
-
-    &.checkbox-inline {
-        display: inline-block;
-
-        &:first-child {
-            padding-left: 0;
-        }
-    }
-}
-
-/* Radio buttons */
-
-.radio-list > label {
-    display: block;
-
-    &.radio-inline {
-        display: inline-block;
-
-        &:first-child {
-            padding-left: 0;
-        }
-    }
-}
-
-/* Radio buttons in horizontal forms */
-
-.form-horizontal {
-
-    .radio-list {
-        .radio {
-            padding-top: 1px;
-        }
-
-        > label {
-            margin-bottom: 0;
-        }
-    }
-
-    .radio {
-        > span {
-            margin-top: 2px;
-        }
-    }
-}
+///* Checkboxes */
+//
+//.checkbox,
+//.form-horizontal .checkbox {
+//  padding: 0;   
+//
+//  > label {
+//      padding-left: 0;
+//  }
+//}
+//
+//.checkbox-list > label {
+//  display: block;
+//
+//  &.checkbox-inline {
+//      display: inline-block;
+//
+//      &:first-child {
+//          padding-left: 0;
+//      }
+//  }
+//}
+//
+///* Radio buttons */
+//
+//.radio-list > label {
+//  display: block;
+//
+//  &.radio-inline {
+//      display: inline-block;
+//
+//      &:first-child {
+//          padding-left: 0;
+//      }
+//  }
+//}
+//
+///* Radio buttons in horizontal forms */
+//
+//.form-horizontal {
+//
+//  .radio-list {
+//      .radio {
+//          padding-top: 1px;
+//      }
+//
+//      > label {
+//          margin-bottom: 0;
+//      }
+//  }
+//
+//  .radio {
+//      > span {
+//          margin-top: 2px;
+//      }
+//  }
+//}
 
 /* Rows seperated form layout */
 

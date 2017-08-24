@@ -86,50 +86,48 @@
 													<div class="form-group form-ui-radios">
 														<label for="gender">性别：（单选必填）</label>
 														<div>
-															<div class="ui-radio-list ui-radio-inline">
-																<label class="ui-radio">
-																	男
-																	<input type="radio" class="gender" value="male" name="gender">
-																	<span></span>
-																</label>
-																<label class="ui-radio">
-																	女
-																	<input type="radio" class="gender" value="female" name="gender">
-																	<span></span>
-																</label>
-															</div>
+															<div class="radio-inline">
+								                                <label>
+								                                    <input type="radio" name="gender" value="male" /> 男
+								                                </label>
+								                            </div>
+								                            <div class="radio-inline">
+								                                <label>
+								                                    <input type="radio" name="gender" value="female" /> 女
+								                                </label>
+								                            </div>
+								                            <div class="radio-inline">
+								                                <label>
+								                                    <input type="radio" name="gender" value="other" /> 其他
+								                                </label>
+								                            </div>
 														</div>
 													</div>
 												</div>
 												<div class="col-sm-8">
-													<div class="form-group form-ui-checkboxes">
+													<div class="form-group">
 														<label for="likes">兴趣（限定2~4个）</label>
 														<div>
-															<div class="ui-checkbox-list ui-checkbox-inline">
-																<label class="ui-checkbox">
-																	打球
+															<div class="checkbox">
+																<label class="checkbox-inline">
 																	<input type="checkbox" value="0" name="likes">
-																	<span></span>
+																	打球
 																</label>
-																<label class="ui-checkbox">
-																	唱歌
+																<label class="checkbox-inline">
 																	<input type="checkbox" value="1" name="likes">
-																	<span></span>
+																	唱歌
 																</label>
-																<label class="ui-checkbox">
-																	跳舞
+																<label class="checkbox-inline">
 																	<input type="checkbox" value="2" name="likes">
-																	<span></span>
+																	跳舞
 																</label>
-																<label class="ui-checkbox">
-																	读书
+																<label class="checkbox-inline">
 																	<input type="checkbox" value="3" name="likes">
-																	<span></span>
+																	读书
 																</label>
-																<label class="ui-checkbox">
-																	刷朋友圈
+																<label class="checkbox-inline">
 																	<input type="checkbox" value="4" name="likes">
-																	<span></span>
+																	刷朋友圈
 																</label>
 															</div>
 														</div>
@@ -151,30 +149,20 @@
 													<div class="form-group">
 														<label for="datePicker">DatePicker</label>
 														<div class="input-group date date-picker">
-															<input type="text" class="form-control" readonly>
+															<input type="text" name="dateTime" class="form-control" readonly>
 															<span class="input-group-btn">
 					                                            <button class="btn default" type="button">
 					                                                <i class="fa fa-calendar"></i>
 					                                            </button>
 					                                        </span>
 														</div>
-														<!--<div class="input-icon">
-															<i class="fa fa-calendar"></i>
-															<div class="date"><input class="form-control form_datetime" name="datePicker" id="datePicker" type="text" value=""></div>
-														</div>-->
 													</div>
 												</div>
 												
 												<div class="col-sm-4">
-													<div class="form-group form-group-file">
-														<label for="file1">file文件上传</label>
-														<div class="input-group">
-															<input type="file" name="fourthFile" id="fourthFile" value="" class="hidden" />
-															<input type="text" readonly="readonly" class="form-control" placeholder="请选择">
-															<span class="input-group-btn">
-																<button type="button" class="btn green">选择文件</button>
-															</span>
-														</div>
+													<div class="form-group">
+														<label for="fourthFile">file文件上传</label>
+														<input type="file" name="fourthFile" id="fourthFile" value="" class="form-control" />
 													</div>
 												</div>
 												<div class="col-sm-4">
@@ -233,6 +221,76 @@
 													<div class="form-group">
 														<label for="ip">IP</label>
 														<input type="text" class="form-control" id="ip" name="ip" placeholder="请输入您的IP地址">
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group  form-ui-radios">
+														<label for="gender1">性别</label>
+														<div>
+															<div class="ui-radio-list ui-radio-inline">
+																<label class="ui-radio">
+																	男
+																	<input type="radio" value="0" name="gender1">
+																	<span></span>
+																</label>
+																<label class="ui-radio">
+																	女
+																	<input type="radio" value="0" name="gender1">
+																	<span></span>
+																</label>
+																<label class="ui-radio">
+																	其他
+																	<input type="radio" value="0" name="gender1">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group form-ui-checkboxes">
+														<label for="likes">兴趣（限定2~4个）</label>
+														<div>
+															<div class="ui-checkbox-list ui-checkbox-inline">
+																<label class="ui-checkbox">
+																	打球
+																	<input type="checkbox" value="0" name="likes1" class="likes1">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	唱歌
+																	<input type="checkbox" value="1" name="likes1" class="likes1">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	跳舞
+																	<input type="checkbox" value="2" name="likes1" class="likes1">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	读书
+																	<input type="checkbox" value="3" name="likes1" class="likes1">
+																	<span></span>
+																</label>
+																<label class="ui-checkbox">
+																	刷朋友圈
+																	<input type="checkbox" value="4" name="likes1" class="likes1">
+																	<span></span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group form-group-file" >
+														<label for="fourthFile1">file文件上传</label>
+														<input type="file" name="fourthFile1" id="fourthFile1" value="" class="hidden" />
+														<div class="input-group" id="fourthFile1Trigger">
+															<input type="text" readonly="readonly" class="form-control" placeholder="请选择">
+															<span class="input-group-btn">
+																<button type="button" class="btn green">选择文件</button>
+															</span>
+														</div>
 													</div>
 												</div>
 											</div>

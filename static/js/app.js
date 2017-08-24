@@ -562,7 +562,7 @@ var App = function() {
     	$('.form-group-file .input-group').click(function(){
 			var pnode = $(this).closest('.form-group-file');
 			var fileNode = pnode.find('input[type=file]');
-			fileNode.click();
+			fileNode.trigger('click');
 		});
 		$('.form-group-file input[type=file]').change(function(){
 			var pnode = $(this).parent('.form-group-file');

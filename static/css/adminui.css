@@ -2731,39 +2731,6 @@ Form Layouts
     margin-left: 20px;
     margin-right: 20px; }
 
-/* Checkboxes */
-.checkbox,
-.form-horizontal .checkbox {
-  padding: 0; }
-  .checkbox > label,
-  .form-horizontal .checkbox > label {
-    padding-left: 0; }
-
-.checkbox-list > label {
-  display: block; }
-  .checkbox-list > label.checkbox-inline {
-    display: inline-block; }
-    .checkbox-list > label.checkbox-inline:first-child {
-      padding-left: 0; }
-
-/* Radio buttons */
-.radio-list > label {
-  display: block; }
-  .radio-list > label.radio-inline {
-    display: inline-block; }
-    .radio-list > label.radio-inline:first-child {
-      padding-left: 0; }
-
-/* Radio buttons in horizontal forms */
-.form-horizontal .radio-list .radio {
-  padding-top: 1px; }
-
-.form-horizontal .radio-list > label {
-  margin-bottom: 0; }
-
-.form-horizontal .radio > span {
-  margin-top: 2px; }
-
 /* Rows seperated form layout */
 .form .form-row-seperated .portlet-body {
   padding: 0; }
