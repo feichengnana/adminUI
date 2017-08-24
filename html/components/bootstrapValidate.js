@@ -11,10 +11,6 @@ $(function(){
 	    * 也可以指定一个或多个（多个空格隔开） 'focus blur keyup'
 	    */
 		trigger:'live focus blur keyup',
-		/**
-	    * Number类型  为每个字段设置统一的开始验证情况，当输入字符大于等于设置的数值后才实时触发验证
-	    */
-	    threshold: null,
 	    message:'校验未通过',
 	    container: 'popover',
 	    fields:{
@@ -264,7 +260,6 @@ $(function(){
 	$('#fourthFile1').on('change', function(e) {
 	  $('#validForm2').data('bootstrapValidator').revalidateField('fourthFile1');
 	});
-	
-
 })
+
 
