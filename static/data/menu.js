@@ -109,4 +109,34 @@ var menus = [{
         }
     ]
 }
-]
+];
+var zcbMenus = [{
+    "id":"01",
+    "pid":"1",
+    "icon":"glyphicon-th-large",
+    "name":"首页模板",
+    "uri":"",
+    "childrens":[{
+            "id":"011",
+            "pid":"01",
+            "icon":"",
+            "name":"省市管理员",
+            "uri":"zcb/dashboard1.html",
+            "childrens":[]
+        },{
+            "id":"013",
+            "pid":"01",
+            "icon":"",
+            "name":"区县管理员",
+            "uri":"zcb/dashboard2.html",
+            "childrens":[]
+        },{
+            "id":"017",
+            "pid":"01",
+            "icon":"",
+            "name":"查看员",
+            "uri":"zcb/dashboard3.html",
+            "childrens":[]
+        }
+    ]
+}]
