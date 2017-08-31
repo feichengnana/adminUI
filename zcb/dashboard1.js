@@ -1,6 +1,6 @@
 var chartCount = echarts.init(document.getElementById('echartCount'),'shine');
 var option =   {
-	color:['#d48265', '#91c7ae','#749f83',  '#ca8622', '#c4ccd3','#D53A35','#2F4554','#61A0A8'],
+	color:['#d48265', '#91c7ae','#c4ccd3', '#ca8622', '#89B5DB','#D53A35','#2F4554','#61A0A8'],
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c}"
@@ -163,7 +163,7 @@ loadArea1();
 function loadArea1(){
 	var chartArea = echarts.init(document.getElementById('echartArea1'));
 	var option =  {
-		color:['#91c7ae','#749f83',  '#ca8622', '#c4ccd3'],
+		color:['#91c7ae','#c4ccd3', '#ca8622', '#89B5DB'],
 	    tooltip : {
 	        trigger: 'axis',
 	        axisPointer : {        
