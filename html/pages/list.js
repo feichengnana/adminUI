@@ -1,5 +1,6 @@
 var table = $('#dataTable');
 var fixedHeaderOffset = 0;
+//console.log($.fn.dataTable.defaults)
 var table = table.dataTable({
 	"order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
 	"columns": [{

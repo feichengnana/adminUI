@@ -2641,6 +2641,9 @@ Form Layouts
 .form {
   padding: 0 !important; }
 
+.portlet-body.form .form-body {
+  padding: 10px 0; }
+
 .portlet-form .form-body,
 .form .form-body {
   padding: 20px; }
