@@ -47,6 +47,23 @@ var App = function() {
             each.call();
         }
     };
+    
+    var handleSubpageTab  = function(){
+    	$('.J_pageItem').click(function(e){
+    		e.preventDefault();
+    		e.stopPropagation();
+    		var me = $(this);
+    		var linkUrl = '';
+    		if(me[0].nodeName == 'A'){
+    			linkUrl = me.attr('href');
+    		}else{
+    			linkUrl = me.data('href');
+    		}
+    		var title = me.data('title');
+    		if(linkUrl=='' || title=='') return false;
+    		window.parent.showSubpageTab(linkUrl,title);
+    	})
+    }
 
     var handleOnResize = function() {
         var windowWidth = $(window).width();
@@ -625,6 +642,7 @@ var App = function() {
 
             //Core handlers
             handleInit(); // initialize core variables
+            handleSubpageTab();
             handleOnResize(); // set and handle responsive    
 
             //UI Component handlers     
