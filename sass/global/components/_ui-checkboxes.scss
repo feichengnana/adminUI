@@ -38,99 +38,99 @@
         position: absolute;   
     }
 
-    label {   
-        cursor:pointer; 
-        padding-left: 30px;  
-    }
+//  label {   
+//      cursor:pointer; 
+//      padding-left: 30px;  
+//  }
+//
+//  label > span { 
+//      display:block;    
+//      position:absolute; 
+//      left:0; 
+//      -webkit-transition-duration:0.3s; 
+//      -moz-transition-duration:0.3s; 
+//      transition-duration:0.3s;
+//  }
+//
+//  label > span.inc   { 
+//    background: #fff;
+//    left:-20px;  
+//    top:-20px;
+//    height:60px;
+//    width:60px;
+//    opacity:0; 
+//    border-radius:50% !important; 
+//    -moz-border-radius:50% !important; 
+//    -webkit-border-radius:50% !important;
+//  }
+//
+//  label > .box {
+//    top:0px;
+//    border:2px solid $input-ui-checkbox-box-color;
+//    height:20px;   
+//    width:20px;
+//    z-index:5;
+//    -webkit-transition-delay:0.2s; -moz-transition-delay:0.2s; transition-delay:0.2s;
+//  }
+//
+//  label > .check {
+//    top: -4px;
+//    left: 6px;
+//    width: 10px;
+//    height: 20px;
+//    border:2px solid $input-md-focus-border;  
+//    border-top: none;
+//    border-left: none;
+//    opacity:0; 
+//    z-index:5;
+//    -webkit-transform:rotate(180deg); 
+//    -moz-transform:rotate(180deg); 
+//    transform:rotate(180deg);
+//    -webkit-transition-delay:0.3s; 
+//    -moz-transition-delay:0.3s; transition-delay:0.3s;
+//  }
+//
+//  /* handling click events */
+//
+//  /* when checkbox is checked */
+//  label > span.inc {
+//    -webkit-animation   :growCircle 0.3s ease;
+//    -moz-animation      :growCircle 0.3s ease;
+//    animation           :growCircle 0.3s ease;   
+//  }
 
-    label > span { 
-        display:block;    
-        position:absolute; 
-        left:0; 
-        -webkit-transition-duration:0.3s; 
-        -moz-transition-duration:0.3s; 
-        transition-duration:0.3s;
-    }
-
-    label > span.inc   { 
-      background: #fff;
-      left:-20px;  
-      top:-20px;
-      height:60px;
-      width:60px;
-      opacity:0; 
-      border-radius:50% !important; 
-      -moz-border-radius:50% !important; 
-      -webkit-border-radius:50% !important;
-    }
-
-    label > .box {
-      top:0px;
-      border:2px solid $input-ui-checkbox-box-color;
-      height:20px;   
-      width:20px;
-      z-index:5;
-      -webkit-transition-delay:0.2s; -moz-transition-delay:0.2s; transition-delay:0.2s;
-    }
-
-    label > .check {
-      top: -4px;
-      left: 6px;
-      width: 10px;
-      height: 20px;
-      border:2px solid $input-md-focus-border;  
-      border-top: none;
-      border-left: none;
-      opacity:0; 
-      z-index:5;
-      -webkit-transform:rotate(180deg); 
-      -moz-transform:rotate(180deg); 
-      transform:rotate(180deg);
-      -webkit-transition-delay:0.3s; 
-      -moz-transition-delay:0.3s; transition-delay:0.3s;
-    }
-
-    /* handling click events */
-
-    /* when checkbox is checked */
-    label > span.inc {
-      -webkit-animation   :growCircle 0.3s ease;
-      -moz-animation      :growCircle 0.3s ease;
-      animation           :growCircle 0.3s ease;   
-    }
-
-    input[type=checkbox]:checked ~ label > .box { 
-      opacity:0;
-      -webkit-transform   :scale(0) rotate(-180deg);
-      -moz-transform        :scale(0) rotate(-180deg);
-      transform                 :scale(0) rotate(-180deg);
-    }
-
-    input[type=checkbox]:checked ~ label > .check {
-      opacity:1; 
-      -webkit-transform   :scale(1) rotate(45deg);
-      -moz-transform      :scale(1) rotate(45deg);
-      transform           :scale(1) rotate(45deg);
-    }
-
-    // Disabled state
-    input[type=checkbox]:disabled ~ label,
-    input[type=checkbox][disabled] ~ label {
-        cursor: not-allowed;   
-        @include opacity($input-ui-checkbox-disabled-opacity); 
-    }
-   
-    input[type=checkbox]:disabled ~ label > .box,
-    input[type=checkbox][disabled] ~ label > .box { 
-        cursor: not-allowed;
-        @include opacity($input-ui-checkbox-disabled-opacity);
-    }
-
-    input[type=checkbox]:disabled:checked ~ label > .check, 
-    input[type=checkbox][disabled]:checked ~ label > .check {           
-        cursor: not-allowed;
-        @include opacity($input-ui-checkbox-disabled-opacity);
-    } 
+//  input[type=checkbox]:checked ~ label > .box { 
+//    opacity:0;
+//    -webkit-transform   :scale(0) rotate(-180deg);
+//    -moz-transform        :scale(0) rotate(-180deg);
+//    transform                 :scale(0) rotate(-180deg);
+//  }
+//
+//  input[type=checkbox]:checked ~ label > .check {
+//    opacity:1; 
+//    -webkit-transform   :scale(1) rotate(45deg);
+//    -moz-transform      :scale(1) rotate(45deg);
+//    transform           :scale(1) rotate(45deg);
+//  }
+//
+//  // Disabled state
+//  input[type=checkbox]:disabled ~ label,
+//  input[type=checkbox][disabled] ~ label {
+//      cursor: not-allowed;   
+//      @include opacity($input-ui-checkbox-disabled-opacity); 
+//  }
+// 
+//  input[type=checkbox]:disabled ~ label > .box,
+//  input[type=checkbox][disabled] ~ label > .box { 
+//      cursor: not-allowed;
+//      @include opacity($input-ui-checkbox-disabled-opacity);
+//  }
+//
+//  input[type=checkbox]:disabled:checked ~ label > .check, 
+//  input[type=checkbox][disabled]:checked ~ label > .check {           
+//      cursor: not-allowed;
+//      @include opacity($input-ui-checkbox-disabled-opacity);
+//  } 
 }
 
 // Error states
