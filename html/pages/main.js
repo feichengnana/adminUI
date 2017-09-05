@@ -1,5 +1,6 @@
 var chartCount = echarts.init(document.getElementById('echartCount'),'shine');
 var option =   {
+	color:['#d48265', '#91c7ae','#c4ccd3', '#ca8622', '#89B5DB','#D53A35','#2F4554','#61A0A8'],
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c}"
@@ -13,7 +14,7 @@ var option =   {
     legend: {
         orient : 'horizontal',
         x : 'left',
-        data:['新建','改造','扩容','\n','项目编制','项目设计','项目施工','项目施工','项目完成']
+        data:['项目编制','项目设计','项目施工','项目验收','项目完成','\n','新建','改造','扩容']
     },
     toolbox: {
         show : true,
@@ -30,6 +31,25 @@ var option =   {
     },
     calculable : false,
     series : [
+        {
+            name:'业务阶段',
+            type:'pie',
+            radius : [100, 140],
+            
+            // for funnel
+            x: '60%',
+            width: '35%',
+            funnelAlign: 'left',
+            max: 1048,
+            
+            data:[
+                {value:335, name:'项目编制'},
+                {value:310, name:'项目设计'},
+                {value:234, name:'项目施工'},
+                {value:135, name:'项目验收'},
+                {value:1048, name:'项目完成'}
+            ]
+        },
         {
             name:'建设性质',
             type:'pie',
@@ -56,25 +76,6 @@ var option =   {
                 {value:335, name:'新建'},
                 {value:679, name:'改造'},
                 {value:1548, name:'扩容'}
-            ]
-        },
-        {
-            name:'业务阶段',
-            type:'pie',
-            radius : [100, 140],
-            
-            // for funnel
-            x: '60%',
-            width: '35%',
-            funnelAlign: 'left',
-            max: 1048,
-            
-            data:[
-                {value:335, name:'项目编制'},
-                {value:310, name:'项目设计'},
-                {value:234, name:'项目施工'},
-                {value:135, name:'项目验收'},
-                {value:1048, name:'项目完成'}
             ]
         }
     ]
@@ -131,6 +132,7 @@ var option2 =  {
             name:'项目数',
             type:'line',
             data:[0,0,0,0,15,30,4,0,0,0,0,0],
+            smooth:true,
             markPoint : {
                 data : [
                     {type : 'max', name: '最大值'},
