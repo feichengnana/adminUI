@@ -75,14 +75,14 @@ var Login = function() {
             handleLogin();
 
             // 初始化左侧图片
-            $('.login-bg').backstretch([
-                "../../static/img/login/bg3.jpg",
-                "../../static/img/login/bg4.jpg"
-                ], {
-                  fade: 1000,
-                  duration: 8000
-                }
-            );
+//          $('.login-bg').backstretch([
+//              "../../static/img/login/d1.jpg",
+//              "../../static/img/login/d2.jpg"
+//              ], {
+//                fade: 1000,
+//                duration: 8000
+//              }
+//          );
 
         }
 
