@@ -1,37 +1,4 @@
 @charset "UTF-8";
-/***
-Rounded corners reset
-***/
-/* Reset rounded corners for all elements */
-div,
-svg,
-input,
-select,
-textarea,
-span,
-img,
-table,
-label,
-td,
-th,
-p,
-a,
-button,
-ul,
-code,
-pre,
-li {
-  -webkit-border-radius: 0 !important;
-  -moz-border-radius: 0 !important;
-  border-radius: 0 !important; }
-
-/* except below bootstrap elements */
-.img-circle {
-  border-radius: 50% !important; }
-
-.img-rounded {
-  border-radius: 6px !important; }
-
 /* Cubic Bezier Transition */
 /***
 General reset
@@ -1567,10 +1534,10 @@ Custom color buttons
 
 .btn.btn-outline.default {
   border-color: #e1e5ec;
-  color: #e1e5ec;
+  color: #666;
   background: none; }
   .btn.btn-outline.default:hover, .btn.btn-outline.default:active, .btn.btn-outline.default:active:hover, .btn.btn-outline.default:active:focus, .btn.btn-outline.default:focus, .btn.btn-outline.default.active {
-    border-color: #e1e5ec;
+    border-color: #666;
     color: #666;
     background-color: #e1e5ec; }
 
@@ -3782,12 +3749,7 @@ Portlets
 .portlet {
   margin-top: 0px;
   margin-bottom: 10px;
-  padding: 0px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px; }
+  padding: 0px; }
   .portlet.portlet-fullscreen {
     z-index: 10060;
     margin: 0;
@@ -3807,12 +3769,7 @@ Portlets
       padding: 0 10px; }
   .portlet > .portlet-title {
     border-bottom: 1px solid #eee;
-    padding: 0;
-    -webkit-border-radius: 4px 4px 0 0;
-    -moz-border-radius: 4px 4px 0 0;
-    -ms-border-radius: 4px 4px 0 0;
-    -o-border-radius: 4px 4px 0 0;
-    border-radius: 4px 4px 0 0; }
+    padding: 0; }
     .portlet > .portlet-title:before, .portlet > .portlet-title:after {
       content: " ";
       display: table; }
@@ -3823,7 +3780,7 @@ Portlets
       display: inline-block;
       font-size: 18px;
       line-height: 18px;
-      padding: 10px 0 12px; }
+      padding: 8px 0 10px; }
       .portlet > .portlet-title > .caption.bold {
         font-weight: 400; }
       .portlet > .portlet-title > .caption > i {
@@ -3952,7 +3909,7 @@ Portlets
           background: none;
           margin: 5px 0 0 1px;
           border: 0;
-          padding: 8px 10px;
+          padding: 5px 13px 8px;
           color: #fff; }
         .portlet > .portlet-title > .nav-tabs > li.active > a,
         .portlet > .portlet-title > .nav-tabs > li:hover > a {
@@ -3960,12 +3917,7 @@ Portlets
           background: #fff;
           border: 0; }
   .portlet > .portlet-body {
-    clear: both;
-    -webkit-border-radius: 0 0 4px 4px;
-    -moz-border-radius: 0 0 4px 4px;
-    -ms-border-radius: 0 0 4px 4px;
-    -o-border-radius: 0 0 4px 4px;
-    border-radius: 0 0 4px 4px; }
+    clear: both; }
     .portlet > .portlet-body p {
       margin-top: 0; }
   .portlet > .portlet-empty {
@@ -3993,8 +3945,7 @@ Portlets
     padding: 0;
     border-bottom: 1px solid #eef1f5; }
     .portlet > .portlet-title > .caption {
-      color: #666;
-      padding: 10px 0; }
+      color: #666; }
       .portlet > .portlet-title > .caption > .caption-subject {
         font-size: 16px; }
       .portlet > .portlet-title > .caption > i {
@@ -4007,7 +3958,7 @@ Portlets
       .portlet > .portlet-title > .caption.caption-md > i {
         font-size: 14px; }
     .portlet > .portlet-title > .actions {
-      padding: 6px 0 14px 0; }
+      padding-top: 5px; }
       .portlet > .portlet-title > .actions .btn-default {
         color: #666; }
       .portlet > .portlet-title > .actions .btn-icon-only {
@@ -4033,14 +3984,14 @@ Portlets
     .portlet > .portlet-title > .pagination {
       padding: 2px 0 13px 0; }
     .portlet > .portlet-title > .tools {
-      padding: 10px 0 13px 0;
+      padding: 10px 0 7px;
       margin-top: 2px; }
     .portlet > .portlet-title > .nav-tabs > li {
       margin: 0;
       padding: 0; }
       .portlet > .portlet-title > .nav-tabs > li > a {
         margin: 0;
-        padding: 12px 13px 13px 13px;
+        padding: 5px 13px 8px;
         font-size: 13px;
         color: #666; }
       .portlet > .portlet-title > .nav-tabs > li.active > a,
@@ -5301,9 +5252,6 @@ Custom tabs
 
 .tabbable-custom.tabbable-noborder .tab-content {
   border: 0; }
-
-.portlet:not(.light) .tabbable-line {
-  padding-top: 15px; }
 
 .tabbable-line > .nav-tabs {
   border: none;

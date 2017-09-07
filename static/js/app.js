@@ -604,7 +604,6 @@ var App = function() {
 
 		//main function to initiate core javascript after ajax complete
 		initAjax: function() {
-			//handleUniform(); // handles custom radio & checkboxes     
 			handleiCheck(); // handles custom icheck radio and checkboxes
 			handleBootstrapSwitch(); // handle bootstrap switch plugin
 			handleScrollers(); // handles slim scrolling contents 
@@ -1080,7 +1079,8 @@ var App = function() {
 jQuery(document).ready(function() {
 	App.init();
 	$(window).resize(function() {
-		App.destroySlimScroll('.page-content.scroller');
-		App.initSlimScroll('.page-content.scroller');
+//		App.destroySlimScroll('.page-content.scroller');
+//		App.initSlimScroll('.page-content.scroller');
+		App.initAjax();
 	})
 });

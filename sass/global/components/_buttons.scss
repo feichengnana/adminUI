@@ -25,23 +25,60 @@ Custom color buttons
     .btn.#{$name}:not(.btn-outline) {
         @include button-variant(map-get($colors, font), map-get($colors, base), map-get($colors, base));
     }
-
-    .btn.btn-outline.#{$name} {  
-        border-color: map-get($colors, base);
-        color: map-get($colors, base);
-        background: none;
-
-        &:hover,
-        &:active,  
-        &:active:hover,
-        &:active:focus,     
-        &:focus,
-        &.active {
+    
+    @if $name !='default'{
+        .btn.btn-outline.#{$name} {  
             border-color: map-get($colors, base);
-            color: map-get($colors, font);
-            background-color: map-get($colors, base);
+            color: map-get($colors, base);
+            background: none;
+    
+            &:hover,
+            &:active,  
+            &:active:hover,
+            &:active:focus,     
+            &:focus,
+            &.active {
+                border-color: map-get($colors, base);
+                color: map-get($colors, font);
+                background-color: map-get($colors, base);
+            }
         }
     }
+    @else{
+        .btn.btn-outline.#{$name} {  
+            border-color: map-get($colors, base);
+            color: map-get($colors, font);
+            background: none;
+    
+            &:hover,
+            &:active,  
+            &:active:hover,
+            &:active:focus,     
+            &:focus,
+            &.active {
+                border-color: map-get($colors, font);
+                color: map-get($colors, font);
+                background-color: map-get($colors, base);
+            }
+        } 
+    }
+    
+//  .btn.btn-outline.#{$name} {  
+//      border-color: map-get($colors, base);
+//      color: map-get($colors, base);
+//      background: none;
+//
+//      &:hover,
+//      &:active,  
+//      &:active:hover,
+//      &:active:focus,     
+//      &:focus,
+//      &.active {
+//          border-color: map-get($colors, base);
+//          color: map-get($colors, font);
+//          background-color: map-get($colors, base);
+//      }
+//  }
   
     .btn.#{$name}-stripe { 
         border-left: 4px solid map-get($colors, base) !important;

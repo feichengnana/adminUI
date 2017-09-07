@@ -15,7 +15,7 @@ Portlets
     margin-bottom: 10px;
     padding: 0px; 
     
-    @include border-radius($general-border-radius);
+//  @include border-radius($general-border-radius);
 
     &.portlet-fullscreen {
         z-index: $zindex-modal + 10;
@@ -43,10 +43,7 @@ Portlets
     > .portlet-title {  
         border-bottom: 1px solid #eee;
         padding: 0;   
-        //margin-bottom: 10px;
-        //min-height: 41px;
-        
-        @include border-radius($general-border-radius $general-border-radius 0 0);       
+//      @include border-radius($general-border-radius $general-border-radius 0 0);       
 
         @include clearfix();  
 
@@ -55,7 +52,7 @@ Portlets
             display: inline-block; 
             font-size: 18px;
             line-height: 18px;              
-            padding: 10px 0 12px; 
+            padding: 8px 0 10px; 
 
             &.bold {
                 font-weight: 400;   
@@ -249,7 +246,7 @@ Portlets
                     background: none;
                     margin: 5px 0 0 1px; 
                     border: 0;
-                    padding: 8px 10px; 
+                    padding: 5px 13px 8px; 
                     color: #fff;
                 }
 
@@ -265,7 +262,7 @@ Portlets
 
     > .portlet-body {
         clear: both;  
-        @include border-radius(0 0 $general-border-radius $general-border-radius); 
+//      @include border-radius(0 0 $general-border-radius $general-border-radius); 
 
         p {
             margin-top: 0;
@@ -508,8 +505,7 @@ Portlets
 
         > .caption {
             color: #666;
-            padding: 10px 0;
-
+            
             > .caption-subject {
                 font-size: 16px;
             }
@@ -533,7 +529,7 @@ Portlets
         }
 
         > .actions {
-            padding: 6px 0 14px 0;
+            padding-top: 5px;
 
             .btn-default {
                 color: #666;
@@ -583,7 +579,7 @@ Portlets
         }
 
         > .tools {
-            padding: 10px 0 13px 0;
+            padding: 10px 0 7px;
             margin-top: 2px;
         }
 
@@ -594,7 +590,7 @@ Portlets
 
                 > a {
                     margin: 0;
-                    padding: 12px 13px 13px 13px; 
+                    padding: 5px 13px 8px; 
                     font-size: 13px;
                     color: #666;
                 }
