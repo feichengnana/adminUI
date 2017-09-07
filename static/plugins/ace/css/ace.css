@@ -1150,7 +1150,7 @@ pre.prettyprint {
   -webkit-box-shadow: none;
   box-shadow: none;
   min-height: 45px;
-  background: #d11718;
+  background: #46BE8A;
 }
 .navbar .navbar-text,
 .navbar .navbar-link {
@@ -1194,7 +1194,7 @@ pre.prettyprint {
 .ace-nav > li {
   line-height: 50px;
   height: 50px;
-  border-left: 1px solid #d11718;
+  border-left: 1px solid #46BE8A;
   padding: 0;
   position: relative;
   float: left;
@@ -1203,7 +1203,7 @@ pre.prettyprint {
   border-left-width: 0;
 }
 .ace-nav > li > a {
-  background-color: #d11718;
+  background-color: #46BE8A;
   color: #FFF;
   display: block;
   line-height: inherit;
@@ -1233,7 +1233,7 @@ pre.prettyprint {
 .ace-nav > li.open > a,
 .ace-nav > li.open > a:focus,
 .ace-nav > li.open > a:hover{
-  background-color: #E61C1D;
+  background-color: #66D6A5;
   color: #FFF;
 }
 .ace-nav > li.blue > a {
@@ -20146,13 +20146,13 @@ input.typeahead.scrollable ~ .tt-menu {
 /*涓�у寲瀹氬埗鍏ㄥ眬ace*/
 
 .no-skin .sidebar-toggle {
-  border-color: #d11718 !important;
+  border-color: #46BE8A !important;
   border-bottom:none;
 }
 .no-skin .sidebar-toggle>.ace-icon{
   background-color: #f3f3f3 !important;
-  border-color: #d11718 !important;
-  color: #d11718 !important;
+  border-color: #46BE8A !important;
+  color: #46BE8A !important;
 }
 
 .form-control{
@@ -20293,7 +20293,7 @@ body.no-skin{overflow: hidden;}
 	line-height: 40px
 }
 .content-tabs {
-	border-bottom: solid 1px #ccc
+	border-bottom: solid 1px #E4EAEC
 }
 
 .content-tabs .roll-nav,
@@ -20404,7 +20404,7 @@ nav.page-tabs .page-tabs-content {
 .page-tabs a.active {
 	position: relative;
 	background: #FFF;
-	color: #ca5952;
+	/*color: #46BE8A;*/
 }
 .page-tabs a.active:after{
 	content: '';
@@ -20413,5 +20413,5 @@ nav.page-tabs .page-tabs-content {
 	bottom: 0;
 	width: 100%;
 	height:0;
-	border-bottom: 1px solid #ca5952;
+	border-bottom: 2px solid #46BE8A;
 }
