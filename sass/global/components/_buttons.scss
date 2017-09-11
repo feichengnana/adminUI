@@ -56,7 +56,7 @@ Custom color buttons
             &:active:focus,     
             &:focus,
             &.active {
-                border-color: map-get($colors, font);
+                border-color: map-get($colors, base);
                 color: map-get($colors, font);
                 background-color: map-get($colors, base);
             }

@@ -61,7 +61,7 @@ var App = function() {
 			}
 			var title = me.data('title');
 			if(linkUrl == '' || title == '') return false;
-			window.parent.showSubpageTab(linkUrl, title);
+			window.top.showSubpageTab(linkUrl, title);
 		})
 	}
 

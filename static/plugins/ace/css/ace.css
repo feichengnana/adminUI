@@ -20355,7 +20355,8 @@ nav.page-tabs .page-tabs-content {
 .page-tabs a:hover {
 	color: #777;
 	background: #f2f2f2;
-	cursor: pointer
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .roll-right.J_tabRight {
