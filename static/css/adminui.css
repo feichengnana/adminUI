@@ -7092,6 +7092,8 @@ html, body, .page-content {
 .page-search {
   position: relative;
   margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #EEF1F5;
   min-height: 40px;
   margin-top: -5px; }
 
@@ -7625,6 +7627,16 @@ a.travis {
   margin-bottom: 0 !important;
   padding-left: 20px;
   line-height: 20px !important; }
+
+div.dataTables_wrapper div.dataTables_info {
+  line-height: 45px; }
+
+.form-control-wrapper {
+  border: 1px solid #C2CAD8;
+  border-radius: 4px;
+  height: 220px;
+  overflow: auto;
+  padding: 6px 12px; }
 
 /* Cubic Bezier Transition */
 /***

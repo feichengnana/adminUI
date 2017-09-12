@@ -22,7 +22,7 @@ html,body,.page-content{height:100%;}
 .page-content{padding:10px;overflow-y: auto;overflow-x: hidden;}
 .page-content.scroller{padding:10px 12px 10px 10px !important;}
 
-.page-search{position: relative;margin-bottom: 10px;min-height: 40px;margin-top: -5px;}
+.page-search{position: relative;margin-bottom: 10px;padding-bottom:5px;border-bottom:1px solid #EEF1F5;min-height: 40px;margin-top: -5px;}
 .page-search .page-search-form{padding-right:110px;overflow: hidden;}
 .page-search .page-search-form .input-group{margin-bottom: 5px;margin-top: 5px;}
 .page-search .page-search-action{position: absolute;right:0;top:0;width:100px;padding:5px 10px;height: 100%;margin-bottom:10px;text-align: center;border-left: 1px solid #ddd;}
@@ -581,4 +581,15 @@ a.travis {
     margin-bottom: 0!important;
     padding-left: 20px;
     line-height: 20px !important;
+}
+
+//修复 表格分页不对齐的问题
+div.dataTables_wrapper div.dataTables_info{line-height: 45px;}
+//新增类似输入框样式的表单容器
+.form-control-wrapper{
+    border: 1px solid #C2CAD8;
+    border-radius: 4px;
+    height: 220px;
+    overflow: auto;
+    padding:6px 12px;
 }

@@ -1001,8 +1001,6 @@ var App = function() {
 			the = this;
 			options = $.extend(true, {
 				"order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
-				"scrollX": true,
-				"scrollCollapse": true,
 				"oLanguage": {
 					"sProcessing": "处理中...",
 					"sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
@@ -1042,22 +1040,25 @@ var App = function() {
 					}
 				},
 				"dom": '<"clearfix"<"#table-btns.pull-left"><"pull-right" B><"pull-right mr-10" f>>t<"clearfix dt-footer-wrapper" <"pull-left" <"inline-block" i><"inline-block"l>><"pull-right" p>>', //生成样式
-				"scrollCollapse": true,
 				"processing": true,
 				"paging": true,
+				"lengthMenu": [
+					[5, 10, 15, 20, -1],
+					[5, 10, 15, 20, "All"] // change per page values here
+				],
+				"pageLength": 15,
 				"language": {
 					"emptyTable": "没有关联的需求信息!",
 					"thousands": ","
 				},
-				"fixedColumns": {
-					'leftColumns': 2
-				},
-				"pageLength": 10,
+//				"fixedColumns": {
+//					'leftColumns': 2
+//				},
 				"columnDefs": [{ // 所有列默认值
 					"targets": "_all",
 					"defaultContent": ''
 				}],
-				"buttons": ['copy', 'excel', 'colvis'], //'pdf',
+//"buttons": ['copy', 'excel', 'colvis'], //'pdf',
 				"initComplete": function(settings, json) {
 					var html = $('#toolbars').html();
 					$('#table-btns').append(html);
