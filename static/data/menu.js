@@ -9,7 +9,7 @@ var menus = [{
             "pid":"01",
             "icon":"",
             "name":"数据列表页",
-            "uri":"html/pages/list1.html",
+            "uri":"html/pages/list.html",
             "childrens":[]
         },{
             "id":"013",

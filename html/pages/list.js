@@ -90,7 +90,8 @@ var table = App.initDataTables('#dataTable',{
 	"data": dataTableData,
 	"fixedColumns": {
 		'leftColumns': 2
-	}
+	},
+	"scrollX":true
 })
 
 function findDetail(itemId) {

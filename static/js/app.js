@@ -1032,6 +1032,7 @@ var App = function() {
 						"excel": "<i title='导出表格' class='fa fa-table'></i>",
 						"pdf": "<i title='导出PDF' class='fa fa-file-pdf-o'></i>",
 						"colvis": "<i title='列' class='glyphicon glyphicon-th'></i>",
+						"print": "<i title='打印' class='fa fa-print'></i>",
 						"copyTitle": "复制到剪切板",
 						"copySuccess": {
 							1: "已经复制当前记录到剪贴板",
@@ -1058,7 +1059,7 @@ var App = function() {
 					"targets": "_all",
 					"defaultContent": ''
 				}],
-//"buttons": ['copy', 'excel', 'colvis'], //'pdf',
+				"buttons": ['copy', 'excel', 'colvis','print'], //'pdf',
 				"initComplete": function(settings, json) {
 					var html = $('#toolbars').html();
 					$('#table-btns').append(html);
@@ -1067,8 +1068,28 @@ var App = function() {
 					// 取消全选  
 					$(":checkbox[name='td-checkbox']").prop('checked', false);
 				}
-			}, options)
-			$table = $(el).DataTable(options);
+			}, options);
+			
+			$table = $(el).DataTable(options).on('init.dt',function(){
+                if(options.scrollX == undefined || options.scrollX == false){
+                    var wrapperWidth = $(el).closest('.dataTables_wrapper').width();
+                    var tableWidth = $(el).width();
+                    if(tableWidth - wrapperWidth > 10){
+                        options = $.extend(true, {
+                            "scrollX":true
+                        }, options);
+                        $table.destroy();
+                        $table = $(el).DataTable(options);
+                    }
+                }
+            });
+            
+            $(window).resizeEnd(function(){
+            	$table.destroy();
+                $table = $(el).DataTable(options);
+				console.log('调整完成');
+				//$('.txt h3').text('调整完成');
+			});
 			return $table;
 		}
 	};
@@ -1085,3 +1106,4 @@ jQuery(document).ready(function() {
 		App.initAjax();
 	})
 });
+

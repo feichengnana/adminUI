@@ -25,7 +25,7 @@ html,body,.page-content{height:100%;}
 .page-search{position: relative;margin-bottom: 10px;padding-bottom:5px;border-bottom:1px solid #EEF1F5;min-height: 40px;margin-top: -5px;}
 .page-search .page-search-form{padding-right:110px;overflow: hidden;}
 .page-search .page-search-form .input-group{margin-bottom: 5px;margin-top: 5px;}
-.page-search .page-search-action{position: absolute;right:0;top:0;width:100px;padding:5px 10px;height: 100%;margin-bottom:10px;text-align: center;border-left: 1px solid #ddd;}
+.page-search .page-search-action{position: absolute;right:0;top:0;width:100px;padding:5px 10px;height: 98%;margin-bottom:10px;text-align: center;border-left: 1px solid #ddd;}
 .page-search .page-search-action:after{content:'';clear: both;}
 .page-search-more{text-align: right;}
 .page-search-more>a{color: $brand-danger !important;}
@@ -584,7 +584,7 @@ a.travis {
 }
 
 //修复 表格分页不对齐的问题
-div.dataTables_wrapper div.dataTables_info{line-height: 45px;}
+div.dataTables_wrapper div.dataTables_info{line-height: 36px;padding-top: 0 !important;}
 //新增类似输入框样式的表单容器
 .form-control-wrapper{
     border: 1px solid #C2CAD8;
@@ -592,4 +592,12 @@ div.dataTables_wrapper div.dataTables_info{line-height: 45px;}
     height: 220px;
     overflow: auto;
     padding:6px 12px;
+}
+
+div.dataTables_wrapper div.dataTables_length select{
+    height:22px;
+    width:55px;
+    line-height: 55px;
+    padding:0 5px;
+    margin-top: -2px;
 }

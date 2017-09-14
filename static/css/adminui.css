@@ -3909,7 +3909,8 @@ Portlets
           background: none;
           margin: 5px 0 0 1px;
           border: 0;
-          padding: 5px 13px 8px;
+          font-size: 14px;
+          padding: 7px 13px 6px;
           color: #fff; }
         .portlet > .portlet-title > .nav-tabs > li.active > a,
         .portlet > .portlet-title > .nav-tabs > li:hover > a {
@@ -3991,8 +3992,8 @@ Portlets
       padding: 0; }
       .portlet > .portlet-title > .nav-tabs > li > a {
         margin: 0;
-        padding: 5px 13px 8px;
-        font-size: 13px;
+        padding: 7px 13px 6px;
+        font-size: 14px;
         color: #666; }
       .portlet > .portlet-title > .nav-tabs > li.active > a,
       .portlet > .portlet-title > .nav-tabs > li:hover > a {
@@ -7111,7 +7112,7 @@ html, body, .page-content {
   top: 0;
   width: 100px;
   padding: 5px 10px;
-  height: 100%;
+  height: 98%;
   margin-bottom: 10px;
   text-align: center;
   border-left: 1px solid #ddd; }
@@ -7629,7 +7630,8 @@ a.travis {
   line-height: 20px !important; }
 
 div.dataTables_wrapper div.dataTables_info {
-  line-height: 45px; }
+  line-height: 36px;
+  padding-top: 0 !important; }
 
 .form-control-wrapper {
   border: 1px solid #C2CAD8;
@@ -7637,6 +7639,13 @@ div.dataTables_wrapper div.dataTables_info {
   height: 220px;
   overflow: auto;
   padding: 6px 12px; }
+
+div.dataTables_wrapper div.dataTables_length select {
+  height: 22px;
+  width: 55px;
+  line-height: 55px;
+  padding: 0 5px;
+  margin-top: -2px; }
 
 /* Cubic Bezier Transition */
 /***
