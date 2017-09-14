@@ -397,3 +397,34 @@ dataTableData = [
 	}
 ];
 
+var simpleData = [{
+	"proId":"p001",
+	"proName":"工单名称工单名称工单名称工单名称工单名称",
+	"proCode":"20170302",
+	"cityName":"济南",
+	"time":"2017-12-12 05:00:00"
+},{
+	"proId":"p002",
+	"proName":"工单名称工单名称工单名称工单名称工单名称工单名称",
+	"proCode":"20170302",
+	"cityName":"济南",
+	"time":"2017-12-12 05:00:00"
+},{
+	"proId":"p003",
+	"proName":"工单名称",
+	"proCode":"20170302",
+	"cityName":"济南",
+	"time":"2017-12-12 05:00:00"
+},{
+	"proId":"p004",
+	"proName":"工单名称",
+	"proCode":"20170302",
+	"cityName":"济南",
+	"time":"2017-12-12 05:00:00"
+},{
+	"proId":"p005",
+	"proName":"工单名称",
+	"proCode":"20170302",
+	"cityName":"济南",
+	"time":"2017-12-12 05:00:00"
+}]

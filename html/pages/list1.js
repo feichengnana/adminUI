@@ -1,6 +1,14 @@
 var initTable1 = function() {
 	var table = $('#sample_1');
 	var oTable = table.dataTable({
+		responsive: {
+			details: true
+		},
+	//"scrollX":true,
+		"sScrollX": "100%",
+"sScrollXInner": "100%",
+		"bAutoWidth": true,
+	//"scrollCollapse":true,
 		"order": [],
 		"language": {
 			"emptyTable": "没有关联的需求信息!",
@@ -59,6 +67,7 @@ var initTable1 = function() {
 				"className": "td-checkbox text-center",
 				"orderable": false,
 				"data": "proId",
+				"width":20,
 				"align": 'center',
 				"render": function(data, type, row, meta) {
 					var content = '<label class="ui-checkbox">';
@@ -66,31 +75,11 @@ var initTable1 = function() {
 					content += '<span></span></label>';
 					return content;
 				}
-			}, {
-				"data": "proId",
-				"title": "操作",
-				"orderable": false,
-				"bSort": false,
-				"width": "20",
-				"align": 'center',
-				"className": "text-center",
-				"render": function(a, b, c, d) {
-					var html = '';
-					html += '<button title="查看" onclick="findDetail(' + c.proId + ')" class="btn btn-info btn-link btn-xs"><i class="fa fa-search-plus"></i></button>';
-					html += '<button title="编辑" onclick="editDetail(' + c.proId + ')" class="btn btn-success btn-link btn-xs" ' + (a < 3 ? 'disabled="disabled"' : '') + '><i class="fa fa-edit"></i></button>';
-					return html;
-				}
-			},
+			}, 
 			{
 				"data": "proName",
 				"title": "工单名称",
 				"width": '160',
-				"align": 'left'
-			},
-			{
-				"data": "busiCode",
-				"title": "工单编码",
-				"width": '120',
 				"align": 'left'
 			},
 			{
@@ -106,43 +95,13 @@ var initTable1 = function() {
 				"align": 'left'
 			},
 			{
-				"data": "disName",
-				"title": "区县",
-				"width": '120',
-				"align": 'left'
-			},
-			{
-				"data": "providerName",
-				"title": "工程服务商",
-				"width": '100',
-				"align": 'left'
-			},
-			{
-				"data": "providerUserName",
-				"title": "工单接收人",
-				"width": '100',
-				"align": 'left'
-			},
-			{
-				"data": "buildSceneName",
-				"title": "建设性质",
-				"width": '100',
-				"align": 'left'
-			},
-			{
-				"data": "buildTypeName",
-				"title": "建设时限",
-				"width": '100',
-				"align": 'left'
-			},
-			{
-				"data": "proDate",
-				"title": "归属工期（天）",
+				"data": "time",
+				"title": "时间",
 				"width": '100',
 				"align": 'left'
 			}
 		],
-		"data": dataTableData
+		"data": simpleData
 	});
 }
 $(function() {

@@ -20,7 +20,6 @@
 		<link rel="stylesheet" type="text/css" href="../../static/plugins/select2/css/select2-bootstrap.min.css" />
 		
 		<link rel="stylesheet" type="text/css" href="../../static/js/datatables/datatables.min.css" />
-		<link rel="stylesheet" type="text/css" href="../../static/js/datatables/plugins/bootstrap/datatables.bootstrap.css" />
 		
 		<link rel="stylesheet" type="text/css" href="../../static/css/adminui.min.css" />
 	</head>
@@ -108,173 +107,13 @@
 							</div>
 						</form>
 					</div>
-					<!--<div id="toolbars" class="hidden">
-						<a  href="addForm.html" class="btn red btn-outline" data-title="添加工单"><i class="fa fa-plus-circle"></i> 新增</a>
-						<button onclick="delItem()" type="button" class="btn yellow btn-outline"><i class="fa fa-times"></i> 删除</button>
-						<div class="btn-group">
-							<button type="button" class="btn blue btn-outline"><i class="fa fa-gear"></i> 导入</button>
-							<button type="button" class="btn blue btn-outline"><i class="fa fa-gear"></i> 导出</button>
-						</div>
-						<div class="btn-group">
-							<button type="button" class="btn default btn-outline"><i class="fa fa-gear"></i> 其他操作</button>
-							<button type="button" class="btn default btn-outline"><i class="fa fa-gear"></i> 其他操作</button>
-						</div>
-					</div>
-					-->
 					<table class="table table-striped table-bordered table-hover table-header-fixed" id="sample_1">
                                             
                     </table>
 				</div>
 			</div>
 		</div>
-		<!--弹出查看-->
-		<div class="modal fade" id="findDetailModal" tabindex="-1" data-backdrop="static" role="dialog">
-			<div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">查看内容</h4>
-					</div>
-					<div class="modal-body form">
-						<div class="form-body form-horizontal form-row-seperated">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-                                        <label class="control-label col-sm-2">工单名称:</label>
-                                        <div class="col-sm-10">
-                                            <p class="form-control-static"> 集客需求名称--测试29-JK </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">项目编码:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 20170809150702 </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">建设性质:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 新建 </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">地市:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 德州 </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">区县:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 齐河县 </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">工单接收人:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 崔国动（菏泽） </p>
-                                        </div>
-                                    </div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-                                        <label class="control-label col-sm-4">工程服务商:</label>
-                                        <div class="col-sm-8">
-                                            <p class="form-control-static"> 山东省邮电工程有限公司 </p>
-                                        </div>
-                                    </div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default btn-circle" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--弹出编辑-->
-		<div class="modal fade" id="editDetailModal" data-backdrop="static" tabindex="-1" role="dialog">
-			<div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">编辑内容</h4>
-					</div>
-					<div class="modal-body form">
-						<div class="form-body">
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label for="proName">工单名称  <i class="needIcon"></i></label>
-										<div class="input-group">
-											<input type="text" class="form-control" id="proName" placeholder="工程订单名称.">
-											<span class="input-group-btn">
-												<button type="button" class="btn btn-success">勾选需求</button>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label for="proCode">项目编码</label>
-										<input type="text" class="form-control" id="proCode" placeholder="编码格式：xxx-xx">
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label for="buildScene">建设性质  <i class="needIcon"></i></label>
-										<select name="buildScene" class="form-control select2me" style="width:100%" id="buildScene">
-											<option value="0">新建</option>
-											<option value="1">改造</option>
-											<option value="2">扩容</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label for="cityName">地市</label>
-										<input type="text" class="form-control" id="cityName" placeholder="">
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group">
-										<label for="disName">区县</label>
-										<input type="text" class="form-control" id="disName" placeholder="">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="providerUserName">工单接收人  <i class="needIcon"></i></label>
-										<input type="text" class="form-control" id="providerUserName" placeholder="工单接收人">
-									</div>
-								</div>
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label for="providerName">工程服务商</label>
-										<input type="text" class="form-control" id="providerName" placeholder="工程服务商">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger btn-circle"><i class="fa fa-check"></i> 提交</button>
-						<button type="button" class="btn btn-default btn-circle" data-dismiss="modal"><i class="fa fa-close"></i> 关闭</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		
 		<!--[if lt IE 9]>
 		  <script src="../../static/plugins/html5shiv.min.js"></script>
 		  <script src="../../static/plugins/respond.min.js"></script>
@@ -294,7 +133,6 @@
 		<script src="../../static/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
 		<!--业务依赖-->
 		<script src="../../static/js/datatables/datatables.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/js/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<!--当前页面依赖-->
