@@ -2691,6 +2691,72 @@ Form Layouts
   margin-top: 1px; }
 
 /***
+Form Repeater
+****/
+.ui-repeater {
+  display: table;
+  width: 100%; }
+  .ui-repeater .ui-repeater-item {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 15px; }
+    .ui-repeater .ui-repeater-item.ui-overflow {
+      overflow: auto; }
+  .ui-repeater .ui-repeater-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-weight: 600; }
+  .ui-repeater .ui-repeater-input {
+    display: table-cell;
+    vertical-align: top;
+    padding: 0 10px 10px 10px;
+    width: 1%; }
+    .ui-repeater .ui-repeater-input input[type="text"], .ui-repeater .ui-repeater-input textarea, .ui-repeater .ui-repeater-input select {
+      width: 100%; }
+    .ui-repeater .ui-repeater-input .control-label {
+      padding-top: 0;
+      margin-bottom: 5px; }
+    .ui-repeater .ui-repeater-input.ui-repeater-textarea {
+      width: 3%; }
+    .ui-repeater .ui-repeater-input:first-child {
+      padding-left: 0; }
+    .ui-repeater .ui-repeater-input:last-child {
+      padding-right: 0; }
+  .ui-repeater .ui-repeater-delete {
+    margin-top: 1.8em; }
+    .ui-repeater .ui-repeater-delete.ui-repeater-del-right {
+      float: right;
+      margin-top: 10px; }
+  .ui-repeater .ui-repeater-cell {
+    display: table;
+    width: 100%; }
+    .ui-repeater .ui-repeater-cell .ui-repeater-input-inline,
+    .ui-repeater .ui-repeater-cell .ui-repeater-btn-inline {
+      display: table-cell; }
+    .ui-repeater .ui-repeater-cell .ui-repeater-input-inline {
+      width: 100%;
+      border-right: none; }
+    .ui-repeater .ui-repeater-cell .ui-repeater-btn-inline {
+      width: 1%;
+      float: none; }
+  .ui-repeater .ui-repeater-row {
+    margin-right: 0; }
+
+@media (max-width: 991px) {
+  .ui-repeater .ui-repeater-input {
+    width: 100%;
+    display: block;
+    padding-left: 0;
+    padding-right: 0; }
+    .ui-repeater .ui-repeater-input.ui-repeater-textarea {
+      width: 100%; }
+    .ui-repeater .ui-repeater-input .control-label {
+      text-align: left !important; }
+    .ui-repeater .ui-repeater-input .ui-repeater-delete {
+      margin-top: 0; } }
+
+/***
 Forms
 ***/
 .form-control {
@@ -7617,10 +7683,15 @@ a.travis {
 
 /*layer 默认样式修改-end */
 .form-group .needIcon {
-  font-family: FontAwesome;
-  font-size: 10px;
+  font-family: "iconfont" !important;
+  font-size: 12px;
   color: #E43A45;
   font-style: normal; }
+
+.form-group .needIcon:after {
+  content: "\e8d4";
+  position: relative;
+  top: -1px; }
 
 .td-checkbox .ui-checkbox {
   margin-left: 0 !important;
@@ -7640,12 +7711,33 @@ div.dataTables_wrapper div.dataTables_info {
   overflow: auto;
   padding: 6px 12px; }
 
+.form-group.has-success .form-control-wrapper {
+  border-color: #27a4b0; }
+
+.form-group.has-warning .form-control-wrapper {
+  border-color: #c29d0b; }
+
+.form-group.has-error .form-control-wrapper {
+  border-color: #e73d4a; }
+
+.form-group.has-info .form-control-wrapper {
+  border-color: #e73d4a; }
+
 div.dataTables_wrapper div.dataTables_length select {
   height: 22px;
   width: 55px;
   line-height: 55px;
   padding: 0 5px;
   margin-top: -2px; }
+
+.zTreeContent {
+  position: absolute;
+  background: #FFF;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 9999;
+  overflow: auto;
+  padding-bottom: 5px; }
 
 /* Cubic Bezier Transition */
 /***

@@ -88,7 +88,7 @@ jQuery(function($) {
 		$.each(menus,function(index,menuinfo){
 			if(!jQuery.isEmptyObject(menuinfo.childrens)){
 				ulmain.append("<li class='' id="+menuinfo.id+"></li>");
-				$("#"+menuinfo.id).append("<a class='dropdown-toggle'  href='"+menuinfo.uri+"'"+"id='"+menuinfo.id+"a'></a>");
+				$("#"+menuinfo.id).append("<a class='dropdown-toggle'  href='"+menuinfo.uri+"'"+" id='"+menuinfo.id+"a'></a>");
 				$("#"+menuinfo.id+"a").append("<span class='menu-icon "+((menuinfo.icon==''||menuinfo.icon==null)?"menu-icon fa fa-desktop":"glyphicon "+menuinfo.icon)+"'></span>");
 				$("#"+menuinfo.id+"a").append("<span class='menu-text'> "+menuinfo.name+" </span>");
 				$("#"+menuinfo.id+"a").append("<b class='arrow fa fa-angle-down'></b>");
@@ -98,7 +98,7 @@ jQuery(function($) {
 				menu(menuinfo.childrens,parent);
 			}else{
 				ulmain.append("<li class='' id="+menuinfo.id+"></li>");
-				$("#"+menuinfo.id).append("<a class='dropdown-toggle J_menuItem' href='"+menuinfo.uri+"'"+"id='"+menuinfo.id+"a'></a>");
+				$("#"+menuinfo.id).append("<a class='dropdown-toggle J_menuItem' href='"+menuinfo.uri+"'"+" id='"+menuinfo.id+"a'></a>");
 				$("#"+menuinfo.id+"a").append("<span class='menu-icon "+((menuinfo.icon==''||menuinfo.icon==null)?"fa fa-caret-right":menuinfo.icon)+"'></span>");
 				$("#"+menuinfo.id+"a").append("<span class='menu-text'>"+menuinfo.name+"</span>");
 				$("#"+menuinfo.id).append("<b class='arrow'></b>");

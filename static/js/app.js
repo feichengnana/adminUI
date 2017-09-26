@@ -997,8 +997,8 @@ var App = function() {
 			if(!$().dataTable) {
 				return;
 			}
-
-			the = this;
+            var initComplete = function(){};
+            if(options.initComplete){initComplete = options.initComplete}; 
 			options = $.extend(true, {
 				"order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
 				"oLanguage": {
@@ -1069,29 +1069,70 @@ var App = function() {
 					$(":checkbox[name='td-checkbox']").prop('checked', false);
 				}
 			}, options);
-			
-			$table = $(el).DataTable(options).on('init.dt',function(){
-                if(options.scrollX == undefined || options.scrollX == false){
-                    var wrapperWidth = $(el).closest('.dataTables_wrapper').width();
-                    var tableWidth = $(el).width();
-                    if(tableWidth - wrapperWidth > 10){
-                        options = $.extend(true, {
-                            "scrollX":true
-                        }, options);
-                        $table.destroy();
-                        $table = $(el).DataTable(options);
+			options.initComplete = function(){
+                initComplete();
+                if(options.toolbars){
+                    $(el+'_wrapper').find('.table_toolbars').html('').append($(options.toolbars).html());
+                }
+            }
+            $table = $(el).DataTable(options);
+			return $table;
+		},
+        delTableItem:function(el,callback){//el 为table的id ；itemName为名称的字段名
+            var checkedItem = $(el+'_wrapper').find('input[type=checkbox][name=td-checkbox]:checked');
+            if(checkedItem.length == 0){
+                layer.alert('请先在表格中勾选您要删除的项目',{
+                    icon:0,
+                    skin:'layer-ext-moon'
+                })
+                return false;
+            }else{
+                var delStr = [];
+                $.each(checkedItem,function(index,item){
+                    delStr.push(" <span class='text-warning'>"
+                    + $(item).attr('data-name') + "</span> ");
+                })
+                layer.confirm('您选择了【' + delStr.join(',') + '】共' + checkedItem.length + '条记录，确定要将其删除吗？',{
+                    btn:[
+                        '删除','取消'
+                    ],
+                    icon:0,
+                    skin:'layer-ext-moon'
+                },function(){
+                    callback(checkedItem);
+                })
+            }
+        },
+        setChecked:function(name, value) {
+            var cks = document.getElementsByName(name);
+            var arr = value.split(',');
+
+            for (var i = 0; i < cks.length; i++) {
+                if (isInArray(arr, cks[i].value)) {
+                    cks[i].checked = true;
+                }
+            }
+        },
+        setFormValues: function(formId,json) {
+            if (json != undefined && json != null) {
+                var obj = null,
+                    sel = null,
+                    objType = null;
+                for (var a in json) {
+                    sel = ":input[name='" + a + "']";
+                    obj = $(formId).find(sel);
+                    objType = obj[0].type;
+                    if (objType == "text" || objType == "select-one" || objType == "textarea") {
+                        obj.val(json[a]);
+                        if(objType == "select-one" && obj.hasClass('select2me')){
+                        	obj.trigger('change');
+                        }
+                    } else if (objType == "radio" || objType == "checkbox") {
+                        setChecked(a, json[a]);
                     }
                 }
-            });
-            
-            $(window).resizeEnd(function(){
-            	$table.destroy();
-                $table = $(el).DataTable(options);
-				console.log('调整完成');
-				//$('.txt h3').text('调整完成');
-			});
-			return $table;
-		}
+            }
+        }
 	};
 
 }();

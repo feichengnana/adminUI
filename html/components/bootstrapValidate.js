@@ -181,6 +181,11 @@ $(function(){
 	        }
 	    }
 	})
+
+	$('#validForm').find('[type=reset]').click(function(){
+		console.log(11);
+		$('#validForm').data('bootstrapValidator').resetForm();
+	})
 	$('#validForm2').bootstrapValidator({
 		excluded: [':disabled', ':not(:visible)'],
 	    message:'校验未通过',

@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="portlet-body form">
-                   <form action="" method="post">
+                   <form id="addForm" action="" method="post">
                    		<div class="form-body">
                    			<div class="form-fieldset">
 	                   			<div class="form-fieldset-title">
@@ -46,7 +46,7 @@
 	                   						<div class="form-group">
 												<label for="proName">工单名称  <i class="needIcon"></i></label>
 												<div class="input-group">
-													<input type="text" class="form-control" id="proName" placeholder="工程订单名称.">
+													<input type="text" class="form-control" name="proName" id="proName" placeholder="工程订单名称.">
 													<span class="input-group-btn">
 														<button type="button" class="btn green">勾选需求</button>
 													</span>
@@ -206,6 +206,15 @@
         <!--业务依赖-->
         <script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
         <!--当前页面依赖-->
-        <!--<script src="main.js" type="text/javascript" charset="utf-8"></script>-->
+        <script type="text/javascript">
+        	$(function(){
+        		var formData = {
+        			proName:'111',
+        			buildScene:'1'
+        		}
+        		App.setFormValues('#addForm',formData);
+        		
+        	})
+        </script>
 	</body>
 </html>
