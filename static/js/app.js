@@ -999,84 +999,92 @@ var App = function() {
 			}
             var initComplete = function(){};
             if(options.initComplete){initComplete = options.initComplete}; 
-			options = $.extend(true, {
-				"order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
-				"oLanguage": {
-					"sProcessing": "处理中...",
-					"sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
-					"sZeroRecords": "没有匹配结果",
-					"sInfo": "当前为第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
-					"sInfoEmpty": "当前为第 0 至 0 条记录，共 0 项",
-					"sInfoFiltered": "(由 _MAX_ 条记录结果过滤)",
-					"sInfoPostFix": "",
-					"sSearch": "",
-					"sSearchPlaceholder": "输入关键字筛选表格",
-					"sUrl": "",
-					"sDecimal": "",
-					"sThousands": ",",
-					"sEmptyTable": "表中数据为空",
-					"sLoadingRecords": "载入中...",
-					"sInfoThousands": ",",
-					"oPaginate": {
-						"sFirst": "首页",
-						"sPrevious": "上页",
-						"sNext": "下页",
-						"sLast": "末页"
-					},
-					"oAria": {
-						"sSortAscending": ": 以升序排列此列",
-						"sSortDescending": ": 以降序排列此列"
-					},
-					"buttons": {
-						"copy": "<i title='复制到剪切板' class='fa fa-copy'></i>",
-						"excel": "<i title='导出表格' class='fa fa-table'></i>",
-						"pdf": "<i title='导出PDF' class='fa fa-file-pdf-o'></i>",
-						"colvis": "<i title='列' class='glyphicon glyphicon-th'></i>",
-						"print": "<i title='打印' class='fa fa-print'></i>",
-						"copyTitle": "复制到剪切板",
-						"copySuccess": {
-							1: "已经复制当前记录到剪贴板",
-							_: "已经复制 %d 条记录到剪切板"
-						}
-					}
-				},
-				"dom": '<"clearfix"<"#table-btns.pull-left"><"pull-right" B><"pull-right mr-10" f>>t<"clearfix dt-footer-wrapper" <"pull-left" <"inline-block" i><"inline-block"l>><"pull-right" p>>', //生成样式
-				"processing": true,
-				"paging": true,
-				"lengthMenu": [
-					[5, 10, 15, 20, -1],
-					[5, 10, 15, 20, "All"] // change per page values here
-				],
-				"pageLength": 15,
-				"language": {
-					"emptyTable": "没有关联的需求信息!",
-					"thousands": ","
-				},
-//				"fixedColumns": {
-//					'leftColumns': 2
-//				},
-				"columnDefs": [{ // 所有列默认值
-					"targets": "_all",
-					"defaultContent": ''
-				}],
-				"buttons": ['copy', 'excel', 'colvis','print'], //'pdf',
-				"initComplete": function(settings, json) {
-					var html = $('#toolbars').html();
-					$('#table-btns').append(html);
-				},
-				drawCallback: function() {
-					// 取消全选  
-					$(":checkbox[name='td-checkbox']").prop('checked', false);
-				}
-			}, options);
-			options.initComplete = function(){
+            options = $.extend(true, {
+                "ordering": false,
+                "scrollX":true,
+                "scrollCollapse":true,
+                "sScrollX": "100%",
+                "sScrollXInner": "100%",
+                "bAutoWidth": true,
+//              "serverSide":true,
+//              "ajax":{
+//                  "type":"POST",
+//                  "contentType":'application/x-www-form-urlencoded; charset=UTF-8',
+//                  "dataType":'json'
+//              },
+                "order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
+                "oLanguage": {
+                    "sProcessing": "正在加载数据，请稍候...",
+                    "sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
+                    "sZeroRecords": "没有匹配结果",
+                    "sInfo": "当前为第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
+                    "sInfoEmpty": "当前为第 0 至 0 条记录，共 0 项",
+                    "sInfoFiltered": "(由 _MAX_ 条记录结果过滤)",
+                    "sInfoPostFix": "",
+                    "sSearch": "",
+                    "sSearchPlaceholder": "输入关键字筛选表格",
+                    "sUrl": "",
+                    "sDecimal": "",
+                    "sThousands": ",",
+                    "sEmptyTable": "表中数据为空",
+                    "sLoadingRecords": "载入中...",
+                    "sInfoThousands": ",",
+                    "oPaginate": {
+                        "sFirst": "首页",
+                        "sPrevious": "上页",
+                        "sNext": "下页",
+                        "sLast": "末页"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": 以升序排列此列",
+                        "sSortDescending": ": 以降序排列此列"
+                    },
+                    "buttons": {
+                        "copy": "<i title='复制到剪切板' class='fa fa-copy'></i>",
+                        "excel": "<i title='导出表格' class='fa fa-table'></i>",
+                        "pdf": "<i title='导出PDF' class='fa fa-file-pdf-o'></i>",
+                        "colvis": "<i title='选择列' class='glyphicon glyphicon-th'></i>",
+                        "copyTitle": "复制到剪切板",
+                        "copySuccess": {
+                            1: "已经复制当前记录到剪贴板",
+                            _: "已经复制 %d 条记录到剪切板"
+                        }
+                    }
+                },
+                "dom": '<"clearfix"<"table_toolbars pull-left"><"pull-right"B>>t<"clearfix dt-footer-wrapper" <"pull-left" <"inline-block" i><"inline-block"l>><"pull-right" p>>', //生成样式
+                "processing": false,
+                //"bProcessing":true,
+                "paging": true,
+                "lengthMenu": [
+                    [5, 10, 15, 20, -1],
+                    [5, 10, 15, 20, 50,100]
+                ],
+                "pageLength": 10,
+                "language": {
+                    "emptyTable": "没有关联的需求信息!",
+                    "thousands": ","
+                },
+//              "fixedColumns": {
+//                  'leftColumns': 2
+//              },
+                "columnDefs": [{ // 所有列默认值
+                    "targets": "_all",
+                    "defaultContent": ''
+                }],
+                "buttons": ['copy', 'excel', 'colvis'], //'pdf',
+                
+                drawCallback: function() {
+                    // 取消全选  
+                    $(":checkbox[name='td-checkbox']").prop('checked', false);
+                }
+            }, options);
+            options.initComplete = function(){
                 initComplete();
                 if(options.toolbars){
                     $(el+'_wrapper').find('.table_toolbars').html('').append($(options.toolbars).html());
                 }
             }
             $table = $(el).DataTable(options);
-			return $table;
 		},
         delTableItem:function(el,callback){//el 为table的id ；itemName为名称的字段名
             var checkedItem = $(el+'_wrapper').find('input[type=checkbox][name=td-checkbox]:checked');
@@ -1132,6 +1140,36 @@ var App = function() {
                     }
                 }
             }
+        },
+        /*为查看页面自动赋值*/
+        setFindValue:function(el,formData,valueCallback){
+            if (formData != undefined && formData != null) {
+                var obj = null,
+                    sel = null;
+                //将有name的.form-control-static设置为空
+                $(el).find(".form-control-static[name]").text('');
+                if(valueCallback != undefined && valueCallback != null){
+                    for (var b in valueCallback) {
+                        var value = formData[b];
+                        var tvalue = valueCallback[b](value);
+                        formData[b] = tvalue;
+                    }
+                }
+                $(el).find(".form-control-static[name]").each(function(index,item){
+                    var key = $(item).attr('name');
+                    var valueObj = formData[key];
+                    if(valueObj){
+                        if(valueObj.callback){
+                            $(item).text(valueObj.callback(valueObj.value));
+                        }else{
+                            $(item).text(valueObj);
+                        }
+                    }else{
+                        //如果没有值用空格填充，解决为空导致的高度错乱问题
+                        $(item).html('&nbsp;');
+                    }
+                })
+            }
         }
 	};
 
@@ -1142,8 +1180,6 @@ var App = function() {
 jQuery(document).ready(function() {
 	App.init();
 	$(window).resize(function() {
-//		App.destroySlimScroll('.page-content.scroller');
-//		App.initSlimScroll('.page-content.scroller');
 		App.initAjax();
 	})
 });

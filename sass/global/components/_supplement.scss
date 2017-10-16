@@ -591,6 +591,8 @@ a.travis {
 
 //修复 表格分页不对齐的问题
 div.dataTables_wrapper div.dataTables_info{line-height: 36px;padding-top: 0 !important;}
+//非datatables表格，使用dataTables_wrapper做容器
+.dataTables_wrapper{overflow: auto;}
 //新增类似输入框样式的表单容器
 .form-control-wrapper{
     border: 1px solid #C2CAD8;
@@ -634,3 +636,17 @@ div.dataTables_wrapper div.dataTables_length select{
     overflow: auto;
     padding-bottom: 5px;
 }
+
+/*datatables 子表*/
+td.details-control{width:36px;text-align:center}
+td.details-control:after{
+    content:"\f055";
+    font:normal normal normal 18px/1 FontAwesome;
+    color:#B0C1D2;
+}
+tr.shown td.details-control:after{
+    content:"\f056";
+    color:#46BE8A;
+}
+
+.form.form-view .form-section{margin:-10px 0 10px;}

@@ -2,32 +2,57 @@
     //自定义表单验证规则
     $.fn.bootstrapValidator.validators.chinese = {
         validate:function(validator, $field, options){
-            var reg = /^[\u4e00-\u9fa5]+$/;
-            return {valid:reg.test($field.val()),message:'只能输入中文'};
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /^[\u4e00-\u9fa5]+$/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'只能输入中文'};
         }
     }
     $.fn.bootstrapValidator.validators.english = {
         validate:function(validator, $field, options){
-            var reg = /^[A-Za-z]+$/;
-            return {valid:reg.test($field.val()),message:'只能输入英文'};
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /^[A-Za-z]+$/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'只能输入英文'};
         }
     }
     $.fn.bootstrapValidator.validators.phoneNumber = {
         validate:function(validator, $field, options){
-            var reg = /0?(13|14|15|17|18)[0-9]{9}/;
-            return {valid:reg.test($field.val()),message:'请输入正确的手机号码'};
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /0?(13|14|15|17|18)[0-9]{9}/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'请输入正确的手机号码'};
         }
     }
     $.fn.bootstrapValidator.validators.telNumber = {
         validate:function(validator, $field, options){
-            var reg = /[0-9-()（）]{7,18}/;
-            return {valid:reg.test($field.val()),message:'请输入正确的座机号码'};
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /[0-9-()（）]{7,18}/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'请输入正确的座机号码'};
         }
     }
     $.fn.bootstrapValidator.validators.ip  = {
         validate:function(validator, $field, options){
-            var reg = /((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))/;
-            return {valid:reg.test($field.val()),message:'请输入正确的IP地址'};
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'请输入正确的IP地址'};
         }
     }
     
@@ -38,7 +63,6 @@
     }
     $.fn.bootstrapValidator.validators.ui_choice  = {
         validate:function(validator, $field, options){
-        	
             var checkedItem = $field.find('input:checked');
             console.log(checkedItem.length);
             var flag = true;
@@ -123,4 +147,26 @@
             return true;
         }
     };
+    $.fn.bootstrapValidator.validators.identity = {
+        validate:function(validator, $field, options){
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$|^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'请输入15或18位身份证号'};
+        }
+    };
+    $.fn.bootstrapValidator.validators.postcode = {
+        validate:function(validator, $field, options){
+            var flag = false;
+            if($field.val() == '') flag = true;
+            if(!flag){
+                var reg = /^[1-9][0-9]{5}$/;
+                flag = reg.test($field.val());
+            }
+            return {valid:flag,message:'请输入正确格式的邮政编码'};
+        }
+    }
 }(window.jQuery))

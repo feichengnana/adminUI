@@ -1,5 +1,6 @@
 
 var table = App.initDataTables('#dataTable',{
+	"toolbars":"#toolbars",
 	"columns": [{
 			"className": "td-checkbox text-center",
 			"orderable": false,
