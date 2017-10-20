@@ -126,6 +126,12 @@ var App = function() {
 				portlet.removeClass('portlet-fullscreen');
 				$('body').removeClass('page-portlet-fullscreen');
 				portlet.children('.portlet-body').css('height', 'auto');
+				
+				//处理scroller
+				var $scroller = portlet.children('.portlet-body').find('.scroller');
+				if($scroller.length){
+					App.initSlimScroll($scroller);
+				}
 			} else {
 				var height = App.getViewPort().height -
 					portlet.children('.portlet-title').outerHeight() -
@@ -136,6 +142,10 @@ var App = function() {
 				portlet.addClass('portlet-fullscreen');
 				$('body').addClass('page-portlet-fullscreen');
 				portlet.children('.portlet-body').css('height', height);
+				var $scroller = portlet.children('.portlet-body').find('.scroller');
+				if($scroller.length){
+					App.destroySlimScroll($scroller);
+				}
 			}
 		});
 
@@ -1141,7 +1151,12 @@ var App = function() {
                 }
             }
         },
-        /*为查看页面自动赋值*/
+        /**
+         * setFindValue 为查看页面自动赋值
+         * @param {String} el 表单容器选择器
+         * @param {JSON} formData 表单项的值
+         * @param {Array} valueCallback 需要做重定义的项
+         * */
         setFindValue:function(el,formData,valueCallback){
             if (formData != undefined && formData != null) {
                 var obj = null,
