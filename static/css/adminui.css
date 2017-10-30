@@ -3830,8 +3830,7 @@ Portlets
     .portlet.portlet-fullscreen > .portlet-body {
       overflow-y: auto;
       overflow-x: hidden;
-      padding: 0 10px;
-      height: auto !important; }
+      padding: 0 10px; }
     .portlet.portlet-fullscreen > .portlet-title {
       padding: 0 10px; }
   .portlet > .portlet-title {

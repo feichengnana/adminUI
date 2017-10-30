@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$('#treeTable').treegridData({
-		id: 'id',
-		parentColumn: 'pid',
+		id: 'ORG_ID',
+		parentColumn: 'PARENT_ID',
 		type: "GET", //请求数据的ajax类型
 		url: '../../static/data/orgTree.json', //请求数据的ajax的url
 		ajaxParams: {}, //请求数据的ajax的data属性
@@ -11,18 +11,18 @@ $(document).ready(function() {
 		expanderCollapsedClass:'fa fa-angle-right font-primary',
 		columns: [{
 				title: '选择',
-				field: 'id',
+				field: 'ORG_ID',
 				width: '60',
 				align: 'center',
 				render: function(data, row) {
 					var content = '<label class="ui-checkbox" style="margin-right:-6px;">';
-					content += '<input type="checkbox" data-id="' + row.id + '"  data-name="' + row.name + '" value="' + data + '" name="td-checkbox">';
+					content += '<input type="checkbox" data-id="' + row.ORG_ID + '"  data-name="' + row.ORG_NAME + '" value="' + data + '" name="td-checkbox">';
 					content += '<span></span></label>';
 					return content;
 				}
 			}, {
 				title: '操作',
-				field: 'id',
+				field: 'ORG_ID',
 				width: '80',
 				align: 'center',
 				render: function(data, row) {
@@ -33,13 +33,13 @@ $(document).ready(function() {
 				}
 			}, {
 				title: '名称',
-				field: 'name'
+				field: 'ORG_NAME'
 			}, {
 				title: 'ID',
-				field: 'id'
+				field: 'ORG_ID'
 			}, {
 				title: 'PARENTID',
-				field: 'pid'
+				field: 'PARENT_ID'
 			}
 		]
 	});

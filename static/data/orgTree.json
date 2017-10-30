@@ -1,62 +1,727 @@
 [
     {
-        "id": 0,
-        "name": "研发部",
-        "count": "4"
+        "ORG_ID": 287,
+        "ORG_NAME": "青岛地铁集团有限公司",
+        "PARENT_ID": 0
     },
     {
-        "id": 1,
-        "name": "行政部",
-        "count": "1"
+        "ORG_ID": 288,
+        "ORG_NAME": "青岛地铁集团职能部门",
+        "PARENT_ID": 287
     },
     {
-        "id": 11,
-        "pid": 1,
-        "name": "技术部",
-        "count": "1"
+        "ORG_ID": 290,
+        "ORG_NAME": "资源开发分公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 111,
-        "pid": 11,
-        "name": "JAVA开发部",
-        "count": "1"
+        "ORG_ID": 291,
+        "ORG_NAME": "青岛地铁集团有限公司运营分公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 113,
-        "pid": 11,
-        "name": "产品部",
-        "count": "1"
+        "ORG_ID": 292,
+        "ORG_NAME": "西海岸轨道公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 12,
-        "pid": 1,
-        "name": "产品部",
-        "count": "1"
+        "ORG_ID": 293,
+        "ORG_NAME": "青岛益群地下城开发有限公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 13,
-        "pid": 1,
-        "name": "美工部",
-        "count": "1"
+        "ORG_ID": 294,
+        "ORG_NAME": "青岛地铁文化传媒有限公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 2,
-        "name": "市场部",
-        "count": "2"
+        "ORG_ID": 295,
+        "ORG_NAME": "青岛市地铁一号线有限公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 3,
-        "name": "人资部",
-        "count": "3"
+        "ORG_ID": 296,
+        "ORG_NAME": "青岛市地铁11号线推进办",
+        "PARENT_ID": 287
     },
     {
-        "id": 4,
-        "name": "财务部",
-        "count": "4"
+        "ORG_ID": 297,
+        "ORG_NAME": "工程建设分公司 四号线公司",
+        "PARENT_ID": 287
     },
     {
-        "id": 5,
-        "name": "其他",
-        "count": "5"
+        "ORG_ID": 298,
+        "ORG_NAME": "青岛市地铁八号线有限公司",
+        "PARENT_ID": 287
+    },
+    {
+        "ORG_ID": 299,
+        "ORG_NAME": "青岛地铁投资发展有限公司",
+        "PARENT_ID": 287
+    },
+    {
+        "ORG_ID": 312,
+        "ORG_NAME": "分公司领导",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 313,
+        "ORG_NAME": "综合管理处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 314,
+        "ORG_NAME": "司机班",
+        "PARENT_ID": 313
+    },
+    {
+        "ORG_ID": 315,
+        "ORG_NAME": "财务处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 316,
+        "ORG_NAME": "计划合约处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 317,
+        "ORG_NAME": "安全质量处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 318,
+        "ORG_NAME": "工程技术处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 319,
+        "ORG_NAME": "工程管理处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 320,
+        "ORG_NAME": "设备管理处",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 321,
+        "ORG_NAME": "11号线推进办",
+        "PARENT_ID": 297
+    },
+    {
+        "ORG_ID": 322,
+        "ORG_NAME": "分公司领导",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 323,
+        "ORG_NAME": "综合处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 324,
+        "ORG_NAME": "规划发展处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 325,
+        "ORG_NAME": "财务审计处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 326,
+        "ORG_NAME": "工程管理与安全质量处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 327,
+        "ORG_NAME": "投资开发处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 328,
+        "ORG_NAME": "资源经营处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 329,
+        "ORG_NAME": "物业招商处",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 330,
+        "ORG_NAME": "分公司领导",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 331,
+        "ORG_NAME": "综合部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 332,
+        "ORG_NAME": "党群工作部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 333,
+        "ORG_NAME": "人力资源部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 334,
+        "ORG_NAME": "财务部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 335,
+        "ORG_NAME": "企业管理部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 336,
+        "ORG_NAME": "物资部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 337,
+        "ORG_NAME": "安全保卫部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 338,
+        "ORG_NAME": "调度部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 339,
+        "ORG_NAME": "车辆部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 340,
+        "ORG_NAME": "培训管理部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 341,
+        "ORG_NAME": "乘务部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 342,
+        "ORG_NAME": "站务部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 343,
+        "ORG_NAME": "票务部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 344,
+        "ORG_NAME": "新线管理部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 345,
+        "ORG_NAME": "生产技术部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 346,
+        "ORG_NAME": "供电部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 347,
+        "ORG_NAME": "机电部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 348,
+        "ORG_NAME": "工务部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 349,
+        "ORG_NAME": "通号部",
+        "PARENT_ID": 291
+    },
+    {
+        "ORG_ID": 350,
+        "ORG_NAME": "西海岸轨道公司",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 351,
+        "ORG_NAME": "综合管理部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 352,
+        "ORG_NAME": "财务部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 353,
+        "ORG_NAME": "计划合约部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 354,
+        "ORG_NAME": "工程技术部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 355,
+        "ORG_NAME": "工程管理部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 356,
+        "ORG_NAME": "安全质量部",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 357,
+        "ORG_NAME": "设备推进办",
+        "PARENT_ID": 292
+    },
+    {
+        "ORG_ID": 358,
+        "ORG_NAME": "子公司领导",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 359,
+        "ORG_NAME": "综合管理处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 360,
+        "ORG_NAME": "财务处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 361,
+        "ORG_NAME": "安全质量处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 362,
+        "ORG_NAME": "经营管理处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 363,
+        "ORG_NAME": "工程管理处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 364,
+        "ORG_NAME": "物业管理处",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 365,
+        "ORG_NAME": "青岛地铁物业管理有限公司",
+        "PARENT_ID": 293
+    },
+    {
+        "ORG_ID": 366,
+        "ORG_NAME": "物业公司领导",
+        "PARENT_ID": 365
+    },
+    {
+        "ORG_ID": 367,
+        "ORG_NAME": "物业公司综合部",
+        "PARENT_ID": 365
+    },
+    {
+        "ORG_ID": 368,
+        "ORG_NAME": "物业公司服务部",
+        "PARENT_ID": 365
+    },
+    {
+        "ORG_ID": 369,
+        "ORG_NAME": "服务中心一",
+        "PARENT_ID": 368
+    },
+    {
+        "ORG_ID": 370,
+        "ORG_NAME": "服务中心二",
+        "PARENT_ID": 368
+    },
+    {
+        "ORG_ID": 371,
+        "ORG_NAME": "服务中心三",
+        "PARENT_ID": 368
+    },
+    {
+        "ORG_ID": 372,
+        "ORG_NAME": "服务中心四",
+        "PARENT_ID": 368
+    },
+    {
+        "ORG_ID": 373,
+        "ORG_NAME": "物业公司技术部",
+        "PARENT_ID": 365
+    },
+    {
+        "ORG_ID": 374,
+        "ORG_NAME": "物业公司财务部",
+        "PARENT_ID": 365
+    },
+    {
+        "ORG_ID": 375,
+        "ORG_NAME": "子公司领导",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 376,
+        "ORG_NAME": "综合事务部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 377,
+        "ORG_NAME": "新媒体部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 378,
+        "ORG_NAME": "地铁晨报编辑部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 379,
+        "ORG_NAME": "移动电视部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 380,
+        "ORG_NAME": "市场营销部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 381,
+        "ORG_NAME": "活动推广部",
+        "PARENT_ID": 294
+    },
+    {
+        "ORG_ID": 382,
+        "ORG_NAME": "公司领导",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 383,
+        "ORG_NAME": "综合管理处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 384,
+        "ORG_NAME": "财务处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 385,
+        "ORG_NAME": "计划合约处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 386,
+        "ORG_NAME": "安全质量处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 387,
+        "ORG_NAME": "工程技术处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 388,
+        "ORG_NAME": "工程管理处",
+        "PARENT_ID": 295
+    },
+    {
+        "ORG_ID": 389,
+        "ORG_NAME": "推进办领导",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 390,
+        "ORG_NAME": "综合计划组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 391,
+        "ORG_NAME": "工程管理组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 392,
+        "ORG_NAME": "安全质量组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 393,
+        "ORG_NAME": "工程技术组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 394,
+        "ORG_NAME": "系统设备组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 395,
+        "ORG_NAME": "机电安装组",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 396,
+        "ORG_NAME": "青岛市地铁11号线推进办",
+        "PARENT_ID": 296
+    },
+    {
+        "ORG_ID": 397,
+        "ORG_NAME": "八号线项目公司领导层",
+        "PARENT_ID": 298
+    },
+    {
+        "ORG_ID": 398,
+        "ORG_NAME": "综合计划部",
+        "PARENT_ID": 298
+    },
+    {
+        "ORG_ID": 399,
+        "ORG_NAME": "财务部",
+        "PARENT_ID": 298
+    },
+    {
+        "ORG_ID": 400,
+        "ORG_NAME": "工程安质部",
+        "PARENT_ID": 298
+    },
+    {
+        "ORG_ID": 401,
+        "ORG_NAME": "技术管理部",
+        "PARENT_ID": 298
+    },
+    {
+        "ORG_ID": 402,
+        "ORG_NAME": "子公司领导",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 403,
+        "ORG_NAME": "投资部",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 404,
+        "ORG_NAME": "财务部",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 405,
+        "ORG_NAME": "风控部",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 406,
+        "ORG_NAME": "综合部",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 407,
+        "ORG_NAME": "投后管理部",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 408,
+        "ORG_NAME": "青岛地铁融资租赁股份有限公司",
+        "PARENT_ID": 299
+    },
+    {
+        "ORG_ID": 409,
+        "ORG_NAME": "董事长",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 410,
+        "ORG_NAME": "总经办",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 411,
+        "ORG_NAME": "业务一部",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 412,
+        "ORG_NAME": "业务二部",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 413,
+        "ORG_NAME": "计划财务部",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 414,
+        "ORG_NAME": "风险控制部",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 415,
+        "ORG_NAME": "综合管理部",
+        "PARENT_ID": 408
+    },
+    {
+        "ORG_ID": 416,
+        "ORG_NAME": "集团领导",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 417,
+        "ORG_NAME": "监事会",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 418,
+        "ORG_NAME": "青岛地铁公安分局",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 419,
+        "ORG_NAME": "集团办公室",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 420,
+        "ORG_NAME": "法律事务部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 421,
+        "ORG_NAME": "热线管理",
+        "PARENT_ID": 420
+    },
+    {
+        "ORG_ID": 422,
+        "ORG_NAME": "人力资源部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 423,
+        "ORG_NAME": "党群工作部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 424,
+        "ORG_NAME": "财务部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 425,
+        "ORG_NAME": "监察审计部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 426,
+        "ORG_NAME": "企业管理部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 427,
+        "ORG_NAME": "计划合约部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 428,
+        "ORG_NAME": "安全质量部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 429,
+        "ORG_NAME": "总工办",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 430,
+        "ORG_NAME": "征迁协调部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 431,
+        "ORG_NAME": "信息管理部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 432,
+        "ORG_NAME": "致远OA项目实施组",
+        "PARENT_ID": 431
+    },
+    {
+        "ORG_ID": 433,
+        "ORG_NAME": "等保",
+        "PARENT_ID": 431
+    },
+    {
+        "ORG_ID": 434,
+        "ORG_NAME": "工程管理部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 435,
+        "ORG_NAME": "设备管理部",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 436,
+        "ORG_NAME": "机关党委",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 437,
+        "ORG_NAME": "集团团委",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 438,
+        "ORG_NAME": "地铁协会",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 439,
+        "ORG_NAME": "青岛市公安消防支队轨道交通大队",
+        "PARENT_ID": 288
+    },
+    {
+        "ORG_ID": 101227088,
+        "ORG_NAME": "资源开发分公司子公司12344",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 101227092,
+        "ORG_NAME": "资源开发分公司子公司0922-01",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 101227104,
+        "ORG_NAME": "资源开发分公司子公司0925",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 101227145,
+        "ORG_NAME": "资源开发分公司1010",
+        "PARENT_ID": 290
+    },
+    {
+        "ORG_ID": 101227146,
+        "ORG_NAME": "资源分公司1010",
+        "PARENT_ID": 290
     }
 ]

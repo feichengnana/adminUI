@@ -12,7 +12,21 @@ var menus = [{
             "uri":"html/pages/list.html",
             "childrens":[]
         },{
+            "id":"012",
+            "pid":"01",
+            "icon":"",
+            "name":"树形列表页",
+            "uri":"html/pages/list_treegrid.html",
+            "childrens":[]
+        },{
             "id":"013",
+            "pid":"01",
+            "icon":"",
+            "name":"可编辑列表页",
+            "uri":"html/pages/list_editable.html",
+            "childrens":[]
+        },{
+            "id":"014",
             "pid":"01",
             "icon":"",
             "name":"表单布局",
