@@ -1,6 +1,7 @@
 
 var table = App.initDataTables('#dataTable',{
 	"toolbars":"#toolbars",
+	"ajax":"../../static/data/datatable.json",
 	"columns": [{
 			"className": "td-checkbox text-center",
 			"orderable": false,
@@ -18,12 +19,11 @@ var table = App.initDataTables('#dataTable',{
 			"orderable": false,
 			"bSort": false,
 			"width": "20",
-			"align": 'center',
 			"className": "text-center",
-			"render": function(a, b, c, d) {
+			"render": function(data, type, row, meta) {
 				var html = '';
-				html += '<button title="查看" onclick="findDetail(' + c.proId + ')" class="btn btn-info btn-link btn-xs"><i class="fa fa-search-plus"></i></button>';
-				html += '<button title="编辑" onclick="editDetail(' + c.proId + ')" class="btn btn-success btn-link btn-xs" ' + (a < 3 ? 'disabled="disabled"' : '') + '><i class="fa fa-edit"></i></button>';
+				html += '<button title="查看" onclick="findDetail(' + row.proId + ')" class="btn btn-info btn-link btn-xs"><i class="fa fa-search-plus"></i></button>';
+				html += '<button title="编辑" onclick="editDetail(' + row.proId + ')" class="btn btn-success btn-link btn-xs" ' + (data < 3 ? 'disabled="disabled"' : '') + '><i class="fa fa-edit"></i></button>';
 				return html;
 			}
 		},
@@ -31,37 +31,36 @@ var table = App.initDataTables('#dataTable',{
 			"data": "proName",
 			"title": "工单名称",
 			"width": '160',
-			"align": 'left'
+			"className": "text-center",
+			"render":function(data, type, row, meta){
+				return "<div class='text-left'>"+data+"</div>"
+			}
 		},
 		{
 			"data": "busiCode",
 			"title": "工单编码",
-			"width": '120',
-			"align": 'left'
+			"width": '120'
 		},
 		{
 			"data": "proCode",
 			"title": "项目编码",
-			"width": '190',
-			"align": 'left'
+			"width": '190'
 		},
 		{
 			"data": "cityName",
 			"title": "地市",
-			"width": '120',
-			"align": 'left'
+			"width": '120'
 		},
 		{
 			"data": "disName",
 			"title": "区县",
-			"width": '120',
-			"align": 'left'
+			"width": '120'
 		},
 		{
 			"data": "providerName",
 			"title": "工程服务商",
 			"width": '100',
-			"align": 'left'
+			"render":$.fn.dataTable.render.ellipsis(5,true)
 		},
 		{
 			"data": "providerUserName",
@@ -88,7 +87,6 @@ var table = App.initDataTables('#dataTable',{
 			"align": 'left'
 		}
 	],
-	"data": dataTableData,
 	"fixedColumns": {
 		'leftColumns': 2
 	},

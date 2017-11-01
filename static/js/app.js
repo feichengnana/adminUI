@@ -126,10 +126,10 @@ var App = function() {
 				portlet.removeClass('portlet-fullscreen');
 				$('body').removeClass('page-portlet-fullscreen');
 				portlet.children('.portlet-body').css('height', 'auto');
-				
+
 				//处理scroller
 				var $scroller = portlet.children('.portlet-body').find('.scroller');
-				if($scroller.length){
+				if($scroller.length) {
 					App.initSlimScroll($scroller);
 				}
 			} else {
@@ -143,7 +143,7 @@ var App = function() {
 				$('body').addClass('page-portlet-fullscreen');
 				portlet.children('.portlet-body').css('height', height);
 				var $scroller = portlet.children('.portlet-body').find('.scroller');
-				if($scroller.length){
+				if($scroller.length) {
 					App.destroySlimScroll($scroller);
 				}
 			}
@@ -1007,185 +1007,395 @@ var App = function() {
 			if(!$().dataTable) {
 				return;
 			}
-            var initComplete = function(){};
-            if(options.initComplete){initComplete = options.initComplete}; 
-            options = $.extend(true, {
-                "ordering": false,
-                "scrollX":true,
-                "scrollCollapse":true,
-                "sScrollX": "100%",
-                "sScrollXInner": "100%",
-                "bAutoWidth": true,
-//              "serverSide":true,
-//              "ajax":{
-//                  "type":"POST",
-//                  "contentType":'application/x-www-form-urlencoded; charset=UTF-8',
-//                  "dataType":'json'
-//              },
-                "order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
-                "oLanguage": {
-                    "sProcessing": "正在加载数据，请稍候...",
-                    "sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
-                    "sZeroRecords": "没有匹配结果",
-                    "sInfo": "当前为第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
-                    "sInfoEmpty": "当前为第 0 至 0 条记录，共 0 项",
-                    "sInfoFiltered": "(由 _MAX_ 条记录结果过滤)",
-                    "sInfoPostFix": "",
-                    "sSearch": "",
-                    "sSearchPlaceholder": "输入关键字筛选表格",
-                    "sUrl": "",
-                    "sDecimal": "",
-                    "sThousands": ",",
-                    "sEmptyTable": "表中数据为空",
-                    "sLoadingRecords": "载入中...",
-                    "sInfoThousands": ",",
-                    "oPaginate": {
-                        "sFirst": "首页",
-                        "sPrevious": "上页",
-                        "sNext": "下页",
-                        "sLast": "末页"
-                    },
-                    "oAria": {
-                        "sSortAscending": ": 以升序排列此列",
-                        "sSortDescending": ": 以降序排列此列"
-                    },
-                    "buttons": {
-                        "copy": "<i title='复制到剪切板' class='fa fa-copy'></i>",
-                        "excel": "<i title='导出表格' class='fa fa-table'></i>",
-                        "pdf": "<i title='导出PDF' class='fa fa-file-pdf-o'></i>",
-                        "colvis": "<i title='选择列' class='glyphicon glyphicon-th'></i>",
-                        "copyTitle": "复制到剪切板",
-                        "copySuccess": {
-                            1: "已经复制当前记录到剪贴板",
-                            _: "已经复制 %d 条记录到剪切板"
-                        }
-                    }
-                },
-                "dom": '<"clearfix"<"table_toolbars pull-left"><"pull-right"B>>t<"clearfix dt-footer-wrapper" <"pull-left" <"inline-block" i><"inline-block"l>><"pull-right" p>>', //生成样式
-                "processing": false,
-                //"bProcessing":true,
-                "paging": true,
-                "lengthMenu": [
-                    [5, 10, 15, 20, -1],
-                    [5, 10, 15, 20, 50,100]
-                ],
-                "pageLength": 10,
-                "language": {
-                    "emptyTable": "没有关联的需求信息!",
-                    "thousands": ","
-                },
-//              "fixedColumns": {
-//                  'leftColumns': 2
-//              },
-                "columnDefs": [{ // 所有列默认值
-                    "targets": "_all",
-                    "defaultContent": ''
-                }],
-                "buttons": ['copy', 'excel', 'colvis'], //'pdf',
-                
-                drawCallback: function() {
-                    // 取消全选  
-                    $(":checkbox[name='td-checkbox']").prop('checked', false);
-                }
-            }, options);
-            options.initComplete = function(){
-                initComplete();
-                if(options.toolbars){
-                    $(el+'_wrapper').find('.table_toolbars').html('').append($(options.toolbars).html());
-                }
-            }
-            $table = $(el).DataTable(options);
-		},
-        delTableItem:function(el,callback){//el 为table的id ；itemName为名称的字段名
-            var checkedItem = $(el+'_wrapper').find('input[type=checkbox][name=td-checkbox]:checked');
-            if(checkedItem.length == 0){
-                layer.alert('请先在表格中勾选您要删除的项目',{
-                    icon:0,
-                    skin:'layer-ext-moon'
-                })
-                return false;
-            }else{
-                var delStr = [];
-                $.each(checkedItem,function(index,item){
-                    delStr.push(" <span class='text-warning'>"
-                    + $(item).attr('data-name') + "</span> ");
-                })
-                layer.confirm('您选择了【' + delStr.join(',') + '】共' + checkedItem.length + '条记录，确定要将其删除吗？',{
-                    btn:[
-                        '删除','取消'
-                    ],
-                    icon:0,
-                    skin:'layer-ext-moon'
-                },function(){
-                    callback(checkedItem);
-                })
-            }
-        },
-        setChecked:function(name, value) {
-            var cks = document.getElementsByName(name);
-            var arr = value.split(',');
+			var initComplete = function() {};
+			if(options.initComplete) {
+				initComplete = options.initComplete
+			};
+			options = $.extend(true, {
+				"ordering": false,
+				"scrollX": true,
+				"scrollCollapse": true,
+				"sScrollX": "100%",
+				"sScrollXInner": "100%",
+				"bAutoWidth": true,
+				//              "serverSide":true,
+				//              "ajax":{
+				//                  "type":"POST",
+				//                  "contentType":'application/x-www-form-urlencoded; charset=UTF-8',
+				//                  "dataType":'json'
+				//              },
+				"order": [], //默认排序查询,为空则表示取消默认排序否则复选框一列会出现小箭头 
+				"oLanguage": {
+					"sProcessing": "正在加载数据，请稍候...",
+					"sLengthMenu": "&nbsp;&nbsp;&nbsp;&nbsp;每页显示  _MENU_ 条记录",
+					"sZeroRecords": "没有匹配结果",
+					"sInfo": "当前为第 _START_ 至 _END_ 条记录，共 _TOTAL_ 条记录",
+					"sInfoEmpty": "当前为第 0 至 0 条记录，共 0 项",
+					"sInfoFiltered": "(由 _MAX_ 条记录结果过滤)",
+					"sInfoPostFix": "",
+					"sSearch": "",
+					"sSearchPlaceholder": "输入关键字筛选表格",
+					"sUrl": "",
+					"sDecimal": "",
+					"sThousands": ",",
+					"sEmptyTable": "表中数据为空",
+					"sLoadingRecords": "载入中...",
+					"sInfoThousands": ",",
+					"oPaginate": {
+						"sFirst": "首页",
+						"sPrevious": "上页",
+						"sNext": "下页",
+						"sLast": "末页"
+					},
+					"oAria": {
+						"sSortAscending": ": 以升序排列此列",
+						"sSortDescending": ": 以降序排列此列"
+					},
+					"buttons": {
+						"copy": "<i title='复制到剪切板' class='fa fa-copy'></i>",
+						"excel": "<i title='导出表格' class='fa fa-table'></i>",
+						"pdf": "<i title='导出PDF' class='fa fa-file-pdf-o'></i>",
+						"colvis": "<i title='选择列' class='glyphicon glyphicon-th'></i>",
+						"copyTitle": "复制到剪切板",
+						"copySuccess": {
+							1: "已经复制当前记录到剪贴板",
+							_: "已经复制 %d 条记录到剪切板"
+						}
+					}
+				},
+				"dom": '<"clearfix"<"table_toolbars pull-left"><"pull-right"B>>t<"clearfix dt-footer-wrapper" <"pull-left" <"inline-block" i><"inline-block"l>><"pull-right" p>>', //生成样式
+				"processing": false,
+				//"bProcessing":true,
+				"paging": true,
+				"lengthMenu": [
+					[5, 10, 15, 20, -1],
+					[5, 10, 15, 20, 50, 100]
+				],
+				"pageLength": 10,
+				"language": {
+					"emptyTable": "没有关联的需求信息!",
+					"thousands": ","
+				},
+				//              "fixedColumns": {
+				//                  'leftColumns': 2
+				//              },
+				"columnDefs": [{ // 所有列默认值
+					"targets": "_all",
+					"defaultContent": ''
+				}],
+				"buttons": ['copy', 'excel', 'colvis'], //'pdf',
 
-            for (var i = 0; i < cks.length; i++) {
-                if (isInArray(arr, cks[i].value)) {
-                    cks[i].checked = true;
-                }
-            }
-        },
-        setFormValues: function(formId,json) {
-            if (json != undefined && json != null) {
-                var obj = null,
-                    sel = null,
-                    objType = null;
-                for (var a in json) {
-                    sel = ":input[name='" + a + "']";
-                    obj = $(formId).find(sel);
-                    objType = obj[0].type;
-                    if (objType == "text" || objType == "select-one" || objType == "textarea") {
-                        obj.val(json[a]);
-                        if(objType == "select-one" && obj.hasClass('select2me')){
-                        	obj.trigger('change');
-                        }
-                    } else if (objType == "radio" || objType == "checkbox") {
-                        setChecked(a, json[a]);
-                    }
-                }
-            }
-        },
-        /**
-         * setFindValue 为查看页面自动赋值
-         * @param {String} el 表单容器选择器
-         * @param {JSON} formData 表单项的值
-         * @param {Array} valueCallback 需要做重定义的项
-         * */
-        setFindValue:function(el,formData,valueCallback){
-            if (formData != undefined && formData != null) {
-                var obj = null,
-                    sel = null;
-                //将有name的.form-control-static设置为空
-                $(el).find(".form-control-static[name]").text('');
-                if(valueCallback != undefined && valueCallback != null){
-                    for (var b in valueCallback) {
-                        var value = formData[b];
-                        var tvalue = valueCallback[b](value);
-                        formData[b] = tvalue;
-                    }
-                }
-                $(el).find(".form-control-static[name]").each(function(index,item){
-                    var key = $(item).attr('name');
-                    var valueObj = formData[key];
-                    if(valueObj){
-                        if(valueObj.callback){
-                            $(item).text(valueObj.callback(valueObj.value));
-                        }else{
-                            $(item).text(valueObj);
-                        }
-                    }else{
-                        //如果没有值用空格填充，解决为空导致的高度错乱问题
-                        $(item).html('&nbsp;');
-                    }
-                })
-            }
-        }
+				"drawCallback": function() {
+					// 取消全选  
+					$(":checkbox[name='td-checkbox']").prop('checked', false);
+				}
+			}, options);
+			options.initComplete = function() {
+				if(options.toolbars) {
+					$(el + '_wrapper').find('.table_toolbars').html('').append($(options.toolbars).html());
+					$(options.toolbars).remove();
+				}
+				initComplete();
+			}
+			var oTable = $(el).dataTable(options);
+			return oTable;
+		},
+		/**
+		 * initEditableDatatables 基于initDataTables 实现表格的可编辑
+		 * options 新增 addRowBtn String 触发新增按钮的id或calss选择器
+		 * options.columns 新增 isEditable Booleans 标识当前列是否可编辑
+		 * options 新增fnDeleteEditRow Function 为删除一行之后的回调函数
+		 * options 新增fnValidEditRow Function 为保存时校验内容是否符合规范，返回boolean
+		 * options 新增fnSaveEditRow Function 为保存一行数据的回调函数
+		 * 
+		 * */
+		initEditableDatatables: function(el, options) {
+			var nEditing = null;
+			var nNew = false;
+			//增加编辑列
+			options.columns.push({
+				"data": null,
+				"title": "编辑",
+				"width": '60',
+				"align": 'center',
+				"render": function(data, type, row, meta) {
+					return "<button class='btn primary btn-outline btn-xs dt-edit'>编辑</button>"
+				}
+			});
+			//增加删除列
+			options.columns.push({
+				"data": null,
+				"title": "编辑",
+				"width": '60',
+				"align": 'center',
+				"render": function(data, type, row, meta) {
+					return "<button class='btn yellow btn-outline btn-xs dt-delete'>删除</button>"
+				}
+			})
+			//options.initComplete
+			var initComplete = function() {};
+			if(options.initComplete) {
+				initComplete = options.initComplete
+			};
+			options.initComplete = function() {
+				//为新增按钮绑定时间
+				$('#dataTable_wrapper').find(options.addRowBtn).click(function(event){
+					event.preventDefault();
+					if(nEditing) {
+						layer.confirm('尚有编辑项未保存，您确定要保存吗?', {
+							icon: 3, 
+							title:'提示'
+						}, function(layerObj){
+							if(!validRow(oTable, nEditing)) return false;
+						  	saveRow(oTable, nEditing); 
+							nEditing = null;
+							nNew = false;
+							addEmptyRow();
+							layer.close(layerObj);
+						},function(layerObj){
+							oTable.fnDeleteRow(nEditing);
+							nEditing = null;
+							nNew = false;
+							addEmptyRow();
+							return;
+						});
+					}else{
+						addEmptyRow();
+					}
+				})
+				initComplete();
+			}
+			
+			var oTable = this.initDataTables(el, options);
+			var table = $(el);
+
+			/*删除一行*/
+			table.on('click', '.dt-delete', function(e) {
+				e.preventDefault();
+				var _btn = this;
+				layer.confirm('您确定要删除此记录吗?', {
+					icon: 3,
+					title: '提示'
+				}, function(layerObj) {
+					var nRow = $(_btn).parents('tr')[0];
+					var aData = oTable.fnGetData(nRow); //当前行的数据
+					oTable.fnDeleteRow(nRow);
+					layer.close(layerObj);
+					//删除成功，进行ajax数据同步
+					if(typeof options.fnDeleteEditRow == 'function') options.fnDeleteEditRow(aData);
+				});
+
+			});
+
+			/*删除编辑行*/
+			table.on('click', '.dt-cancel', function(e) {
+				e.preventDefault();
+				if(nNew) {
+					oTable.fnDeleteRow(nEditing);
+					nEditing = null;
+					nNew = false;
+				} else {
+					restoreRow(oTable, nEditing);
+					nEditing = null;
+				}
+			});
+
+			/*编辑当前行*/
+			table.on('click', '.dt-edit', function(e) {
+				e.preventDefault();
+				nNew = false;
+
+				var nRow = $(this).parents('tr')[0];
+
+				if(nEditing !== null && nEditing != nRow) {
+					/* 再次编辑前使之前的编辑项复原 */
+					restoreRow(oTable, nEditing);
+					editRow(oTable, nRow);
+					nEditing = nRow;
+				} else if(nEditing == nRow && this.innerHTML == "保存") {
+					if(!validRow(oTable, nEditing)) return false;
+					saveRow(oTable, nEditing);
+					nEditing = null;
+					//更新成功，进行ajax数据同步
+				} else {
+					editRow(oTable, nRow);
+					nEditing = nRow;
+				}
+			});
+			
+			
+			function addEmptyRow(){
+				var newRow = {};
+				for (var i=0;i<options.columns.length;i++) {
+					var c = options.columns[i];
+					if(c.data !=null && c.data !=''){
+						newRow[c.data] = '';
+					}
+				}
+				console.log('newRow::'+JSON.stringify(newRow));
+				var aiNew = oTable.fnAddData(newRow);
+				var nRow = oTable.fnGetNodes(aiNew[0]);
+				editRow(oTable, nRow);
+				nEditing = nRow;
+				nNew = true;
+			}
+			
+			/*复原行*/
+			function restoreRow(oTable, nRow) {
+				var aData = oTable.fnGetData(nRow);
+				var jqTds = $('>td', nRow);
+				var iLen = jqTds.length;
+				for(var i = 0; i < iLen-2; i++) {
+					var field = $(jqTds[i]).find('input').attr('name');
+					if(field) oTable.fnUpdate(aData[field], nRow, i, false);
+				}
+				var oTdEdit = $(nRow).find('td:eq('+(iLen-2)+')');
+				oTdEdit.html('<button class="btn primary btn-outline btn-xs dt-edit">编辑</button>');
+				var oTdCancel = $(nRow).find('td:eq('+(iLen-1)+')');
+				oTdCancel.html('<button class="btn yellow btn-outline btn-xs dt-cancel">取消</button>');
+				oTable.fnDraw();
+			}
+			
+			/*编辑行*/
+			function editRow(oTable, nRow) {
+				var aData = oTable.fnGetData(nRow);
+				var clength = $('>td', nRow).length;
+				for(var i=0;i<clength-2;i++){
+					var c = options.columns[i];
+					var oTd = $('>td:eq('+i+')', nRow);
+					if(c.isEditable){
+						oTd.html('<input type="text" class="form-control input-small" name="'+c.data+'" value="' + aData[c.data] + '">');
+					}else{
+						oTd.html(aData[c.data?c.data:'']);
+					}
+				}
+				var oTdEdit = $(nRow).find('td:eq('+(clength-2)+')');
+				oTdEdit.html('<button class="btn primary btn-outline btn-xs dt-edit">保存</button>');
+				var oTdCancel = $(nRow).find('td:eq('+(clength-1)+')');
+				oTdCancel.html('<button class="btn yellow btn-outline btn-xs dt-cancel">取消</button>');
+			}
+			function validRow(oTable, nRow){
+				var aData = oTable.fnGetData(nRow);
+				var preAData = aData;
+				$('input', nRow).each(function(index,item){
+					var name = $(this).attr('name');
+					var value = $(this).val();
+					preAData[name] = value;
+				})
+				var flag = true;
+				if(typeof options.fnValidEditRow == 'function'){
+					flag = options.fnValidEditRow(preAData);
+				} 
+				return flag;
+			}
+			/*保存行*/
+			function saveRow(oTable, nRow) {
+				var aData = oTable.fnGetData(nRow);
+				$('input', nRow).each(function(index,item){
+					var tdIndex = $(this).parent('td').index();
+					var value = $(this).val();
+					oTable.fnUpdate(value, nRow, tdIndex, false);
+				})
+				var length = $('>td', nRow).length;	
+				oTable.fnUpdate('<button class="btn primary btn-outline btn-xs dt-edit">编辑</button>', nRow, length-2, false);
+				oTable.fnUpdate('<button class="btn yellow btn-outline btn-xs dt-delete">删除</button>', nRow, length-1, false);
+				oTable.fnDraw();
+				//保存数据，进行ajax数据同步等操作
+				if(typeof options.fnSaveEditRow == 'function'){
+					options.fnSaveEditRow(aData);
+				} 
+			}
+		},
+		delTableItem: function(el, callback) { //el 为table的id ；itemName为名称的字段名
+			var checkedItem = $(el + '_wrapper').find('input[type=checkbox][name=td-checkbox]:checked');
+			if(checkedItem.length == 0) {
+				layer.alert('请先在表格中勾选您要删除的项目', {
+					icon: 0,
+					skin: 'layer-ext-moon'
+				})
+				return false;
+			} else {
+				var delStr = [];
+				$.each(checkedItem, function(index, item) {
+					delStr.push(" <span class='text-warning'>" +
+						$(item).attr('data-name') + "</span> ");
+				})
+				layer.confirm('您选择了【' + delStr.join(',') + '】共' + checkedItem.length + '条记录，确定要将其删除吗？', {
+					btn: [
+						'删除', '取消'
+					],
+					icon: 0,
+					skin: 'layer-ext-moon'
+				}, function() {
+					callback(checkedItem);
+				})
+			}
+		},
+		setChecked: function(name, value) {
+			var cks = document.getElementsByName(name);
+			var arr = value.split(',');
+
+			for(var i = 0; i < cks.length; i++) {
+				if(isInArray(arr, cks[i].value)) {
+					cks[i].checked = true;
+				}
+			}
+		},
+		setFormValues: function(formId, json) {
+			if(json != undefined && json != null) {
+				var obj = null,
+					sel = null,
+					objType = null;
+				for(var a in json) {
+					sel = ":input[name='" + a + "']";
+					obj = $(formId).find(sel);
+					objType = obj[0].type;
+					if(objType == "text" || objType == "select-one" || objType == "textarea") {
+						obj.val(json[a]);
+						if(objType == "select-one" && obj.hasClass('select2me')) {
+							obj.trigger('change');
+						}
+					} else if(objType == "radio" || objType == "checkbox") {
+						setChecked(a, json[a]);
+					}
+				}
+			}
+		},
+		/**
+		 * setFindValue 为查看页面自动赋值
+		 * @param {String} el 表单容器选择器
+		 * @param {JSON} formData 表单项的值
+		 * @param {Array} valueCallback 需要做重定义的项
+		 * */
+		setFindValue: function(el, formData, valueCallback) {
+			if(formData != undefined && formData != null) {
+				var obj = null,
+					sel = null;
+				//将有name的.form-control-static设置为空
+				$(el).find(".form-control-static[name]").text('');
+				if(valueCallback != undefined && valueCallback != null) {
+					for(var b in valueCallback) {
+						var value = formData[b];
+						var tvalue = valueCallback[b](value);
+						formData[b] = tvalue;
+					}
+				}
+				$(el).find(".form-control-static[name]").each(function(index, item) {
+					var key = $(item).attr('name');
+					var valueObj = formData[key];
+					if(valueObj) {
+						if(valueObj.callback) {
+							$(item).text(valueObj.callback(valueObj.value));
+						} else {
+							$(item).text(valueObj);
+						}
+					} else {
+						//如果没有值用空格填充，解决为空导致的高度错乱问题
+						$(item).html('&nbsp;');
+					}
+				})
+			}
+		}
 	};
 
 }();
@@ -1198,4 +1408,3 @@ jQuery(document).ready(function() {
 		App.initAjax();
 	})
 });
-
