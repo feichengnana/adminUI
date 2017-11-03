@@ -1139,7 +1139,7 @@ var App = function() {
 			};
 			options.initComplete = function() {
 				//为新增按钮绑定时间
-				$('#dataTable_wrapper').find(options.addRowBtn).click(function(event){
+				$(options.addRowBtn).click(function(event){
 					event.preventDefault();
 					if(nEditing) {
 						layer.confirm('尚有编辑项未保存，您确定要保存吗?', {

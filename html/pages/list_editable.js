@@ -3,7 +3,7 @@
 var oTable = App.initEditableDatatables('#dataTable', {
 	"toolbars": "#toolbars",
 	"addRowBtn":"#addItemBtn",
-	"ajax": "../../static/data/editTable.json",
+	//"ajax": "../../static/data/editTable.json",
 	"columns": [
 		{
 			"data": "proName",
