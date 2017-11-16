@@ -265,6 +265,14 @@ $(function(){
 	$('#fourthFile1').on('change', function(e) {
 	  $('#validForm2').data('bootstrapValidator').revalidateField('fourthFile1');
 	});
+	
+	function getCheckboxVal(cname){
+		var _array = [];
+		$('input[type=checkbox][name='+cname+']:checked').each(function(){
+			_array.push($(this).val());
+		})
+		return _array.join(',');
+	}
 })
 
 

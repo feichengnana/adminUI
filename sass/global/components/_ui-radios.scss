@@ -13,7 +13,7 @@
 }
 
 @mixin radio-label-variant($color) {
-    label {
+    .ui-radio-list label {
       color: $color;     
     }   
 }

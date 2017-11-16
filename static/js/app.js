@@ -470,6 +470,7 @@ var App = function() {
 			$.fn.select2.defaults.set("theme", "bootstrap");
 			$('.select2me').select2({
 				placeholder: "请选择",
+                language:'zh-CN',
 				// width: 'auto', 
 				allowClear: true
 			});

@@ -130,7 +130,7 @@ body {
   .form-horizontal .form-group.form-md-line-input > label {
     padding-top: 5px;
     font-size: 14px;
-    color: #888888;
+    color: #333;
     opacity: 1 ;
     filter: alpha(opacity=100) ; }
   .form-group.form-md-line-input .form-control {
@@ -190,7 +190,7 @@ body {
       top: 0;
       margin-bottom: 0;
       font-size: 14px;
-      color: #888888;
+      color: #333;
       opacity: 1 ;
       filter: alpha(opacity=100) ; }
     .form-group.form-md-line-input .form-control ~ .help-block-error {
@@ -199,7 +199,7 @@ body {
     .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ label,
     .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ .form-control-focus, .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ label,
     .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ .form-control-focus {
-      color: #888888; }
+      color: #333; }
       .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ label:after,
       .form-group.form-md-line-input .form-control.edited:not([readonly]) ~ .form-control-focus:after, .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ label:after,
       .form-group.form-md-line-input .form-control:focus:not([readonly]) ~ .form-control-focus:after {
@@ -269,7 +269,7 @@ body {
     left: 0;
     bottom: 0;
     margin: 9px 2px 10px 10px;
-    color: #888888; }
+    color: #333; }
   .form-group.form-md-line-input > .input-icon.input-icon-lg > i {
     top: 6px; }
   .form-group.form-md-line-input > .input-icon.input-icon-sm > i {
@@ -499,18 +499,18 @@ body {
   padding-top: 5px; }
   .form-ui-checkboxes > label {
     font-size: 14px;
-    color: #888888;
+    color: #333;
     opacity: 1 ;
     filter: alpha(opacity=100) ; }
   .form-ui-checkboxes .ui-checkbox-list {
     display: inline-block; }
-  .form-ui-checkboxes.has-error label {
+  .form-ui-checkboxes.has-error .ui-checkbox-list label {
     color: #ed6b75; }
-  .form-ui-checkboxes.has-info label {
+  .form-ui-checkboxes.has-info .ui-checkbox-list label {
     color: #659be0; }
-  .form-ui-checkboxes.has-success label {
+  .form-ui-checkboxes.has-success .ui-checkbox-list label {
     color: #36c6d3; }
-  .form-ui-checkboxes.has-warning label {
+  .form-ui-checkboxes.has-warning .ui-checkbox-list label {
     color: #F1C40F; }
 
 .ui-checkbox-list {
@@ -617,18 +617,18 @@ body {
   padding-top: 5px; }
   .form-ui-radios > label {
     font-size: 14px;
-    color: #888888;
+    color: #333;
     opacity: 1 ;
     filter: alpha(opacity=100) ; }
   .form-ui-radios .ui-radio-list {
     display: inline-block; }
-  .form-ui-radios.has-error label {
+  .form-ui-radios.has-error .ui-radio-list label {
     color: #ed6b75; }
-  .form-ui-radios.has-info label {
+  .form-ui-radios.has-info .ui-radio-list label {
     color: #659be0; }
-  .form-ui-radios.has-success label {
+  .form-ui-radios.has-success .ui-radio-list label {
     color: #36c6d3; }
-  .form-ui-radios.has-warning label {
+  .form-ui-radios.has-warning .ui-radio-list label {
     color: #F1C40F; }
 
 .ui-radio-list {

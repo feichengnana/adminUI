@@ -31,43 +31,6 @@
 					</div>
 				</div>
 				<div class="portlet-body">
-					<div class="page-search">
-						<form class="form-horizontal" action="">
-							<div class="row page-search-form">
-								<div class="col-sm-4">
-									<div class="input-group">
-										<span class="input-group-addon">关键字1</span>
-										<input type="text" class="form-control" placeholder="">
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="input-group">
-										<span class="input-group-addon">下拉选择</span>
-										<select name="selectName" class="form-control select2me" data-allowClear="true">
-											<option value="0">选项一</option>
-											<option value="1">选项二</option>
-											<option value="2">选项三</option>
-										</select>
-									</div>
-								</div>
-								<div class="col-sm-4">
-									<div class="input-group date date-picker">
-										<span class="input-group-addon">时间选择</span>
-										<input type="text" class="form-control" readonly>
-										<span class="input-group-btn">
-                                            <button class="btn default" type="button">
-                                                <i class="fa fa-calendar"></i>
-                                            </button>
-                                        </span>
-									</div>
-								</div>
-							</div>
-							<div class="page-search-action">
-								<button type="button" id="submitBtn" class="btn btn-block red"><i class="ace-icon fa fa-search"></i> 查询</button>
-								<button type="reset" class="btn btn-block yellow hidden"><i class="ace-icon fa fa-repeat"></i> 重置</button>
-							</div>
-						</form>
-					</div>
 					<div class="dataTables_wrapper">
 						<div class="margin-bottom-10 clearfix">
 							<div class="pull-left">
@@ -76,6 +39,18 @@
 							</div>
 						</div>
 						<table id="treeTable" class="table table-striped table-bordered table-hover" >
+							<tr class="treegrid-1">
+								<td>Root node</td><td>Additional info</td>
+							</tr>
+							<tr class="treegrid-2 treegrid-parent-1">
+								<td>Node 1-1</td><td>Additional info</td>
+							</tr>
+							<tr class="treegrid-3 treegrid-parent-1">
+								<td>Node 1-2</td><td>Additional info</td>
+							</tr>
+							<tr class="treegrid-4 treegrid-parent-3">
+								<td>Node 1-2-1</td><td>Additional info</td>
+							</tr>
 						</table>
 					</div>
 				</div>
@@ -104,10 +79,10 @@
 		<script src="../../static/plugins/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/plugins/jquery-treegrid/js/jquery.treegrid.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../static/plugins/jquery-treegrid/js/jquery.treegrid.bootstrap3.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../../static/plugins/jquery-treegrid/extension/jquery.treegrid.extension.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../../static/plugins/jquery-treegrid/extension/jquery.treegrid.extension.js" type="text/javascript" charset="utf-8"></script>-->
 		<script src="../../static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<!--当前页面依赖-->
-		<script src="list_treegrid.js" type="text/javascript" charset="utf-8"></script>
+		<script src="list_treegrid1.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>

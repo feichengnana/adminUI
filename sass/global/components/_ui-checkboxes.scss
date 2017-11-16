@@ -13,11 +13,10 @@
 }
 
 @mixin checkbox-label-variant($color) {         
-    label {
+    .ui-checkbox-list label {
       color: $color;     
     }   
 }
-
 
 .ui-checkbox {
     position:relative;

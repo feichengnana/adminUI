@@ -8,6 +8,9 @@
  *  align:'center',//取值left/center/right
  * 	render:function(data,row), //data字段值，data为当前row的json值，可以对字段进行自定义
  * 
+ * 2017-11-14更改
+ * 增加target.reload方法
+ * 
  * */
 (function($) {
 	"use strict";
@@ -32,13 +35,13 @@
 			return result;
 		};
 		var j = 0;
-		
+
 		/**
 		 * 根据td的值和列的设置，输出列内容
 		 * @param {JSON} row 当前记录的数据
 		 * @param {JSON} column 当前列的配置
 		 * */
-		target.getTd = function(row,column){
+		target.getTd = function(row, column) {
 			var td = $('<td></td>');
 			var colVal = row[column.field];
 			if(column.render) {
@@ -59,7 +62,7 @@
 			}
 			return td;
 		};
-		
+
 		//递归获取子节点并且设置子节点
 		target.getChildNodes = function(data, parentNode, parentIndex, tbody) {
 			$.each(data, function(i, item) {
@@ -69,17 +72,17 @@
 					tr.addClass('treegrid-' + nowParentIndex);
 					tr.addClass('treegrid-parent-' + parentIndex);
 					$.each(options.columns, function(index, column) {
-						tr.append(target.getTd(item,column));
+						tr.append(target.getTd(item, column));
 					});
 					tbody.append(tr);
 					target.getChildNodes(data, item, nowParentIndex, tbody)
 				}
 			});
 		};
-		
-		//初始化表格
-		target.initTable = function(data) {
-			//构造表头
+		/**
+		 * 构造表头，根据options.columns
+		 * */
+		target.initHeader = function(){
 			var thr = $('<tr></tr>');
 			$.each(options.columns, function(i, item) {
 				var th = $('<th></th>');
@@ -91,29 +94,48 @@
 			var thead = $('<thead></thead>');
 			thead.append(thr);
 			target.append(thead);
-
-			//构造表体
+		}
+		
+		/**
+		 * 构造表体，根据data
+		 * */
+		target.initBody = function(data){
 			var tbody = $('<tbody></tbody>');
 			var rootNode = target.getRootNodes(data);
 			$.each(rootNode, function(i, item) {
+				var rootIndex = (++j);
 				var tr = $('<tr></tr>');
-				tr.addClass('treegrid-' + (j + i));
+				tr.addClass('treegrid-' + rootIndex);
 				$.each(options.columns, function(index, column) {
-					tr.append(target.getTd(item,column));
+					tr.append(target.getTd(item, column));
 				});
 				tbody.append(tr);
-				target.getChildNodes(data, item, (j + i), tbody);
+				target.getChildNodes(data, item, rootIndex, tbody);
 			});
 			target.append(tbody);
-			
+		}
+		
+		target.initTreeTable = function(){
 			target.treegrid({
-				treeColumn:options.treeColumn?options.treeColumn:0,
+				treeColumn: options.treeColumn ? options.treeColumn : 0,
 				expanderExpandedClass: options.expanderExpandedClass,
-				expanderCollapsedClass: options.expanderCollapsedClass
+				expanderCollapsedClass: options.expanderCollapsedClass,
+				initialState: options.expandAll ? 'expanded':'collapsed',
+				saveState: options.saveState ? options.saveState :false,
+				saveStateName: options.saveStateName ? options.saveStateName : 'tree-grid-state'
 			});
-			if(!options.expandAll) {
-				target.treegrid('collapseAll');
-			}
+		}
+		
+
+		//初始化表格
+		target.initTable = function(data) {
+			target.html('');
+			//构造表头
+			target.initHeader();
+			//构造表体
+			target.initBody(data);
+			//初始化表格
+			target.initTreeTable();
 		};
 
 		if(!target.hasClass('table')) target.addClass('table');
@@ -137,6 +159,27 @@
 			//也可以通过defaults里面的data属性通过传递一个数据集合进来对组件进行初始化....
 			if(options.data) target.initTable(options.data);
 			else return;
+		}
+		target.reload = function(){
+			if(options.url) {
+				$.ajax({
+					type: options.type,
+					url: options.url,
+					data: options.ajaxParams,
+					dataType: "JSON",
+					success: function(data, textStatus, jqXHR) {
+						//console.log(data);
+						target.initBody(data);
+						target.initTreeTable();
+					}
+				});
+			} else {
+				//也可以通过defaults里面的data属性通过传递一个数据集合进来对组件进行初始化....
+				if(options.data){
+					target.initBody(data);
+					target.initTreeTable();
+				}else return;
+			}
 		}
 		return target;
 	};

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#treeTable').treegridData({
+	var treeTable = $('#treeTable').treegridData({
 		id: 'ORG_ID',
 		parentColumn: 'PARENT_ID',
 		type: "GET", //请求数据的ajax类型
@@ -9,6 +9,8 @@ $(document).ready(function() {
 		expandAll: true,  //是否全部展开
 		expanderExpandedClass:'fa fa-angle-down font-primary',
 		expanderCollapsedClass:'fa fa-angle-right font-primary',
+		saveState:true,
+		saveStateName:'treeTable-state',
 		columns: [{
 				title: '选择',
 				field: 'ORG_ID',
@@ -43,4 +45,14 @@ $(document).ready(function() {
 			}
 		]
 	});
+	
+	
+	setTimeout(function(){
+		//console.log(treeTable);
+		//reload
+		//treeTable.reload();
+		var allNodes = $('#treeTable').treegrid('getRootNodes');
+	   console.log(allNodes);
+	},3000)
+	
 });
